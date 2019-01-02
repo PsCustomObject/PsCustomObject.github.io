@@ -4,7 +4,5 @@ main:
      url: /about/
    - title: "Posts by Year"
      url: /year-archive/
-   - title: "Post by Category"
-     url: /categories-archive/
-   - title: "Categories"
+   - title: "Posts by Category"
      url: /categories/
