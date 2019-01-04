@@ -1,3 +1,4 @@
+---
 title: "PowerShell Exception Handling"
 excerpt: "An introduction to PowerShell error handling. In this post we will explore what error handling is and how to implement it in PowerShell scripts"
 categories:
@@ -9,6 +10,7 @@ tags:
   - PowerShell Core
   - Error Handling
   - Exception Handling
+---
 
 # What is PowerShell Exception handling
 
