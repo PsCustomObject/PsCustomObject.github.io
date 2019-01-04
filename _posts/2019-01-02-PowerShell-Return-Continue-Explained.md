@@ -1,6 +1,6 @@
 ---
 title: "PowerShell Return and Continue - Explained"
-excerpt: "An introduction PowerShell statements. In this post we will explore Return and Continue"
+excerpt: "An introduction to PowerShell statements. In this post we will explore Return and Continue"
 categories:
   - PowerShell
   - Post Series - Statements
