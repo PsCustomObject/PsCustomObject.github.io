@@ -107,3 +107,16 @@ The code in this article is just a minimum working example that can be expanded 
 There are probably more features that could make the script even more useful and I would love to hear what you think could be useful.
 
 I am developing something to accommodate the above requirements as it is something I do rather frequently, it is not quite ready yet but I will share as soon code has been written and tested.
+
+## Update January 5th 2019
+
+I have released a complete solution to perform automatic cleanup of files in folders called **Remove-OldFiles.ps1** it does all that I described in the post in addition to support:
+
+- Central configuration
+- Exception notification
+- Custom retention policies
+- Ignored path(s)
+
+You can find source code either [here](https://github.com/PsCustomObject/Remove-Old-Files) or over [Technet Galleries](https://gallery.technet.microsoft.com/Cleanup-Old-Files-bde3af13)
+
+Hope you can find the script useful and of course if you have any feature you'd like to see implemented don't hesitate to open an issue in Git!
