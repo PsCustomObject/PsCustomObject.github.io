@@ -1,5 +1,5 @@
 ---
-title: "Python - Pip List Outdated Packages"
+title: "Python - List Outdated Packages"
 excerpt: "How to list all outdated Python packages with Pip and how to upgrade them"
 categories:
 
@@ -12,7 +12,7 @@ tags:
   - Python3
 ---
 
-Python3 comes with a list of pre-installed packages which are updated from time to time. On a Mac or \*nix machine it is really easy to list any *outdated* package with the following command:
+Python3 comes with a list of pre-installed packages which are updated from time to time. It is really easy to list any *outdated* package with the following command:
 
 ```python
 pip list --outdated
