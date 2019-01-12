@@ -58,7 +58,7 @@ In my new role as *Advisory Engineer* I found myself solving a lot of the same c
 
 I spent most of my first year converting all these batch files to proper PowerShell scripts while discovering the power of workflows, not a new concept in the Linux world, and started to gradually introduce **Orchestrator Runbooks** that helped removing lot of the black magic I was talking of earlier.
 
-Once all the legacy tasks have been converted I started writing support scripts for my colleagues but there was an issue that seemed all too common, especially among Junior staff, which was adapting to the new paradigm of having a CLI tool carrying on all the heavy lifting work, this is when I started poking around with PowerShell and GUI.
+Once all the legacy tasks have been converted I started writing support scripts for my colleagues but there was an issue that seemed all too common, especially among Junior staff, which was adapting to the new paradigm of having a CLI tool carrying on all the heavy lifting work, this is when I started poking around with PowerShell and GUIs.
 
 I started converting some of the CLI only tools I wrote to their GUI counterpart while most these tools were internal only I released some of them like my **[Exchange message tracking GUI](https://gallery.technet.microsoft.com/Exchange-message-tracking-73a2604c)** which is a replacement for (now defunct) Exchange Log Tracking utility.
 
@@ -68,6 +68,8 @@ Fast forward to date I’m lucky enough to work as a Senior Engineer, guess my r
 
 In few words I spend my time writing PowerShell code and not shying away from C# or Python which I deeply love for its simplicity and elegance, don’t tell around but sometimes I find it faster to implement something in Python rather than in PowerShell/C#.
 
+I mainly deal with Active Directory and Identity Management so more often than not you will find example and snippets related, in a way or another, to Identity Management in general.
+
 ## Why a blog
 
-I used to maintain a full blown WordPress blog where I rambled about various technical arguments but with the passing of years’ time grew scarce and I closed it down, issue is I do love to write (ok ramble is more appropriate) and to give back to the community so I opened this GitHub space where I share code snippets, full scripts or functions hoping to help somebody out there.
+I used to maintain a full blown WordPress blog where I rambled about various technical arguments but with the passing of years time grew scarce and I closed it down, issue is I do love to write (ok ramble is more appropriate) and to give back to the community so I started this GitHub space where I share code snippets, full scripts or functions hoping to help somebody out there.
