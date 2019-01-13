@@ -1,7 +1,6 @@
 ---
 title: "PowerShell - Command Splatting"
 excerpt: "What is command splatting, how to use it and implement dynamic parameters"
-toc: false
 categories:
   - PowerShell Tips
 tags:

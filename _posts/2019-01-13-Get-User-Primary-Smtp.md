@@ -1,8 +1,8 @@
 ---
 title: "Get User Primary SMTP Address without Exchange module"
 excerpt: "How to get user primary SMTP Address when you don't have the Exchange module installed on your machine"
+toc: false
 categories:
-
   - PowerShell Tips
 tags:
   - PowerShell
@@ -21,7 +21,7 @@ $testUser = Get-AdUser -Identity 'Test.User' -Properties 'ProxyAddresses'
 
 A user can only have a primary address denoted by the **SMTP** prefix. In the above example we are performing a *case sensitive* like operation on the *ProxyAddresses* attribute which will return only the primary address.
 
-Of course the same approach can be used when dealing with multiple users 
+Of course the same approach can be used when dealing with multiple users
 
 ```powershell
 [array]$matchingUsers = Get-AdUser -Filter * -Properties 'ProxyAddresses'
