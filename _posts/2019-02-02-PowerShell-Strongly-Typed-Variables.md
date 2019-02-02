@@ -1,6 +1,6 @@
 ---
 title: "PowerShell Strongly Typed Variables"
-excerpt: "Everything you always wanted to know about PowerShell Hashtables  and never dared to ask"
+excerpt: "Post will explain what Strongly typed variables are, why you should care and use them in your code to reduce errors and make code easier to read."
 categories:
 
   - PowerShell
@@ -12,7 +12,7 @@ tags:
   - PowerShell Variables
 ---
 
-# PowerShell Strongly Typed Variables
+# PowerShell Data Types
 
 PowerShell is dynamically implicit typed, this is a fact. What does that mean? 
 
