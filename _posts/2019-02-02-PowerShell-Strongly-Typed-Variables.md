@@ -1,6 +1,6 @@
 ---
 title: "PowerShell Strongly Typed Variables"
-excerpt: "Everything you always wanted to know about PowerShell Hashtables  and never dared to ask"
+excerpt: "PowerShell Strongly Typed Variables, what they are, why you should care and why you should use them in your code to avoid pitfalls and potential issues with data types"
 categories:
 
   - PowerShell
