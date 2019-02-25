@@ -1,12 +1,44 @@
 ---
 title: "History"
+classes: wide
 permalink: /docs/history/
 excerpt: "Change log of enhancements and bug fixes made to the theme."
 sidebar:
   nav: docs
-last_modified_at: 2019-01-01T19:10:40-05:00
-toc: true
+last_modified_at: 2019-02-17T12:28:30-05:00
+toc: false
 ---
+
+## [4.15.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.15.2)
+
+### Enhancements
+
+- Close search overlay with <kbd>Esc</kbd>. [#2055](https://github.com/mmistakes/minimal-mistakes/pull/2055)
+- Update Swedish localized UI text strings. [#2056](https://github.com/mmistakes/minimal-mistakes/pull/2056)
+- Update Font Awesome to 5.7.1 and add `data-search-pseudo-elements` attribute. [#2053](https://github.com/mmistakes/minimal-mistakes/pull/2053)
+- Add Malayalam localized UI text strings. [#2037](https://github.com/mmistakes/minimal-mistakes/pull/2037)
+
+### Bug Fixes
+
+- Fix table of contents errors with non-English chracters in the headings. [#2042](https://github.com/mmistakes/minimal-mistakes/pull/2042)
+- Fix `site.logo` false positives. [#2026](https://github.com/mmistakes/minimal-mistakes/pull/2026#issuecomment-455770730)
+- Add empty `alt` attribute to `site.logo` image. [#2035](https://github.com/mmistakes/minimal-mistakes/pull/2035)
+
+## [4.15.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.15.1)
+
+### Bug Fixes
+
+- Fix empty `<img>` when `site_logo` is not assigned. [#2026](https://github.com/mmistakes/minimal-mistakes/pull/2026#issuecomment-454809876)
+
+## [4.15.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.15.0)
+
+### Enhancements
+
+- Add logo and title customization to the masthead. [#2026](https://github.com/mmistakes/minimal-mistakes/pull/2026)
+- Add support to customize `issue-term` for utterances comment provider. [#2022](https://github.com/mmistakes/minimal-mistakes/pull/2022)
+- Allow custom canonical url on a page-by-page basis. [#2021](https://github.com/mmistakes/minimal-mistakes/pull/2021)
+- Update table of contents navigation based on scroll position to indicate which link is currently active in the viewport. [#2020](https://github.com/mmistakes/minimal-mistakes/pull/2020)
+- Clicking table of contents links changes URL has fragment. [#2019](https://github.com/mmistakes/minimal-mistakes/pull/2019) [#2023](https://github.com/mmistakes/minimal-mistakes/pull/2023)
 
 ## [4.14.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.14.2)
 
@@ -48,7 +80,7 @@ toc: true
 - Add Punjabi localized UI text strings. [#1962](https://github.com/mmistakes/minimal-mistakes/pull/1962)
 - Add Hindi localized UI text strings. [#1888](https://github.com/mmistakes/minimal-mistakes/pull/1888)
 - Update Lunr to `2.3.3`. [#1885](https://github.com/mmistakes/minimal-mistakes/pull/1885)
-- Cache "static" includes to improve build performance. **Note:** The theme uses the [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) plugin which will need to be installed in your `Gemfile` and added to the `plugins` array of `_config.yml`. Otherwise you'll throw `Unknown tag 'include_cached'` errors at build. [#1874]
+- Cache "static" includes to improve build performance. **Note:** The theme uses the [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) plugin which will need to be installed in your `Gemfile` and added to the `plugins` array of `_config.yml`. Otherwise you'll throw `Unknown tag 'include_cached'` errors at build. [#1874](https://github.com/mmistakes/minimal-mistakes/pull/1874)
 - Make entire feature and archive items "clickable". [#1864](https://github.com/mmistakes/minimal-mistakes/pull/1864)
 - Allow custom Staticman endpoints. [#1842](https://github.com/mmistakes/minimal-mistakes/issues/1842)
 - Remove `type="text/css"` from Algolia script includes. [#1836](https://github.com/mmistakes/minimal-mistakes/pull/1836)

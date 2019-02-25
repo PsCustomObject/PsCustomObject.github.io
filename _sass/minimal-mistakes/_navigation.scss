@@ -189,6 +189,11 @@
       color: $masthead-link-color-hover;
     }
 
+    &.site-logo {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+
     &.site-title {
       margin-left: 0;
     }
@@ -506,6 +511,11 @@
     background: $primary-color;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
+  }
+
+  // Scrollspy marks toc items as .active when they are in focus
+  .active {
+    @include yiq-contrasted($active-color);
   }
 }
 
