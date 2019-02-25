@@ -44,13 +44,13 @@ In the above example we declared *myVar* with a type of **Int** but afterwards a
 
 ## Implicitly Typed Variables
 
-In addition to allow a runtime conversion PowerShell will usually try its best to guess the *type* of the object we are trying to instantiate and use.  As an example, writing something like this:
+In addition to allow a runtime conversion PowerShell will usually try its best to guess the *type* of the object we are trying to instantiate and use.  As an example, writing something like this
 
 ```powershell
 $myArray = @(1,2,'Test')
 ```
 
-will tell PowerShell we're trying to create an Array which can be easily verified with
+Will tell PowerShell we're trying to create an Array which can be easily verified with
 
 ```powershell
 $myArray.GetType()
@@ -60,7 +60,7 @@ IsPublic IsSerial Name                                     BaseType
 True     True     Object[]                                 System.Array
 ```
 
-This is different from what we have in strongly typed languages, like C# for example, where you cannot declare a variable without also specifying the data type ti will contain.
+This is different from what we have in strongly typed languages, like C# for example, where you cannot declare a variable without also specifying the data type it will contain.
 
 
 
