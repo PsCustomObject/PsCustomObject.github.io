@@ -105,8 +105,7 @@ analytics:
 author:
   name             : "PsCustomObject"
   avatar           : "/assets/images/pscustomobject.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I do automate stuff for fun and work. Some would say DevOps I prefer Systems Engineer who 
-  loves to code. I do PowerShell, Python, C#, HTML and sometimes JavaScript."
+  bio              : "I do automate stuff for fun and work. Some would say DevOps I prefer Systems Engineer who loves to code. I do PowerShell, Python, C#, HTML and sometimes JavaScript. I believe C is the best language out there even if I did not touch it in years."
   location         : "pid 0"
   email            : "PsCustomObject@outlook.com"
   links:
