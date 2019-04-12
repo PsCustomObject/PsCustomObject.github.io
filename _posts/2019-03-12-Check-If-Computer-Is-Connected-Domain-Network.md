@@ -4,7 +4,7 @@ excerpt: "How to check if a computer is connected to the domain network"
 categories:
 
   - PowerShell
-  - How To
+  - HowTo
 tags:
   - PowerShell
   - Domain Network

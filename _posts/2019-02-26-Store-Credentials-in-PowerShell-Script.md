@@ -4,7 +4,7 @@ excerpt: "How to securely store credentials in a PowerShell script writing them 
 categories:
 
   - PowerShell
-  - How To
+  - HowTo
 tags:
   - PowerShell
   - Hash
