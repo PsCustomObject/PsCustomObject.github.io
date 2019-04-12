@@ -19,10 +19,10 @@ Nested and mixed lists are an interesting beast. It's a corner case to make sure
 
 1. ordered item
 2. ordered item 
-  * **unordered**
-  * **unordered** 
-    1. ordered item
-    2. ordered item
+   * **unordered**
+   * **unordered** 
+     1. ordered item
+     2. ordered item
 3. ordered item
 4. ordered item
 
@@ -30,10 +30,10 @@ Nested and mixed lists are an interesting beast. It's a corner case to make sure
 
 1. ordered item
 2. ordered item 
-  * **unordered**
-  * **unordered** 
-    * unordered item
-    * unordered item
+   * **unordered**
+   * **unordered** 
+     * unordered item
+     * unordered item
 3. ordered item
 4. ordered item
 
@@ -43,8 +43,8 @@ Nested and mixed lists are an interesting beast. It's a corner case to make sure
 * unordered item 
   1. ordered
   2. ordered 
-    * unordered item
-    * unordered item
+     * unordered item
+     * unordered item
 * unordered item
 * unordered item
 
@@ -58,3 +58,9 @@ Nested and mixed lists are an interesting beast. It's a corner case to make sure
     2. **ordered item**
 * unordered item
 * unordered item
+
+### Task Lists
+
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
