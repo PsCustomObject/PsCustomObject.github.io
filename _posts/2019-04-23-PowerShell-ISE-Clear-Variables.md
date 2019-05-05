@@ -33,7 +33,7 @@ This will take care of clearing all stored variables so we can be sure we script
 
 What I just described also applies to the the *Error* buffer which can similarly be cleared with the following command
 
-```powers
+```powershell
 $error.Clear()
 ```
 
