@@ -1,3 +1,31 @@
+## [4.16.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.3)
+
+### Enhancements
+
+- Update jQuery to v3.4.1. [#2137](https://github.com/mmistakes/minimal-mistakes/issues/2137)
+- Update Gumshoe to v5.1.1. [#2140](https://github.com/mmistakes/minimal-mistakes/issues/2140)
+
+### Bug Fixes
+
+- Fix JavaScript error when resizing pages with table of contents. [#2140](https://github.com/mmistakes/minimal-mistakes/issues/2140)
+
+## [4.16.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.2)
+
+### Bug Fixes
+
+- Revert jQuery back to version v3.3.1, v.3.4.0 causes issues with other plugins that haven't been updated. [#2137](https://github.com/mmistakes/minimal-mistakes/issues/2137)
+
+## [4.16.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.1)
+
+### Enhancements
+
+- Update [`compress` layout](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#compress-layout) to v3.1.0. [#2128](https://github.com/mmistakes/minimal-mistakes/pull/2128)
+- Update jQuery to v3.4.0. [#2129](https://github.com/mmistakes/minimal-mistakes/pull/2129)
+
+### Bug Fixes
+
+- Fix Gumshoe related JavaScript error on pages without a table of contents. [#2124](https://github.com/mmistakes/minimal-mistakes/pull/2124)
+
 ## [4.16.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.0)
 
 ### Enhancements
