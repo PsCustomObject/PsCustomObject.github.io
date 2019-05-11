@@ -1,5 +1,5 @@
 ---
-title: "PowerShell ISE Clear Attributes without restarting"
+title: "PowerShell ISE Clear Variables without restarting"
 excerpt: "How to clear variables in PowerShell ISE Editor without restarting the session"
 categories:
 
