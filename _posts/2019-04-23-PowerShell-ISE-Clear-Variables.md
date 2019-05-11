@@ -7,8 +7,8 @@ categories:
   - How To
 tags:
   - PowerShell
-  - Domain Network
-  - Tips
+  - PowerShell ISE
+  - PowerShell Editors
 ---
 
 # PowerShell ISE and Variables values
