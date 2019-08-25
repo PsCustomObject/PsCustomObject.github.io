@@ -13,7 +13,7 @@ tags:
   - PowerShell Continue
 ---
 
-# PowerShell return, continue and exit statements
+## PowerShell return, continue and exit statements
 
 In the previous post [PowerShell break statement - Explained](https://pscustomobject.github.io/powershell/PowerShell-Break-Explained/) we have seen how we can use the *break* statement to interrupt script execution, we also briefly mentioned other statements like *continue*, *return* and *exit* which we are going to cover in this article.
 
@@ -117,7 +117,7 @@ while ($myNumber -lt 10)
 }
 ```
 
-The above code will produce the following output 
+The above code will produce the following output
 > Value is 1
 > Value is 2
 > Value is 3
@@ -130,6 +130,6 @@ This is the basis of working with functions which is something I will better des
 
 ## Closing Notes
 
-This article concludes our introduction to PowerShell statements and how they can be used to alter flow in our scripts. 
+This article concludes our introduction to PowerShell statements and how they can be used to alter flow in our scripts.
 
 In a subsequent post series I will describe **Functions** where the *return* statement will be the foundation of our coding.

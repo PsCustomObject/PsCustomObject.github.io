@@ -10,7 +10,7 @@ tags:
   - Command Splatting
 ---
 
-# PowerShell Command Splatting
+## PowerShell Command Splatting
 
 When using a PowerShell cmdlet we can use parameters to alter the way it will carry on its assigned task. There are situations where it is desirable using a parameter rather than another depending on the result of another cmdlet output or function return value.
 

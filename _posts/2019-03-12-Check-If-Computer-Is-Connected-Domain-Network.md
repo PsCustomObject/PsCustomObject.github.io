@@ -11,21 +11,13 @@ tags:
   - Tips
 ---
 
+## Remote or Domain Network?
 
+In our connected world sometimes we need to find out if a computer is connected to the domain network or a remote one for example if we need to run a script **only** when user is in the corporate network.
 
-# Remote or Domain Network?
-
-In our connected world sometimes we need to find out if a computer is connected to the domain network or a remote one for example if we need to run a script **only** when user is in the corporate network. 
-
-
-
-I had to solve this challenge to accommodate a configuration deployment via SCCM only for users that were physically connected to the domain network via VPN or cable. 
-
-
+I had to solve this challenge to accommodate a configuration deployment via SCCM only for users that were physically connected to the domain network via VPN or cable.
 
 Luckily enough the [System.DirectoryServices.ActiveDirectory.Domain](https://docs.microsoft.com/en-us/dotnet/api/system.directoryservices.activedirectory.domain?view=netframework-4.7.2) class allows us to get this information pretty easily with code similar the following:
-
-
 
 ```powershell
 [System.DirectoryServices.ActiveDirectory.Domain]::GetComputerDomain()
@@ -47,11 +39,9 @@ InfrastructureRoleOwner : DC01.test.lab
 Name                    : test.lab
 ```
 
-On the other hand if computer is connected to a remote network an exception will be returned. 
+On the other hand if computer is connected to a remote network an exception will be returned.
 
-
-
-Putting all together this can easily be turned into a script similar the following: 
+Putting all together this can easily be turned into a script similar the following:
 
 ```powershell
 try

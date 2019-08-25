@@ -15,7 +15,7 @@ tags:
 
 **Arrays** are a data structure designed to store a collection of items that can be of the same or different type. *Arrays* are a fundamental tool in PowerShell and chances are you already used them even without knowing.
 
-#Arrays - A collection of items
+## Arrays - A collection of items
 
 As already mentioned an array is a collection of items and can be declared like this
 

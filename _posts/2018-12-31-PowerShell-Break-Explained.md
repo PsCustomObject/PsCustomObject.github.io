@@ -13,7 +13,7 @@ tags:
   - Switch
 ---
 
-# PowerShell Break Statement
+## PowerShell Break Statement
 
 When dealing with any kind of loop in PowerShell chances are you came across the **break** statement. Sometimes there is confusion on when **break** should be used especially among people starting to learn PowerShell.
 

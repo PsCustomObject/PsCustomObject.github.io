@@ -12,7 +12,7 @@ tags:
   - Exception Handling
 ---
 
-# What is PowerShell Exception handling
+## What is PowerShell Exception handling
 
 I think the best definition of *error* or *exception* handling I can quote is the one coming from Wikipedia which reads:
 
@@ -22,7 +22,7 @@ In other words **exception handling** is the art of pre-empting any unforeseen o
 
 In the post I will got through **error types**, **error action preference**, the **$Error** variable, **try/catch/finally** blocks and will finally cover the **$LastExitCode** variable to trap errors generated *outside* PowerShell processes.
 
-It seems a lot of material but **Exception Handling** is an essential part of any well written script, without it you risk to implement to quickly lose control of what your script did or *did not*. 
+It seems a lot of material but **Exception Handling** is an essential part of any well written script, without it you risk to implement to quickly lose control of what your script did or *did not*.
 
 I have broken down the post into sections to make navigation easier given the amount of content.
 
@@ -30,7 +30,7 @@ I have broken down the post into sections to make navigation easier given the am
 
 Before diving error types I want to introduce a small example which hopefully will help illustrate pitfalls of a script not implementing exception handling.
 
-Imagine we've been tasked with the creation of a script that will check a specific application folder and delete all temporary files an application is creating in it, script should run daily on a schedule. 
+Imagine we've been tasked with the creation of a script that will check a specific application folder and delete all temporary files an application is creating in it, script should run daily on a schedule.
 
 ```powershell
 # Define Application files path
@@ -48,7 +48,7 @@ foreach ($tempFile in $tempFiles)
 Write-Host 'Script execution complete!'
 ```
 
-Once tested our script we schedule it and take on another task, unfortunately the user account under which the scheduled task runs has no permissions to access the folder so script won't be able to complete successfully. As we implemented no proper exception handling we would find out about this only when files would start accumulating filing up the disk on the server. 
+Once tested our script we schedule it and take on another task, unfortunately the user account under which the scheduled task runs has no permissions to access the folder so script won't be able to complete successfully. As we implemented no proper exception handling we would find out about this only when files would start accumulating filing up the disk on the server.
 
 This is a very simple example to show why you **should always** implement exception handling in your scripts.
 
@@ -135,9 +135,9 @@ IsPublic IsSerial Name                                     BaseType
 True     True     ArrayList                                System.Object
 ```
 
-When you start a new PowerShell session the variable will be of course empty but yet it will be initialised. 
+When you start a new PowerShell session the variable will be of course empty but yet it will be initialized.
 
-Let's see how this works trying to run a cmdlet that does not exist: 
+Let's see how this works trying to run a cmdlet that does not exist:
 
 ```powershell
 # This does not exist
@@ -195,9 +195,9 @@ TargetObject          Property       System.Object TargetObject {get;}
 PSMessageDetails      ScriptProperty System.Object PSMessageDetails {get=& {...
 ```
 
-Among the various properties the two you I usually tend to use more are: 
+Among the various properties the two you I usually tend to use more are:
 
-- **$Error[0].Exception** - Contains the original exception object as it was thrown to PowerShell 
+- **$Error[0].Exception** - Contains the original exception object as it was thrown to PowerShell
 - **$Error[0].InvocationInfo** - Contains details about the context which the command was executed, if available
 
 The former is handy to log exception thrown by scripts in my [script log file](https://github.com/PsCustomObject/New-LogEntry) the latter is useful when troubleshooting script execution to know what exactly went wrong and where. 
@@ -242,9 +242,9 @@ It has to be noted that we don't always need access to this level of information
 
 With our newly acquired knowledge we're now ready to dive deep into **try/catch** blocks that are the foundation of exception handling in PowerShell.
 
-The **try/catch/finally** statements allows us to alter script execution flow and *respond* to any error the could be thrown by our code. Default behaviour for *try/catch/finally* statement is to *catch* all terminating errors while any non-terminating error will be *ignored* by it.
+The **try/catch/finally** statements allows us to alter script execution flow and *respond* to any error the could be thrown by our code. Default behavior for *try/catch/finally* statement is to *catch* all terminating errors while any non-terminating error will be *ignored* by it.
 
-Syntax is rather straightforward and can be summarised as: 
+Syntax is rather straightforward and can be summarized as:
 
 - **Try** - Is the command we want PowerShell to execute
 - **Catch** - Is the error condition we want to test for and take action on. We can specify multiple *catch* for different exceptions
@@ -269,14 +269,14 @@ Finally
 }
 ```
 
-The above is a very simple example of how you would use the *try/catch* statement but, as I wrote earlier, this will work only for terminating errors. 
+The above is a very simple example of how you would use the *try/catch* statement but, as I wrote earlier, this will work only for terminating errors.
 
 Take the following example:
 
 ```powershell
-try 
+try
 {
-   $networkCard = Get-WmiObject Win32_NetworkAdapterConfiguration -ComputerName $Computername -Credential $Credential -Filter "IPEnabled = $True" 
+   $networkCard = Get-WmiObject Win32_NetworkAdapterConfiguration -ComputerName $Computername -Credential $Credential -Filter "IPEnabled = $True"
 }
 
 # Catch exception
@@ -288,12 +288,12 @@ catch [GetWMICOMException]
 
 Despite syntax being correct if there is an issue with the code in the *try* block execution will continue and code in the *catch* block will never be executed. Reason for this is that *Get-WmiObject* throws non-terminating errors.
 
-Solution to the above issue lies in the **$ErrorActionPreference** variable which, as I wrote earlier, can be set to any of the supported values according to our need. 
+Solution to the above issue lies in the **$ErrorActionPreference** variable which, as I wrote earlier, can be set to any of the supported values according to our need.
 
 Here is the rewritten example:
 
 ```powershell
-try 
+try
 {
 	# Update variable
 	$ErrorActionPreference = 'Stop'
@@ -316,7 +316,7 @@ Finally
 
 The above code will update the $ErrorActionPreference variable so any error will be treated as terminating allowing us to *catch* it, in the *finally* block we set value back to its default value.
 
-The example also illustrate another important concept which is catching a specific exception which can be useful when we want to take different actions depending on the exception thrown. 
+The example also illustrate another important concept which is catching a specific exception which can be useful when we want to take different actions depending on the exception thrown.
 
 To find the specific exception we use again the *Get-Member* cmdlet applied to the exception object
 
@@ -326,13 +326,13 @@ $Error[0].Exception | Get-Member
    TypeName: System.Management.Automation.CommandNotFoundException
 ```
 
-The above is from the previous example with the inexistent cmdlet but it is exactly how it works with any cmdle, the *TypeName* will contain the exception type/name.
+The above is from the previous example with the inexistent cmdlet but it is exactly how it works with any cmdlet, the *TypeName* will contain the exception type/name.
 
 **Note:** If you are interested in knowing more [MSDN](https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.errorrecord?redirectedfrom=MSDN&view=powershellsdk-1.1.0) has great documentation on the Error Record class and how to use it.
 
 ## Exception Handling - A Better Example
 
-At the beginning of the post I wrote an example to illustrate how proper exception handling is very important in any script or automation project. 
+At the beginning of the post I wrote an example to illustrate how proper exception handling is very important in any script or automation project.
 
 Here's the code rewritten using techniques and concept we covered in the post
 
@@ -371,7 +371,7 @@ finally
 # Remove files
 foreach ($tempFile in $tempFiles)
 {
-	try 
+	try
 	{
         Remove-Item -Path $tempFile
 	}

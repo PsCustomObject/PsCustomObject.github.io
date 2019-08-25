@@ -14,7 +14,7 @@ toc: true
 
 This is a question I get rather frequently so I thought to write an article about it. As the title implies I will show how you can add or remove elements to a PowerShell array once it has been created.
 
-# PowerShell Arrays
+## PowerShell Arrays
 
 Let's start with the definition of an array as it comes from PowerShell documentation:
 

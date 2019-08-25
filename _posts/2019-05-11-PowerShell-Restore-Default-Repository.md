@@ -11,15 +11,9 @@ tags:
   - Tips
 ---
 
-# PowerShell Gallery Default Repository Restore
-
 When installing PowerShell or PowerShell core on a system it comes configured with a default repository for [PowerShell Gallery](https://www.powershellgallery.com/) which can be used to install modules without any further configuration.
 
-
-
 Yesterday I was installing the [AZ Module](https://docs.microsoft.com/en-us/powershell/azure/new-azureps-module-az?view=azps-2.0.0) on my Mac machine but when trying to install the module all I got was the following error
-
-
 
 ```powershell
 Install-Module -Name Az
@@ -32,21 +26,14 @@ At /usr/local/microsoft/powershell/6/Modules/PowerShellGet/PSModule.psm1:9349 ch
 + FullyQualifiedErrorId : NoMatchFoundForCriteria,Microsoft.PowerShell.PackageManagement.Cmdlets.InstallPackage
 ```
 
-Issuing a *Get-PSRepository* was yielding the following: 
-
-
+Issuing a *Get-PSRepository* was yielding the following:
 
 ```powershell
 Get-PSRepository
 
 WARNING: Unable to find module repositories.
 ```
-
-
-
 Apparently I accidentally removed the repository from my system and trying to reinstate it using the standard way of registering a new repository like this
-
-
 
 ```powershell
 $Repository = @{
@@ -68,7 +55,6 @@ Register-PSRepository : Use 'Register-PSRepository -Default' to register the PSG
 ```
 
 It turns out to restore the default PowerShell Gallery repository the only required command is
-
 
 
 ```powershell

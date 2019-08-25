@@ -13,13 +13,13 @@ tags:
   - PowerShell Core
 ---
 
-# The requirement
+## The requirement
 
 When dealing with automation it is essential to log each operation taken by scripts so that it is possible to easily find what went wrong and when with a specific script. The downside of maintaining log files is that they take up space on the disk and usually you don't want to keep files around forever.
 
 PowerShell allows us to easily delete files older than a specific number of days, in this article I will describe how the process works.
 
-# The goal
+## The goal
 
 Our goal is to find all files under a specific path that have been created more than **90 days** ago. In the article I will use a sample folder with some old files in it to illustrate how the process works.
 
@@ -96,7 +96,7 @@ else
 
 You can find the complete code in the following [gist](https://gist.github.com/PsCustomObject/d73c19c85296b6436d9de33ba25197cc)
 
-# Further Script Development
+## Further Script Development
 
 The code in this article is just a minimum working example that can be expanded upon to accommodate needs like:
 

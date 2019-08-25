@@ -13,7 +13,7 @@ tags:
   - Dictionaries
 ---
 
-# PowerShell Hashtables
+## PowerShell Hashtables
 
 **Hashtables**, *Dictionaries*, *Associative Arrays* or simply *Hash* are an invaluable tool in PowerShell development even if sometimes they pose some challenges for beginners.
 
@@ -120,7 +120,7 @@ Move-AdUSer -Identity $user -DestinationPath $ouPath[$userCity]
 
 As you can see the hashtable contains DNs for some OUs in our AD structure. We assign the *$userCity* variable a value and finally use that to find correspondent DN for the destination OU. 
 
-The above example is based on a real automation script I have delivered for a customer. Help Desk operator would select a value from a dropdown in a web interface and a back-end script would move the user to the appropriate OU. 
+The above example is based on a real automation script I have delivered for a customer. Help Desk operator would select a value from a dropdown in a web interface and a back-end script would move the user to the appropriate OU.
 
 ### Nested Hashtables
 
@@ -180,4 +180,4 @@ This will output hashtable content to the *Out-String* cmdlet and save content t
 
 ### Closing Notes
 
-Hashtables are a fascinating and very powerful topic, there are some more advanced topics that I did not cover in this post like converting from or to Json objects but I will save that for another article.
+Hashtables are a fascinating and very powerful topic, there are some more advanced topics that I did not cover in this post like converting from or to json objects but I will save that for another article.

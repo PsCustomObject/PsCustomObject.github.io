@@ -15,7 +15,7 @@ comments: true
 
 This will be a short post regarding a question I get or see asked rather frequently and that is worth writing about.
 
-# PowerShell Check if folder exists
+## PowerShell Check if folder exists
 
 Sometimes when interacting with filesystem, for example when writing a log file to disk, it is important making sure destination folder we are going to write files to really exists to avoid PowerShell throwing an exception or, worse, losing data.
 
@@ -32,7 +32,7 @@ The *Test-Path* cmdlet will take a path as argument and return a *True* (boolean
 [string]$logPath = 'C:\MyLogPath\'
 
 # Create folder if does not exist
-if (!(Test-Path -Path $logPath)) 
+if (!(Test-Path -Path $logPath))
 {
     $paramNewItem = @{
         Path      = $logPAth
@@ -46,7 +46,7 @@ if (!(Test-Path -Path $logPath))
 
 This is something I do so often that I have put it in one of my script templates so not to worry about it every time I write code for a new script.
 
-# Check if folder exists the .Net Way
+## Check if folder exists the .Net Way
 
 The *Test-Path* cmdlet is calling a built-in .Net function under the hood, in case you want to impress your friends the above can be rewritten like this
 
@@ -61,7 +61,7 @@ if (!([System.IO.Directory]::Exists($logPath))
 }
 ```
 
-# Closing Notes
+## Closing Notes
 
 The two methods to check if a folder exists I have described in the article are equivalent. Second approach is slightly more performant but risk to make your code less readable.
 

@@ -6,7 +6,6 @@ categories:
   - PowerShell Best Practice
   - PowerShell
 tags:
-  - PowerShell Best Practice
   - Tutorial
   - HowTo
   - PowerShell
@@ -55,12 +54,6 @@ While this will work, as the title implies, there are better alternatives.
 ## Get function parameters - PSBoundParameters the good way
 
 *PSBoundParameters* being an hashtable allows us a lot of flexibility in checking if a parameter has been specified.
-
-```powershell
-
-```
-
-
 
 ```powershell
 # Method 1
