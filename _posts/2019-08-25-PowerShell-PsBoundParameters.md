@@ -23,7 +23,7 @@ PowerShell will automatically [splat](https://pscustomobject.github.io/powershel
 
 Let's start defining a dummy function that we will use throughout the article.
 
-```PowerShell
+```powershell
 # Wish it was so easy :-)
 function Start-WorldFix
 {
@@ -43,7 +43,7 @@ Despite the name the above function will do absolutely nothing but we specified 
 
 A lot of time, and yes I did this a lot as well, this is what's in the code:
 
-```PowerShell
+```powershell
 if ($Verbose)
 {
   Write-Verbose -Message 'You used the -Verbose paraemter'
@@ -56,7 +56,13 @@ While this will work, as the title implies, there are better alternatives.
 
 *PSBoundParameters* being an hashtable allows us a lot of flexibility in checking if a parameter has been specified.
 
-```PowerShell
+```powershell
+
+```
+
+
+
+```powershell
 # Method 1
 switch ($PSBoundParameters.Keys)
 {
@@ -87,7 +93,7 @@ Personally I'm fan, abuser would maybe more appropriate, of *method 1* as it mak
 
 Remember **$PSBoundParameters** is an hashtable and we can use this to our advantage like
 
-```PowerShell
+```powershell
 $PSBoundParameters.Add('Key','Value')
 ```
 
@@ -97,11 +103,7 @@ This is specifically handy when calling sub functions or want to alter the flow 
 
 If all we want to accomplish is printing which parameter have been specified for a function this is easily accomplished with
 
-```PowerShell
- foreach($boundparam in $PSBoundParameters.GetEnumerator()) {
-       "Key={0} Value={1}" -f $boundparam.Key,$boundparam.Value
-   }
-
+```powershell
 foreach ($boundParam in $PSBoundParameters.GetEnumerator())
 {
   'Key={0} Value={1}' -f $boundParam.Key, $boundParam.Value
@@ -110,6 +112,6 @@ foreach ($boundParam in $PSBoundParameters.GetEnumerator())
 
 Or even simply:
 
-```PowerShell
+```powershell
 $PSBoundPArameters
 ```
