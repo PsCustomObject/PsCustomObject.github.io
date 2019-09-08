@@ -30,25 +30,25 @@ But this is a post about PowerShell so you probably landed here to know how to d
 
 ## PowerShell string case
 
-Let's start the discussion saying in PowerShell strings are case *insensitive* so 
+Let's start the discussion saying in PowerShell strings are case *insensitive* so the following strings will be identical:
 
 ```powershell
 
 $firstString = "A String"
 $secondString = "a strinG"
 
-$firstString -eq $SecondString 
+$firstString -eq $SecondString
 
 $true
 ```
 
-Most of the times this is not an issue but there are cases, for example when generating DisplayNames for users, where you want to *sanitize* the string so that it will use proper **Title Case**. 
+Most of the times this is not an issue but there are cases, for example when generating DisplayNames for users, where you want to *sanitize* the string so that it will use proper **Title Case**.
 
 ## PowerShell convert string to Title Case
 
 PowerShell does not natively have a method/cmdlet to convert a string to Title Case but luckily the [TextInfo](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.totitlecase?view=netframework-4.8) has a method aptly named **ToTitleCase** that accepts a string as input and produces a *formatted* string that is not necessarily **linguistically correct**.
 
-In PowerShell the *TextInfo* class is accessible via the **Get-Culture** cmdlet 
+In PowerShell the *TextInfo* class is accessible via the **Get-Culture** cmdlet
 
 ```powershell
 (Get-Culture).TextInfo.ToTitleCase
@@ -94,7 +94,7 @@ $myString = "STRing WITH Mixed CaSe"
 (Get-Culture).TextInfo.ToTitleCase($myString)
 ```
 
-In the above example expected output would be *String With Mixed Case* but it will really be **String WITH Mixed Case**, why maybe you're wondering. 
+In the above example expected output would be *String With Mixed Case* but it will really be **String WITH Mixed Case**, why maybe you're wondering.
 
 Answer is method will not convert case for *acronyms* or words all in upper case.
 
