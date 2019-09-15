@@ -89,6 +89,6 @@ Output of the above command can be assigned to a variable and easily manipulated
 
 This approach has two advantages.
 
-**First** modification to Active Directory built-in limits is not required.
+**1.** Modification to Active Directory built-in limits is not required
 
-**Second** command runs *extremely* fast, for example on a group with over 14k members it took 3 seconds in my environment.
+**2.** Command runs *extremely* fast, for example on a group with over 14k members it took 3 seconds in my environment.
