@@ -4,7 +4,7 @@ excerpt: "How to clear variables in PowerShell ISE Editor without restarting the
 categories:
 
   - PowerShell
-  - How To
+  - HowTo
 tags:
   - PowerShell
   - PowerShell ISE
