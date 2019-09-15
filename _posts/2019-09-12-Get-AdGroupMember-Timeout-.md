@@ -75,7 +75,7 @@ Default limit for returned objects is set to **5000** but this can be changed un
 The above will raise the limit of returned objects to 25000.
 
 **Note on updating WebServices.exe.config file:** Changing the setting can negatively affect performances of the domain controller. Also note file need to be updated on each domain controller separately.
-{: .notice--warning}
+{: .notice--primary}
 
 ## Solution 2 - Get-ADGroup Cmdlet
 
