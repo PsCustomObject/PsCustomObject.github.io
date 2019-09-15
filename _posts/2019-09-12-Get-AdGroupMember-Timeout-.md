@@ -1,6 +1,7 @@
 ---
 title: "Get-ADGroupMember : The operation returned because the timeout limit was exceeded"
 excerpt: "When using Get-AdGroupMember cmdlet with a group with a large number of members the The operation returned because the timeout limit was exceeded error could be shown. Let's see how to solve this."
+last_modified_at: 2019-09-15T21:35:02-05:00
 categories:
   - PowerShell
   - PowerShell Tips
@@ -73,7 +74,8 @@ Default limit for returned objects is set to **5000** but this can be changed un
 
 The above will raise the limit of returned objects to 25000.
 
-**Note:** Changing the setting can negatively affect performances of the domain controller. Also note file need to be updated on each domain controller separately.
+**Note on updating WebServices.exe.config file:** Changing the setting can negatively affect performances of the domain controller. Also note file need to be updated on each domain controller separately.
+{: .notice--warning}
 
 ## Solution 2 - Get-ADGroup Cmdlet
 
