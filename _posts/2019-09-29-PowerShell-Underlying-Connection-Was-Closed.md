@@ -61,10 +61,9 @@ file.seek(0, 0)
 ```
 
 **Syntax of seek() method** fileObject.seek(offset[, whence])
+- **offset** is the position of the read/write pointer within the file.
 
-**offset** is the position of the read/write pointer within the file.
-
-**whence** is optional and defaults to 0 which means absolute file positioning, other possible values are 1 which means seek relative to the current position and 2 which means seek relative to the file's end
+- **whence** is optional and defaults to 0 which means absolute file positioning, other possible values are 1 which means seek relative to the current position and 2 which means seek relative to the file's end
 {: .notice--warning}
 
 Now if you try to read the file again all content will be correctly displayed
