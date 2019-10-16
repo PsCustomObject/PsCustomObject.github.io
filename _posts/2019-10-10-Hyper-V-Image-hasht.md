@@ -20,7 +20,7 @@ After creating the VM and connecting the required ISO File, CentOS 7 in my case,
 The error message is caused by having *Secure Boot* enabled with an incorrect configuration for guest OS, you can easily display the configuration with the following command: 
 
 ```powershell
-Get-VMFirmware -VMName $vmName 
+Get-VMFirmware -VMName $vmName
 
 VMName    SecureBoot SecureBootTemplate PreferredNetworkBootProtocol BootOrder
 ------    ---------- ------------------ ---------------------------- ---------
@@ -32,7 +32,7 @@ As you can see in the above example the *SEcureBootTemplate* is set to *Microsof
 To change this setting use the **Set-VMFirmware** like this
 
 ```powershell
-Set-VMFirmware -VMName srv-ads01 -SecureBootTemplate MicrosoftUEFICertificateAuthority
+Set-VMFirmware -VMName $vmName -SecureBootTemplate MicrosoftUEFICertificateAuthority
 
 # Very correct settings
 VMName    SecureBoot SecureBootTemplate                PreferredNetworkBootProtocol BootOrder
