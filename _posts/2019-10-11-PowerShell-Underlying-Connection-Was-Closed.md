@@ -2,7 +2,6 @@
 title: "The underlying connection was closed - An unexpected error occurred"
 excerpt: "When using PowerShell Invoke-RestMethod you get the Invoke-RestMethod : The underlying connection was closed: An unexpected error occurred Error message"
 
-toc: true
 categories:
   - PowerShell
   - HowTo
