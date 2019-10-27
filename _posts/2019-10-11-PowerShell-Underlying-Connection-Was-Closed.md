@@ -1,7 +1,7 @@
 ---
 title: "The underlying connection was closed - An unexpected error occurred"
 excerpt: "When using PowerShell Invoke-RestMethod you get the Invoke-RestMethod : The underlying connection was closed: An unexpected error occurred Error message"
-
+last_modified_at: 2019-10-27T21:35:02-05:00
 categories:
   - PowerShell
   - HowTo
@@ -39,8 +39,6 @@ If you need to support multiple versions you can do so like this
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12,
 [Net.SecurityProtocolType]::Tls11
 ```
-
-## Closing notes
 
 Keep in mind the above will be effective **only** for the active PowerShell session where command is executed and it is not a system wide configuration.
 
