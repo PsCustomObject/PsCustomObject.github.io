@@ -21,7 +21,7 @@ PowerShell offers different approaches to this which I am going to explore in th
 
 I will start with the built-in method the **[Measure-Command](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/measure-command?view=powershell-6)** cmdlet which can be invoked like in the following example
 
-```powerhsell
+```powershell
 # Count from 0 to 10000 and measure
 Measure-Command {0..10000 | ForEach-Object {$i++} }
 
@@ -126,7 +126,7 @@ TotalMilliseconds : 254498.4068
 
 As with the previous examples we can easily assign the whole object or some of its properties to a variable
 
-```po[wershell
+```powershell
 [int]$elapsedSecods = $stopwatch.Elapsed.Seconds
 
 $elapsedSecods
