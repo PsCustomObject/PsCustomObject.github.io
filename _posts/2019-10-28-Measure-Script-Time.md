@@ -1,6 +1,6 @@
 ---
 title: "PowerShell - Measure Script execution time"
-excerpt: "Explore how we can measure execution time of PowerShell scripts or code snippets using different techniques"
+excerpt: "Learn how to measure execution time of PowerShell scripts and commands using different techniques and approaches"
 
 categories:
   - PowerShell
@@ -10,7 +10,9 @@ tags:
   - Measure-Command
   - PowerShell Timer
   - PowerShell StopWatch
-  - StopWatch howto
+  - StopWatch how-to
+  - PowerShell measure
+  - PowerShell Execution Time
 ---
 
 Sometime it is useful or necessary to measure time it takes PowerShell to execute a script or block of code. Maybe you need to calculate how often you can schedule a script, maybe curiosity on how long it will take to run your code or some other reason.
