@@ -1,7 +1,7 @@
 ---
 title: "PowerShell - Measure Script execution time"
 excerpt: "Learn how to measure execution time of PowerShell scripts and commands using different techniques and approaches"
-
+last_modified_at: 2019-11-01T17:27:48-05:00
 categories:
   - PowerShell
   - HowTo
@@ -147,3 +147,5 @@ This will not produce any output so it is up to us saving details of the stopwat
 Among the various methods described in this post this is my preferred as it is the less pefpormance intensive and giving precise results.
 
 As PowerShell does not include a built-in cmdlet for this I ended up writing my own function, part of my [IT-ToolBox PowerShell Module](https://github.com/PsCustomObject/IT-ToolBox) that I use daily in my scripts.
+
+If you prefer to download the single functions/cmdlets I have created a dedicated repository where I am publishing functions making up my module or as standalone bits of code that can be found here [PowerShell Functions Repository](https://github.com/PsCustomObject/PowerShell-Functions) keep an eye on it as I will be adding new code and functions regurarly.
