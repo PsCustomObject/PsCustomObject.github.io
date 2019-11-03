@@ -1,6 +1,7 @@
 ---
 title: "The image hash and certificate are not allowed"
 excerpt: "The image hash and certificate are not allowed error is displayed when creating a new Hyper-V machine"
+last_modified_at: 2019-11-03T08:55:48-05:00
 categories:
 
   - Windows
@@ -44,4 +45,4 @@ If you want to disable *SecureBoot* all together for a specific VM, for example 
 
 ```powershell
 Set-VMFirmware -VMName $vmName -EnableSecureBoot Off
-```'
+```
