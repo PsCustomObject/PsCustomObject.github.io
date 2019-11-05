@@ -1,6 +1,7 @@
 ---
 title: "PowerShell check if string is a valid Guid"
 excerpt: "Releasing a PowerShell function that will check if an input string is a valid Guid or not"
+toc: false
 categories:
   - PowerShell
   - Functions
