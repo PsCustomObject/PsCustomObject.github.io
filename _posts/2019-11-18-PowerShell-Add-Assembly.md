@@ -189,5 +189,5 @@ Once we have converted the string to distribute required assemblies all we need 
 
 Note how assembly can only be imported via the **System Reflection Assembly** method and not the *Add-Type* one but apart from this functionality in the script will not be impacted and dependency on the binary DLL being available on the system will be removed.
 
-**Pro Tip:** Keep in mind this method while having advantages comes at the cost of making the script file *larger* due the overhead of having the full DLL string embedded in the code while this won't impact performances it could make some of you uncomfortable.
+**Pro Tip:** Keep in mind this method while having advantages comes at the cost of making the script file *larger* due the overhead of having the full DLL string embedded in the code and will suffer from a slight performance hit due to all the conversion between types. I don't have enough data to confirm the penalty hit but will carry on some tests.
 {: .notice--danger}
