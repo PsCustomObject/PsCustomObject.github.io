@@ -285,6 +285,11 @@ compress_html:
   ignore:
     envs: development
 
+# Configure support for collections
+collections:
+  regex:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -316,9 +321,3 @@ defaults:
       layout: single
       author_profile: true
       share: true
-
-# Configure support for collections
-collections:
-  regex:
-    output: true
-    permalink: /:collection/:path/
