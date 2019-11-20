@@ -296,7 +296,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
       share: true
       related: true
       comments : true
@@ -309,3 +308,17 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: regex
+    values:
+      layout: single
+      author_profile: true
+      share: true
+
+# Configure support for collections
+collections:
+  regex:
+    output: true
+    permalink: /:collection/:path/
