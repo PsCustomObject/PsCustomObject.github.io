@@ -285,7 +285,7 @@ compress_html:
   ignore:
     envs: development
 
-# Configure support for collections
+# Collections
 collections:
   regex:
     output: true
@@ -313,7 +313,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _portfolio
+  # _regex
   - scope:
       path: ""
       type: regex
