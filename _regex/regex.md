@@ -1,15 +1,8 @@
 ---
-title: "Test Content"
-excerpt: "Test collection content"
-categories:
-  - PowerShell
-tags:
-  - PowerShell
-  - Arrays
-  - PowerShell Basics
-  - HowTo
-
-toc: true
+title: Portfolio
+layout: collection
+permalink: /portfolio/
+collection: portfolio
+entries_layout: grid
+classes: wide
 ---
-
-# Test Content
