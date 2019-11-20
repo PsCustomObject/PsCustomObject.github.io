@@ -1,9 +1,15 @@
 ---
-name: Jane Doe
-position: Developer
+title: "Test Content"
+excerpt: "Test collection content"
+categories:
+  - PowerShell
+tags:
+  - PowerShell
+  - Arrays
+  - PowerShell Basics
+  - HowTo
+
+toc: true
 ---
-Jane has worked on Jekyll for the past *five years*.---
-name: Jane Doe
-position: Developer
----
-Jane has worked on Jekyll for the past *five years*.
+
+# Test Content
