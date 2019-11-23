@@ -87,8 +87,6 @@ I used to maintain a full blown WordPress blog where I rambled about various tec
 
 I, like most of you, don't like invasive AD especially when I'm trying to consume content but nonetheless placed some ADs on the website not because I want to make money from the blog, ultimately I enjoy doing what I do and it does not cost me a dime, but because any payout from ADs will go directly to **charity**.
 
-During the year me and my wife save a budget that will go to our yearly donations.
-
 The world we live in is plagued with wars, famine and other such *amenities* and the first victim of all of this are children, for this reason we always try to give as much as we can to charitable associations helping people who most need it.
 
 This is the only reason why I have placed ADs on the website, if you are using an AdBlocker that is fine, I do that myself, but if you take a second to display an AD be sure any earning will go to charity and I want to **THANK YOU** for that.
