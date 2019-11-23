@@ -316,7 +316,7 @@ defaults:
   # _regex
   - scope:
       path: ""
-      type: regex
+      type: Regex
     values:
       layout: single
       author_profile: true
