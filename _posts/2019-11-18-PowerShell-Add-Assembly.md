@@ -181,7 +181,7 @@ Once we have converted the string to distribute required assemblies all we need 
 [string]$assekblyString = 'TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAA...'
 
 # Convert string to bytes
-[byte]$assemblyBytes = [System.Convert]::FromBase64String($dll)
+[byte]$assemblyBytes = [System.Convert]::FromBase64String($assekblyString)
 
 # Import assembly
 [System.Reflection.Assembly]::Load($assemblyBytes)
