@@ -94,8 +94,8 @@ If you want to avoid all the copying/moving data you can instantiate *myArray* a
 $myArrayList = New-Object System.Collections.ArrayList($null)
 
 # Add elements to list
-[void]::($myArrayList.Add(1))
-[void]::($myArrayList.Add(2))
+[void]($myArrayList.Add(1))
+[void]($myArrayList.Add(2))
 
 # Print array length
 2
@@ -104,8 +104,8 @@ $myArrayList = New-Object System.Collections.ArrayList($null)
 Similarly you can remove elements from an ArrayList like this
 
 ```powershell
-# Will corresponding item
-$myArrayList.Remove(1)
+# Will corresponding item by index
+$myArrayList.RemoveAt(1)
 ```
 
 **Note:** Remove method will accept element's value so *1* in the above example refers to the value not the item's index.
