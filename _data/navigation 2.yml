@@ -1,0 +1,10 @@
+# main links
+main:
+   - title: "Posts Collections"
+     url: /collection-archive/
+   - title: "Posts by Category"
+     url: /categories/
+   - title: "About"
+     url: /about/
+   - title: "Posts by Year"
+     url: /year-archive/
