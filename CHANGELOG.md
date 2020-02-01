@@ -1,3 +1,167 @@
+
+n.n.n / 2019-12-26
+==================
+
+  * Fixed typo in PowerShell syntax
+  * Fixed typo in post
+  * Updated about page
+  * Updated about page Updated link order in navigation header
+  * Fixed typo in config.yml
+  * Updated sample content to avoid blank page
+  * Updated collection title
+  * Reorganized navigation links Removed sample content
+  * Updated navigation links
+  * Added collection
+  * TS for collections
+  * Removed google code
+  * Removed google code
+  * Revert change
+  * Updated defual.html to remove google code
+  * Test
+  * Formatted collection
+  * Renamed file
+  * Testing collections
+  * Testing collections
+  * Testing collecitons
+  * Renamed file
+  * Updated _Config file
+  * Fixed typo in config.yml
+  * Added support for collections
+  * modified post
+  * Renamed post file
+  * added new post
+  * Fixed layout for navigation file
+  * Added new post
+  * Disabled TOC for post
+  * Added new post
+  * Update 2019-11-05-PowerShell-Validate-Guid.md
+  * Fixed style issue in markdow
+  * Added new article
+  * Fixed typo in markdown for post
+  * Theme upgrade
+  * Updated post with last revision date and new links
+  * Updated path for favicon
+  * Added favicon support
+  * Updated post header and tags
+  * Removed and ignored DS* files
+  * Updated gitignore
+  * Updated gitignore file
+  * Fixed issue with  markdown syntax highlight code Updated gitignore file
+  * Added new psot
+  * Updated post
+  * Reverted theme back to dark
+  * Updated theme
+  * Updated post header
+  * Added new post
+  * Fixed typo in post code
+  * New Post
+  * Updated markdown formatting for post
+  * Updated formatting
+  * Fixed typo in post
+  * Fixed typo in post
+  * Added new post
+  * Updated formatting on post
+  * Updated post layout and modified date
+  * Fixed markdown style in post
+  * Updated category for post
+  * Updated custom html
+  * Added new article
+  * Fixed style in markdown file
+  * Added new article
+  * Fixed further HTML tags
+  * Fixed HTML tags
+  * Updated packages
+  * Fixed minor style issue
+  * Updated dependencies
+  * Update of set-value to 2.0.1
+  * Added footer
+  * Added footer
+  * Added footer
+  * Added footer
+  * Added footer
+  * Added footer
+  * Added footer
+  * Added footer
+  * Updated config files
+  * Added adsense verification code
+  * added to default.html layouts file
+  * Update custom.html
+  * Update default.html
+  * Fixed markdown style for multiple posts
+  * Fixed markdown typos
+  * Added new post
+  * Removed footer script
+  * Update default body
+  * fixed regrerssion in TOC management
+  * disabled toc in post
+  * Updated head code
+  * Updated footer
+  * Added new post
+  * Updated config.yml settings and BIO
+  * Fixed style issue with markdown Updated bio
+  * Added back custom  footer code
+  * Removed tests and document files
+  * Restored config files after ugprade
+  * Theme upgrade
+  * Customized footer
+  * Updated navigation.yml with front page navigation links
+  * Fixed issue with missing asset for authour image
+  * Theme update
+  * Updated CSS File for font size
+  * Updated CSS File for font size
+  * Fixed post title
+  * Alignment commit
+  * Added new article Fixed tags in post
+  * Added back logo image
+  * Theme upgrade
+  * Fixed style typo in markdown
+  * Fixed filename and date for posts
+  * Create 2019-03-12-PowerShell-ISE-Clear-Variables.md
+  * Fixed typo in script code
+  * Added new article
+  * Restored avatar image
+  * Fixed typo in Category for multiple posts
+  * Theme upgrade
+  * Added new post
+  * Added new article
+  * Fixed typos in post
+  * Updated bio
+  * Updated bio
+  * Added profile image
+  * Updated config file
+  * Updated theme
+  * rebuild pages
+  * Fixed typo in post excerpt
+  * Revert
+  * rebuild pages
+  * Added customizations after upgrade
+  * Theme upgrade cleanup
+  * Fixex excerpt for post
+  * Theme upgrade
+  * Added new article
+  * Disabled toc on post
+  * Disabled toc for article
+  * Added new psot
+  * Updated navigation links Updated about page content
+  * Added new article
+  * Added new post
+  * Added new post
+  * Updated homepage links
+  * Updated post
+  * Updated post title
+  * Added new post Updated gitignore file
+  * Fixed issue in markdown code
+  * Added new post Fixed typo in existing post and updated categories
+  * Added pages
+  * Updated config
+  * Updated config
+  * Updated config
+  * Updated config
+  * Updated config
+  * Updated css
+  * Updated config
+  * Udpated Config
+  * Theme udapte
 ## [4.17.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.17.1)
 
 ### Enhancements

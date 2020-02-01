@@ -48,7 +48,7 @@ First of all a disclaimer **never do this** unless you are testing something in 
 
 # Crete credential Object
 [SecureString]$secureString = $userPassword | ConvertTo-SecureString -AsPlainText -Force 
-[PSCredential]$credentialObejct = New-Object System.Management.Automation.PSCredential -ArgumentList $userName, $userPassword
+[PSCredential]$credentialObejct = New-Object System.Management.Automation.PSCredential -ArgumentList $userName, $secureString
 ```
 
 It is pretty obvious why this should never be used in production, anybody who has access to our code would be able to easily read username password which are conveniently written in the code.
