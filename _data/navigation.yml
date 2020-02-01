@@ -1,7 +1,7 @@
 # main links
 main:
-   - title: "Posts Collections"
-     url: /collection-archive/
+#   - title: "Posts Collections"
+#     url: /collection-archive/
    - title: "Posts by Category"
      url: /categories/
    - title: "About"
