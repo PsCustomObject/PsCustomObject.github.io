@@ -103,9 +103,7 @@ function Convert-EmlFile
 
 The function accepts only a single parameter *-EmlFileName* which is a string representing the path, either local or UNC, to the eml file itself, and will return a **formatted** object you can work with.
 
-```
 **Note:** You will need to suppy a valid path, either local or UNC, or function will fail this is not related to PowerShell code but to the ADODB.Stream class requiring a path rather than just the file name.{: .notice--success}
-```
 
 Here's a sample run and output where I've removed sensitive information:
 
