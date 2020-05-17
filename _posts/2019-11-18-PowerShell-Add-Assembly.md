@@ -57,7 +57,7 @@ As expected PowerShell is complaining as it cannot find a definition for the *Wi
 [string]$assemblyPath = 'C:\Assemblies\WinSCPnet.dll'
 
 # Add assembly DLL
-Add-Type -Path $aseemblyPath
+Add-Type -Path $assemblyPath
 ```
 
 The above will return no output and import into the PowerShell session all classes and methods associated with the DLL. 
