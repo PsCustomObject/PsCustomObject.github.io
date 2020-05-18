@@ -67,7 +67,7 @@ The above will return no output and import into the PowerShell session all class
 [string]$assemblyPath = 'C:\Assemblies\WinSCPnet.dll'
 
 # Add assembly DLL
-Add-Type -Path $aseemblyPath
+Add-Type -Path $assemblyPath
 
 # Create new object
 [WinSCP.Session]$scpSessionObject =  New-Object -TypeName  'WinSCP.Session'
