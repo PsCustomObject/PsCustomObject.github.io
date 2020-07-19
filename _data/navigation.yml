@@ -6,3 +6,5 @@ main:
   #  url: /year-archive/
   - title: "Posts by Category"
     url: /categories/
+  - title: "Posts by Year"
+    url: /year-archive/
