@@ -8,7 +8,7 @@ tags:
   - PowerShell 7
   - HowTo
 
-toc: true
+toc: false
 ---
 
 When Microsoft releases a new PowerShell 7 version the following message is displayed in terminal/console:
