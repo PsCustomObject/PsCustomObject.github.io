@@ -144,7 +144,7 @@ $stopwatch.Stop()
 
 This will not produce any output so it is up to us saving details of the stopwatch and eventually communicating this back to the user.
 
-Among the various methods described in this post this is my preferred as it is the less pefpormance intensive and giving precise results.
+Among the various methods described in this post this is my preferred as it is the less performant intensive and giving precise results.
 
 As PowerShell does not include a built-in cmdlet for this I ended up writing my own function, part of my [IT-ToolBox PowerShell Module](https://github.com/PsCustomObject/IT-ToolBox) that I use daily in my scripts.
 

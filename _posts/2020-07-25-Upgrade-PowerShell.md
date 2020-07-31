@@ -25,4 +25,4 @@ This will start the download of latest PowerShell 7 version and start the instal
 
 ![PowerShell Installer Page](https://pscustomobject.github.io/assets/images/PowerShell-7-Installer.png)
 
-The use of the *-UseMSI* parameter will casue installation to immediately start, when you will be asked chose to close application locking required files this will clsoe tbe current PowerShell session but installation will progress and once it is over latest PowerShell version will be installed.
+The use of the *-UseMSI* parameter will cause installation to immediately start, when you will be asked chose to close application locking required files this will close the current PowerShell session but installation will progress and once it is over latest PowerShell version will be installed.

@@ -9,9 +9,9 @@ tags:
   - Performance Tips
 ---
 
-Many times when writing a PowerShell script I find myself manitpulating lot of strings, for example appending *html* code to a notification mail body, to build what the final value I want to be.
+Many times when writing a PowerShell script I find myself manipulating lot of strings, for example appending *html* code to a notification mail body, to build what the final value I want to be.
 
-The most common way of doing this is using *concatenation* with the most common form being somthing similar to this:
+The most common way of doing this is using *concatenation* with the most common form being something similar to this:
 
 ```powershell
 [string]$myString = $null
@@ -60,7 +60,7 @@ So is there a better way to implement the above?
 
 *StringBuilder* is a class that was designed to solve the issue we just described and documentation can be found [here](https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=netcore-3.1). 
 
-To use *StringBuilder* you first need to instatiate an object like this:
+To use *StringBuilder* you first need to instantiate an object like this:
 
 ```powershell
 # Crete new string builder
@@ -70,7 +70,7 @@ To use *StringBuilder* you first need to instatiate an object like this:
 $myStringBuilder = New-Object -TypeName 'System.Text.StringBuilder'
 ```
 
-Once the object has beencreated you can use the *Append* or *AppendLine* methods to concatenate strings, here's an example:
+Once the object has been created you can use the *Append* or *AppendLine* methods to concatenate strings, here's an example:
 
 ```powershell
 [void]($myStringBuilder.Append('Text1'))
@@ -102,7 +102,7 @@ TotalSeconds      : 0.239489
 TotalMilliseconds : 239.489
 ```
 
-Can you see the difference? This time command only took **239 milliseconds** compared to *15* seconds it took running this with the *+=* opeartor.
+Can you see the difference? This time command only took **239 milliseconds** compared to *15* seconds it took running this with the *+=* operator.
 
 This could not seem much in a script running unattended but when dealing with larger scripts performing a lot of string concatenation or management this can make a huge difference so keep it in mind when writing your code.
 

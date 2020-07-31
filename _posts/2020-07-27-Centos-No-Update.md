@@ -9,7 +9,7 @@ tags:
 toc: false
 ---
 
-Today I deployed a new CentOS 8.1 machine, yes I'm still doing some Linux, and immediaately after installing the OS I ran the update command which did not yield any result
+Today I deployed a new CentOS 8.1 machine, yes I'm still doing some Linux, and immediately after installing the OS I ran the update command which did not yield any result
 
 ```bash
     dnf update

@@ -11,7 +11,7 @@ tags:
 
 Please raise your (virtual) hand if you ever found yourself in need to have your code take a different path depending on the value of a specific variable or outcome of a command.
 
-While Icannot see raised hands I am sure we all have been there and maybe ended up using a chained list of *if/elseif/else* statements. Today we will look at a better way of doing this via the **switch** statement.
+While I cannot see raised hands I am sure we all have been there and maybe ended up using a chained list of *if/elseif/else* statements. Today we will look at a better way of doing this via the **switch** statement.
 
 ## The if/elseif/else statement(s)
 
@@ -51,7 +51,7 @@ $weekDay = 0
     # Today is Sunday
 ```
 
-Well nothing will happen the above is perfect valid code and rather common but it presents two issues, *redeability* and, to a less extent, *performance*.
+Well nothing will happen the above is perfect valid code and rather common but it presents two issues, *readability* and, to a less extent, *performance*.
 
 An alternate, and if you ask me better, way to solve the above is a **switch** statement which is support but most programming languages (but not Python).
 
@@ -72,9 +72,9 @@ switch ($weekDay)
 }
 ```
 
-The above is trivial example but it should be clear how code is more redeable and easier to maintain especially if within parentheses we start implementing custom logic and/or additional operations, as I said there is als othe added performance benefit as a switch statement is generally faster than an if/else construct as internally PowerShell will build a lookup table in memory to evaluate the various expressions.
+The above is trivial example but it should be clear how code is more readable and easier to maintain especially if within parentheses we start implementing custom logic and/or additional operations, as I said there is also the added performance benefit as a switch statement is generally faster than an if/else construct as internally PowerShell will build a lookup table in memory to evaluate the various expressions.
 
-In the above example I used an *integer* as the lookup value but of course wer can use strings as well:
+In the above example I used an *integer* as the lookup value but of course we can use strings as well:
 
 ```powershell
 switch ($weekDay)
@@ -87,7 +87,7 @@ switch ($weekDay)
 
 ### The default statement
 
-The examples we just illustrated pose an interesting question, *what if the values of $weekDay variable is not contained in our switch statement*? The **default** cluase exists just for and as the name implies it exists as *catch all* and is used like this
+The examples we just illustrated pose an interesting question, *what if the values of $weekDay variable is not contained in our switch statement*? The **default** clause exists just for and as the name implies it exists as *catch all* and is used like this
 
 ```powershell
 $weekDay = 100
@@ -131,19 +131,19 @@ switch ($serverRole)
 
 ## PSItem
 
-We can use the $PSItem or $_ builtin variables to reference the current item that has been processed. When we do a simple match, $PSItem will be the value that we are matching.
+We can use the $PSItem or $_ built-in variables to reference the current item that has been processed. When we do a simple match, $PSItem will be the value that we are matching.
 
 ## Switch Parameters
 
-Up to this point we've illustrated the basic capabilities of a switch statemnt but there is much more to explore next let's talk about **parameters** allowing to alter the way statements works.
+Up to this point we've illustrated the basic capabilities of a switch statement but there is much more to explore next let's talk about **parameters** allowing to alter the way statements works.
 
 ## -CaseSensitive
 
-As most things in PowerShell even the switch statement is *case insensitive* by default and we can use the **-CaseSensitive** parameter, in conjunction with others, to alter this defualt bahvior and only perform exact matches similar to **-cmatch**.
+As most things in PowerShell even the switch statement is *case insensitive* by default and we can use the **-CaseSensitive** parameter, in conjunction with others, to alter this default behavior and only perform exact matches similar to **-cmatch**.
 
 ## -RegEx
 
-This is one of my favourite and I use it a lot when parsing log files from my *[New-LogEntry](https://github.com/PsCustomObject/New-LogEntry)* function here is a sample snippet
+This is one of my favorite and I use it a lot when parsing log files from my *[New-LogEntry](https://github.com/PsCustomObject/New-LogEntry)* function here is a sample snippet
 
 ```powershell
 [string]$logMessage = '[Error] - Exception reported'
@@ -165,7 +165,7 @@ switch -Regex ( $logMessage )
 }
 ```
 
-As you can see we can leverage the power of regular expresions to match data via the switch statement.
+As you can see we can leverage the power of regular expressions to match data via the switch statement.
 
 ## -WildCard
 
@@ -197,7 +197,7 @@ Up to know we've learned about the basic switch usage but there is even  more le
 
 ### Expressions and multiple matches
 
-We can use a switch statement in conjuction with expressions just like we would with an if/else statement
+We can use a switch statement in conjunction with expressions just like we would with an if/else statement
 
 ```powershell
  switch ( ([string]::IsNullOrEmpty($myString)) )
@@ -322,10 +322,10 @@ Up to this point we have observed switch while performing *static* comparisons b
     'adult'
 ```
 
-## Closing thoughts on the Switch statemnt
+## Closing thoughts on the Switch statement
 
-There are still some *edge* uses for the switch statment that I'm not going to cover here as they're rarely used. Maybe that will be material for a future post.
+There are still some *edge* uses for the switch statement that I'm not going to cover here as they're rarely used. Maybe that will be material for a future post.
 
-What I fint important to highlight that, in addition to being more *elegant* and easier to read, a *switch* statement is usually **faster** than an *if/else* construct due the way PowerShell internllay indexes data so try to stick to it whenever possible.
+What I find important to highlight that, in addition to being more *elegant* and easier to read, a *switch* statement is usually **faster** than an *if/else* construct due the way PowerShell internally indexes data so try to stick to it whenever possible.
 
 As usual I hope this post helped you and if you feel like I missed something or have any question don't hesitate to leave a comment.

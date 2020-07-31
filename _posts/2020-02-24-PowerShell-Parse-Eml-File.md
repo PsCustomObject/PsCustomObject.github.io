@@ -107,7 +107,7 @@ The function accepts only a single parameter *-EmlFileName* which is a string re
 
 Here's a sample run and output where I've removed sensitive information:
 
-``````powershell
+```powershell
 # Define path to the eml file
 [string]$emlFile = '\\Server01\Data\Message.eml'
 
@@ -149,10 +149,10 @@ Fields               : System.__ComObject
 MDNRequested         : False
 ``````
 
-As you can see function will parse the file and output an object that is easy to work with for example to extract the subject line or any other part of the text available in the message. 
+As you can see function will parse the file and output an object that is easy to work with for example to extract the subject line or any other part of the text available in the message.
 
 ### Function availability
 
 Function is available in my GitHub repository for functions [here](https://github.com/PsCustomObject/PowerShell-Functions) and will soon be made available in my IT-[ToolBox](https://github.com/PsCustomObject/IT-ToolBox) module as well.
 
-If you find any issue or have any question don't hesitate to to leave me a comment here or open an issue in Github.
+If you find any issue or have any question don't hesitate to to leave me a comment here or open an issue in GitHub.
