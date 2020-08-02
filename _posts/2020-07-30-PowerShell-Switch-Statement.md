@@ -38,15 +38,15 @@ What happens if extend on it and have a more complex logic?
 ```powershell
 $weekDay = 0
 
-    if ( $day -eq 0 ) { $result = 'Sunday'        }
-    elseif ( $weekDay -eq 1 ) { $result = 'Monday'    }
-    elseif ( $weekDay -eq 2 ) { $result = 'Tuesday'   }
-    elseif ( $weekDay -eq 3 ) { $result = 'Wednesday' }
-    elseif ( $weekDay -eq 4 ) { $result = 'Thursday'  }
-    elseif ( $weekDay -eq 5 ) { $result = 'Friday'    }
-    elseif ( $weekDay -eq 6 ) { $result = 'Saturday'  }
+    if ( $day -eq 0 ) { $dayName = 'Sunday'        }
+    elseif ( $weekDay -eq 1 ) { $dayName = 'Monday'    }
+    elseif ( $weekDay -eq 2 ) { $dayName = 'Tuesday'   }
+    elseif ( $weekDay -eq 3 ) { $dayName = 'Wednesday' }
+    elseif ( $weekDay -eq 4 ) { $dayName = 'Thursday'  }
+    elseif ( $weekDay -eq 5 ) { $dayName = 'Friday'    }
+    elseif ( $weekDay -eq 6 ) { $dayName = 'Saturday'  }
 
-    Write-Host "Today is $result"
+    Write-Host "Today is $dayName"
 
     # Today is Sunday
 ```
@@ -62,13 +62,13 @@ First of all let's rewrite the above example using a *switch* statement to immed
 ```powershell
 switch ($weekDay)
 {
-    0 { $result = 'Sunday' }
-    1 { $result = 'Monday' }
-    2 { $result = 'Tuesday' }
-    3 { $result = 'Wednesday'}
-    4 { $result = 'Thursday' }
-    5 { $result = 'Friday' }
-    6 { $result = 'Saturday'}
+    0 { $dayName = 'Sunday' }
+    1 { $dayName = 'Monday' }
+    2 { $dayName = 'Tuesday' }
+    3 { $dayName = 'Wednesday'}
+    4 { $dayName = 'Thursday' }
+    5 { $dayName = 'Friday' }
+    6 { $dayName = 'Saturday'}
 }
 ```
 
@@ -79,8 +79,8 @@ In the above example I used an *integer* as the lookup value but of course we ca
 ```powershell
 switch ($weekDay)
 {
-    '0' { $result = 'Sunday' }
-    '1' { $result = 'Monday' }
+    '0' { $dayName = 'Sunday' }
+    '1' { $dayName = 'Monday' }
     # ...
 }
 ```
@@ -94,8 +94,8 @@ $weekDay = 100
 
 switch ($weekDay)
 {
-    '0' { $result = 'Sunday' }
-    '1' { $result = 'Monday' }
+    '0' { $dayName = 'Sunday' }
+    '1' { $dayName = 'Monday' }
     # ...
     default { Write-Host -Message 'Sorry I cannot recognize the value!' }
 }
