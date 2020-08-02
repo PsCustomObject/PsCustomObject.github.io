@@ -35,11 +35,11 @@ Arguably the above command will true when run within an elevated session or, lik
 
 if ($isElevated)
 {
-	Write-Host 'Session is elevated!'
+  Write-Host 'Session is elevated!'
 }
 else
 {
-	Write-Warning 'Session is not elevated!'
+  Write-Warning 'Session is not elevated!'
 }
 ```
 

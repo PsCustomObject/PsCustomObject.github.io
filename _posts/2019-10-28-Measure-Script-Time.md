@@ -148,4 +148,4 @@ Among the various methods described in this post this is my preferred as it is t
 
 As PowerShell does not include a built-in cmdlet for this I ended up writing my own function, part of my [IT-ToolBox PowerShell Module](https://github.com/PsCustomObject/IT-ToolBox) that I use daily in my scripts.
 
-If you prefer to download the single functions/cmdlets I have created a dedicated repository where I am publishing functions making up my module or as standalone bits of code that can be found here [PowerShell Functions Repository](https://github.com/PsCustomObject/PowerShell-Functions) keep an eye on it as I will be adding new code and functions regurarly.
+If you prefer to download the single functions/cmdlets I have created a dedicated repository where I am publishing functions making up my module or as standalone bits of code that can be found here [PowerShell Functions Repository](https://github.com/PsCustomObject/PowerShell-Functions) keep an eye on it as I will be adding new code and functions regularly.

@@ -1,13 +1,15 @@
 ---
 title: "Get User Primary SMTP Address without Exchange module"
 excerpt: "How to get user primary SMTP Address when you don't have the Exchange module installed on your machine"
-toc: false
+
 categories:
   - PowerShell Tips
 tags:
   - PowerShell
   - Exchange
   - Tips
+
+toc: false
 ---
 
 Have you ever found yourself in need to find user primary SMTP without having access to Exchange cmdlets? Usually checking the *email* built-in attribute is enough but there are situations where field is either empty or not properly aligned with user's primary SMTP address.
@@ -32,5 +34,4 @@ foreach ($user in $matchingUsers)
 
   # Take any required action
 }
-
 ```

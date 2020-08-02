@@ -38,7 +38,6 @@ $myVar.GetType()
 IsPublic IsSerial Name                                     BaseType
 -------- -------- ----                                     --------
 True     True     String                                   System.Object
-
 ```
 
 In the above example we declared *myVar* with a type of **Int** but afterwards assigned a **String** value. PowerShell did not complain and dynamically converted the variable's type.
@@ -94,7 +93,7 @@ Main difference between the above example and what we have seen earlier is we're
 
 As I already said this is not strictly required by PowerShell rules but it is what I consider a good coding habit and I can assure the extra typing will be paying in both **code readability** and **ease of debugging** when doing a code review or trying to figure out what went wrong with a script.
 
-First of all when using strongly typed variables it does not matter how many lines our script is composed of we will always know which *properties* and *methods* are available and can be applied to a specific variable. As an example a *string* object will always have a *length* property or a *ToLower* method, the same holds true for all other values like *int*, *arrays* and so on. 
+First of all when using strongly typed variables it does not matter how many lines our script is composed of we will always know which *properties* and *methods* are available and can be applied to a specific variable. As an example a *string* object will always have a *length* property or a *ToLower* method, the same holds true for all other values like *int*, *arrays* and so on.
 
 To illustrate the second aspect of strongly typed variables let me quote what I wrote earlier
 
@@ -174,7 +173,7 @@ PowerShells is protecting us from carrying on an illegal operation like assignin
 
 $myIntVariable = '5' # This is a string value
 
-Write-Host $myIntVariable 
+Write-Host $myIntVariable
 
 5
 

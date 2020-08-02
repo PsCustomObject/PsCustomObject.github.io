@@ -25,7 +25,7 @@ Invoke-RestMethod : The underlying connection was closed: An unexpected error oc
 
 Issue is PowerShell, by default, uses TLS version 1.0 which is disabled on any modern platform due to security risks associated with the use of it.
 
-To solve this simply issue the following command: 
+To solve this simply issue the following command:
 
 ```powershell
 # Enable TLS 1.2 as Security Protocol

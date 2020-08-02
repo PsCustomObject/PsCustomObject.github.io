@@ -227,7 +227,7 @@ Multiple matches would work as you probably have already guessed, here I will be
 
 ## Break and Continue
 
-We've already covered *[break and continue]*(https://pscustomobject.github.io/powershell/post%20series%20-%20statements/PowerShell-Return-Continue-Explained/) and they work similarly with a switch statement.
+We've already covered *[break and continue](https://pscustomobject.github.io/powershell/post%20series%20-%20statements/PowerShell-Return-Continue-Explained/)* and they work similarly with a switch statement.
 
 Let's examine a reworked version of the previous example:
 

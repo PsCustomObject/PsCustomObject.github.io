@@ -110,7 +110,7 @@ $myEmptyarray.Length
 
 This technique is useful when you want to instantiate a new **Array** but don't know the number of elements it will contain.  
 
-Here's another example of iterating through an array that I'm sure anybody dealing with an Active Directory domain used at least once: 
+Here's another example of iterating through an array that I'm sure anybody dealing with an Active Directory domain used at least once:
 
 ```powershell
 # Create the array

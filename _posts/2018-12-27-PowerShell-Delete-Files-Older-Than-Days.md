@@ -53,7 +53,7 @@ To retrieve a list of relevant files we can use the *Get-ChildItem* cmdlet with 
 ```powershell
 # Get all matching files
 [array]$filesToPurge = Get-ChildItem -Path $filePath -Filter $fileExtension -File |
-				Where-Object { $_.LastWriteTime -lt $ageTimeSpan }
+        Where-Object { $_.LastWriteTime -lt $ageTimeSpan }
 ```
 
 The above will get all files with an extension of *.log* that have been written more than *90 days* ago (less than current date minus 90 days).

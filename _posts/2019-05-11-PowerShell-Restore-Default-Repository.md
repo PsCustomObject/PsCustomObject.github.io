@@ -37,12 +37,12 @@ Apparently I accidentally removed the repository from my system and trying to re
 
 ```powershell
 $Repository = @{
-	Name = 'PSGallery'
-	SourceLocation = 'https://www.powershellgallery.com/api/v2/'
-	PublishLocation = 'https://www.powershellgallery.com/api/v2/package/'
-	ScriptSourceLocation = 'https://www.powershellgallery.com/api/v2/items/psscript'
-	ScriptPublishLocation 'https://www.powershellgallery.com/api/v2/package/'
-	InstallationPolicy = 'Untrusted'
+    Name = 'PSGallery'
+    SourceLocation = 'https://www.powershellgallery.com/api/v2/'
+    PublishLocation = 'https://www.powershellgallery.com/api/v2/package/'
+    ScriptSourceLocation = 'https://www.powershellgallery.com/api/v2/items/psscript'
+    ScriptPublishLocation 'https://www.powershellgallery.com/api/v2/package/'
+    InstallationPolicy = 'Untrusted'
 }
 
 Register-PSRepository @Repository
@@ -55,7 +55,6 @@ Register-PSRepository : Use 'Register-PSRepository -Default' to register the PSG
 ```
 
 It turns out to restore the default PowerShell Gallery repository the only required command is
-
 
 ```powershell
 Register-PSRepository -Default

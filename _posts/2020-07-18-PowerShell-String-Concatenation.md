@@ -30,7 +30,7 @@ This is perfectly valid PowerShell code and will execute without any issue but t
 This is taken from [MSDN](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1#Immutability) which makes a great job, far better than I can, to explain what is really happening behind the scenes when using the above approach:
 
 > A String object is called immutable (read-only), because its value cannot be modified after it has been created. Methods that appear to modify a String object actually return a new String object that contains the modification.
-> 
+>
 > Because strings are immutable, string manipulation routines that perform repeated additions or deletions to what appears to be a single string can exact a significant performance penalty. Although the code appears to use string concatenation to append a new character to the existing string named str, it actually creates a new String object for each concatenation operation.
 
 *TLTR* **It's magic.**
@@ -58,7 +58,7 @@ So is there a better way to implement the above?
 
 ## Enter StringBuilder
 
-*StringBuilder* is a class that was designed to solve the issue we just described and documentation can be found [here](https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=netcore-3.1). 
+*StringBuilder* is a class that was designed to solve the issue we just described and documentation can be found [here](https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=netcore-3.1).
 
 To use *StringBuilder* you first need to instantiate an object like this:
 

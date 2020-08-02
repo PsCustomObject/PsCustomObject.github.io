@@ -200,7 +200,7 @@ Among the various properties the two you I usually tend to use more are:
 - **$Error[0].Exception** - Contains the original exception object as it was thrown to PowerShell
 - **$Error[0].InvocationInfo** - Contains details about the context which the command was executed, if available
 
-The former is handy to log exception thrown by scripts in my [script log file](https://github.com/PsCustomObject/New-LogEntry) the latter is useful when troubleshooting script execution to know what exactly went wrong and where. 
+The former is handy to log exception thrown by scripts in my [script log file](https://github.com/PsCustomObject/New-LogEntry) the latter is useful when troubleshooting script execution to know what exactly went wrong and where.
 
 But there is more, the **Exception** object *hides* some additional useful properties and methods that are not immediately visible.
 
@@ -234,7 +234,7 @@ TargetSite                  Property   System.Reflection.MethodBase TargetSi...
 WasThrownFromThrowStatement Property   bool WasThrownFromThrowStatement {get...
 ```
 
-As you can see in the above example we can access hidden information like *StackTrace*, *InnerException* or the *Source*. 
+As you can see in the above example we can access hidden information like *StackTrace*, *InnerException* or the *Source*.
 
 It has to be noted that we don't always need access to this level of information but it can be very useful in a troubleshooting scenario especially when dealing with 3rd party cmdlets or modules.
 
@@ -255,7 +255,7 @@ Let's see an example with our inexistent cmdlet once again
 ```powershell
 Try
 {
-	# Will generate a temrinating error
+    # Will generate a temrinating error
     Get-MyCmdlet -Path 'C:\temp'
 }
 Catch
@@ -264,7 +264,7 @@ Catch
 }
 Finally
 {
-	# Will always be executed
+    # Will always be executed
     Write-Host 'Script Execution complete!'
 }
 ```
@@ -295,9 +295,9 @@ Here is the rewritten example:
 ```powershell
 try
 {
-	# Update variable
-	$ErrorActionPreference = 'Stop'
-	
+    # Update variable
+    $ErrorActionPreference = 'Stop'
+
     $networkCard = Get-WmiObject Win32_NetworkAdapterConfiguration -ComputerName $Computername -Credential $Credential -Filter "IPEnabled = $True"
 }
 
@@ -344,12 +344,12 @@ $isException = $false
 try
 {
     # Get all files
-	$tempFiles = Get-ChildItem -Path $tempFilesPath
+    $tempFiles = Get-ChildItem -Path $tempFilesPath
 }
 catch [ItemNotFoundException]
 {
     <#
-    	Any corrective action code here
+        Any corrective action code here
     #>
     
     $isException = $true
@@ -359,8 +359,8 @@ finally
     if ($isException)
     {
         <#
-    		Code to notify admins here
-    	#>
+            Code to notify admins here
+        #>
     }
     else
     {
@@ -371,31 +371,31 @@ finally
 # Remove files
 foreach ($tempFile in $tempFiles)
 {
-	try
-	{
+    try
+    {
         Remove-Item -Path $tempFile
-	}
-	catch
-	{
-    	<#
-    		Any corrective action code here
-    	#>
+    }
+    catch
+    {
+        <#
+            Any corrective action code here
+        #>
     
-    	$isException = $true
-	}
-	finally
-	{
-    	if ($isException)
-    	{
-        	<#
-    			Code to notify admins here
-    		#>
-    	}
-    	else
-    	{
-        	# Log success
-    	}
-	}
+        $isException = $true
+    }
+    finally
+    {
+        if ($isException)
+        {
+            <#
+                Code to notify admins here
+            #>
+        }
+        else
+        {
+            # Log success
+        }
+    }
 }
 
 Write-Host 'Script execution complete!'

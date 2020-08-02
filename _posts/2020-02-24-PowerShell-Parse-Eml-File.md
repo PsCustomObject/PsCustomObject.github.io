@@ -59,16 +59,16 @@ function Convert-EmlFile
 <#
     .SYNOPSIS
         Function will parse an eml files.
-        
+
     .DESCRIPTION
         Function will parse eml file and return a normalized object that can be used to extract infromation from the encoded file.
-    
+
     .PARAMETER EmlFileName
         A string representing the eml file to parse.
-    
+
     .EXAMPLE
         PS C:\> Convert-EmlFile -EmlFileName 'C:\Test\test.eml'
-    
+
     .OUTPUTS
         System.Object
 #>
@@ -81,29 +81,29 @@ function Convert-EmlFile
         [string]
         $EmlFileName
     )
-    
+
     # Instantiate new ADODB Stream object
     $adoStream = New-Object -ComObject 'ADODB.Stream'
-    
+
     # Open stream
     $adoStream.Open()
-    
+
     # Load file
     $adoStream.LoadFromFile($EmlFileName)
-    
+
     # Instantiate new CDO Message Object
     $cdoMessageObject = New-Object -ComObject 'CDO.Message'
-    
+
     # Open object and pass stream
     $cdoMessageObject.DataSource.OpenObject($adoStream, '_Stream')
-    
+
     return $cdoMessageObject
 }
 ```
 
 The function accepts only a single parameter *-EmlFileName* which is a string representing the path, either local or UNC, to the eml file itself, and will return a **formatted** object you can work with.
 
-**Note:** You will need to suppy a valid path, either local or UNC, or function will fail this is not related to PowerShell code but to the ADODB.Stream class requiring a path rather than just the file name.{: .notice--success}
+**Note:** You will need to supply a valid path, either local or UNC, or function will fail this is not related to PowerShell code but to the ADODB.Stream class requiring a path rather than just the file name.{: .notice--success}
 
 Here's a sample run and output where I've removed sensitive information:
 
@@ -147,12 +147,12 @@ BodyPart             : System.__ComObject
 DataSource           : System.__ComObject
 Fields               : System.__ComObject
 MDNRequested         : False
-``````
+```
 
 As you can see function will parse the file and output an object that is easy to work with for example to extract the subject line or any other part of the text available in the message.
 
 ### Function availability
 
-Function is available in my GitHub repository for functions [here](https://github.com/PsCustomObject/PowerShell-Functions) and will soon be made available in my IT-[ToolBox](https://github.com/PsCustomObject/IT-ToolBox) module as well.
+Function is available in my GitHub repository for functions [here](https://github.com/PsCustomObject/PowerShell-Functions) and will soon be made available in my [IT-ToolBox](https://github.com/PsCustomObject/IT-ToolBox) module as well.
 
-If you find any issue or have any question don't hesitate to to leave me a comment here or open an issue in GitHub.
+If you find any issue or have any question do not hesitate to to leave me a comment here or open an issue in GitHub.
