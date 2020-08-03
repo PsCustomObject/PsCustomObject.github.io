@@ -18,7 +18,7 @@ When Microsoft releases a new PowerShell 7 version the following message is disp
 To upgrade to the latest version you can either go to the [PowerShell Releases Page](https://github.com/PowerShell/PowerShell/releases) or use the following command to upgrade directly from the console:
 
 ```powershell
-Invoke-Expression "& { $(Invoke-Restmethod https://aka.ms/Install-PowerShell.ps1) } -UseMSI
+Invoke-Expression "& { $(Invoke-Restmethod https://aka.ms/Install-PowerShell.ps1) } -UseMSI"
 ```
 
 This will start the download of latest PowerShell 7 version and start the installer directly from the current console:
