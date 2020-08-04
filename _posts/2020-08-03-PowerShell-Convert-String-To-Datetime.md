@@ -71,9 +71,10 @@ Note how the object has been converted to **DateTime** as expectted. A common pi
 **Note:** Both arguments can of course be variables as long as they're in the correct format and not **$null**
 {: .notice--primary}
 
-A neat feature of the **ParseExact** method is that you can even output another string with a different date format. 
+A neat feature of the **ParseExact** method is that you can even output another string with a different date format.
 
 ```powershell
+# Parse input and output string in the desired format
 [datetime]::parseexact($invoice, 'dd-MMM-yy', $null).ToString('yyyy-MM-dd')
 
 # Output
