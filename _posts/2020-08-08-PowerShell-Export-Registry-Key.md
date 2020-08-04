@@ -3,10 +3,10 @@ title: "PowerShell export registry key"
 excerpt: "In this post we will explore how we can use PowerShell to check existence of a specific registry key and how to export them either in CSV or XML format"
 categories:
   - PowerShell
-  - HowTo
 tags:
   - PowerShell
-  - Performance Tips
+  - Code Snippets
+  - Useful functions
 
 header:
     teaser: "/assets/images/WindowsRegistry.png"
