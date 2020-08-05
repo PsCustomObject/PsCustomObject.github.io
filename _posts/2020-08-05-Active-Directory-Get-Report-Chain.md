@@ -1,5 +1,5 @@
 ---
-title: "PowerShell - Get users reporting to mnanager"
+title: "PowerShell - Get users reporting to manager"
 excerpt: "Subtitle - How do I get the full report chain for a specific manager from Active Directory"
 categories:
   - PowerShell
@@ -16,9 +16,9 @@ header:
 
 ## The problem
 
-One request we receive rather frequently is to create groups containing all users in a specific reporting chain. In other words groups containing all users reporting to *Manager 1* and all their direct reports recursevely.
+One request we receive rather frequently is to create groups containing all users in a specific reporting chain. In other words groups containing all users reporting to *Manager 1* and all their direct reports recursively.
 
-While this kind of reports is usually available through any decent HR software, like *Workday*, getting this kind of infomraiotn out of Active Directory poses some unique challenges.
+While this kind of reports is usually available through any decent HR software, like *Workday*, getting this kind of information out of Active Directory poses some unique challenges.
 
 While we can get direct reports of a specific user via the *DirectReports* AD property like this
 
@@ -38,11 +38,11 @@ CN=Test\, User02,OU=Admin,OU=Users,OU=Admin,DC=automatuon,DC=lab
 CN=Test\, User03,OU=Admin,OU=Users,OU=Admin,DC=automatuon,DC=lab
 ```
 
-But this only solves half of the problem as if any of the above users has direct reports it will not be shown in the output. Once solution would be to get all direct reports, cycle through them and recursevely get direct reports.
+But this only solves half of the problem as if any of the above users has direct reports it will not be shown in the output. Once solution would be to get all direct reports, cycle through them and recursively get direct reports.
 
 While a valid approach it is inefficient and not so elegant at least for my personal taste.
 
-## Get management report chain - Appraoch 1
+## Get management report chain - Approach 1
 
 If like me you are lucky enough to have access to *OneIdentity ActiveRoles* (once *Quest*) cmdlets the *Get-QADUser* has a *-Manager* parameter that effectively works like the above example.
 
@@ -77,7 +77,7 @@ As you can see function is really simple, it will accept a user identity as inpu
 
 This approach served me very well and I've been using it in my automation solutions for quite some time. Only drawback is, as I already mentioned, for this to work is you will need access to Active Roles cmdlets.
 
-## Get management report chain - Appraoch 2 (The native way)
+## Get management report chain - Approach 2 (The native way)
 
 A little know fact is that *[Active Directory schema](https://docs.microsoft.com/en-us/windows/win32/adschema/active-directory-schema)* has an *[OID](https://en.wikipedia.org/wiki/Object_identifier)* named **LDAP_MATCHING_RULE_IN_CHAIN** which does exactly what you're thinking of giving us the full report chain. Let's see it in action.
 
@@ -96,7 +96,7 @@ A little know fact is that *[Active Directory schema](https://docs.microsoft.com
 [array]$allUsers = Get-AdUser -LDAPFilter $ldapFilter
 ```
 
-As you can see we can easily query the OID via standard LDAP filter specifying the user DN using *Get-AdUser* cmdlet which is included with the *Active Directory* module. The best part is yet to come, this is **blazing fast**! In an environment with over 15.000 objects getting the full report chain from the CEO down to the most humble IT peon, me, it took a whopping **20 secods** to run the command all of this from a VPN connection.
+As you can see we can easily query the OID via standard LDAP filter specifying the user DN using *Get-AdUser* cmdlet which is included with the *Active Directory* module. The best part is yet to come, this is **blazing fast**! In an environment with over 15.000 objects getting the full report chain from the CEO down to the most humble IT peon, me, it took a whopping **20 seconds** to run the command all of this from a VPN connection.
 
 This method works great, but what if you don't have or cannot install the AD module for some reason? Don't despair, there is a third way which we're going to explore in a second.
 
@@ -119,9 +119,9 @@ $searcherObject.PageSize = 200
 [array]$allUsers = $searcherObject.FindAll()
 ```
 
-The above is equivalent to the *Get-AdUser* method as, under the hood, PowerShell is using a [DirectorySearcher](https://docs.microsoft.com/en-us/dotnet/api/system.directoryservices.directorysearcher?view=netcore-3.1) to retrive results for us.
+The above is equivalent to the *Get-AdUser* method as, under the hood, PowerShell is using a [DirectorySearcher](https://docs.microsoft.com/en-us/dotnet/api/system.directoryservices.directorysearcher?view=netcore-3.1) to retrieve results for us.
 
-There is much more to this accellerator but I'll leave exploraiton to the reader's curiosity. As a reference here's how the object we've just instantiated looks like
+There is much more to this accelerator but I'll leave exploration to the reader's curiosity. As a reference here's how the object we've just instantiated looks like
 
 ```powershell
 CacheResults             : True
@@ -151,6 +151,6 @@ Container                :
 
 ## Closing thoughts - Which method to use
 
-When developing some automation solution I try to use *native* tools as much as possible to make code portable and implementation easier. This does not imply that I consider using modules or external binaries a bad practice, far from it, but we cannot give for granted they will be available on all servers where our code will run and trust me in some environemnts something as simple as installing a module can be a real pain.
+When developing some automation solution I try to use *native* tools as much as possible to make code portable and implementation easier. This does not imply that I consider using modules or external binaries a bad practice, far from it, but we cannot give for granted they will be available on all servers where our code will run and trust me in some environments something as simple as installing a module can be a real pain.
 
-As a personal suggestion I would say if the *AD Module* is available on the system go for [Method 2](https://pscustomobject.github.io/powershell/howto/identity%20management/Active-Directory-Get-Report-Chain/#get-management-report-chain---appraoch-2-the-native-way) which will give you the best perofmances with the added flexibility of PowerShell native cmdlets.
+As a personal suggestion I would say if the *AD Module* is available on the system go for [Method 2](https://pscustomobject.github.io/powershell/howto/identity%20management/Active-Directory-Get-Report-Chain/#get-management-report-chain---appraoch-2-the-native-way) which will give you the best performances with the added flexibility of PowerShell native cmdlets.
