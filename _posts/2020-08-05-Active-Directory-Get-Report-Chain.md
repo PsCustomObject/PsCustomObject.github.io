@@ -153,4 +153,4 @@ Container                :
 
 When developing some automation solution I try to use *native* tools as much as possible to make code portable and implementation easier. This does not imply that I consider using modules or external binaries a bad practice, far from it, but we cannot give for granted they will be available on all servers where our code will run and trust me in some environemnts something as simple as installing a module can be a real pain.
 
-As a personal suggestion I would say if the *AD Module* is available on the system go for [Method 2](## Get management report chain - Appraoch 2 (The native way)) which will give you the best perofmances with the added flexibility of PowerShell native cmdlets.
+As a personal suggestion I would say if the *AD Module* is available on the system go for [Method 2](https://pscustomobject.github.io/powershell/howto/identity%20management/Active-Directory-Get-Report-Chain/#get-management-report-chain---appraoch-2-the-native-way) which will give you the best perofmances with the added flexibility of PowerShell native cmdlets.
