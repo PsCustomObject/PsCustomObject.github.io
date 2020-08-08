@@ -8,9 +8,11 @@ tags:
   - PowerShell
   - PowerShell Basics
   - PowerShell Core
+  - PowerShell create credential
+  - new-object system.management.automation.pscredential
 ---
 
-There are many cmdlets that take a **[PSCredential ](https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.pscredential?view=pscore-6.2.0)** object to run under the context of that specific user.
+There are many cmdlets that take a **[PSCredential](https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.pscredential?view=pscore-6.2.0)** object to run under the context of that specific user.
 
 When running a script interactively this can easily be solved using similar syntax (using *SharePoint Online* cmdlets in the example)
 
