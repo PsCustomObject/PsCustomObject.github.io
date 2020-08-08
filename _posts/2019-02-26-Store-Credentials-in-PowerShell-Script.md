@@ -7,11 +7,11 @@ categories:
   - HowTo
 tags:
   - PowerShell
-  - Hash
   - PowerShell Core
   - Passwords
-  - PowerShell Arrays
-  - Dictionaries
+  - new-object system.management.automation.pscredential
+  - PowerShell create credential
+  - PowerShell store credentials in file
 ---
 
 ## Get-Credential

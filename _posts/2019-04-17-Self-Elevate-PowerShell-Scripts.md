@@ -1,5 +1,5 @@
 ---
-title: "Elevate PowerShell Script"
+title: "PowerShell run script as administrator"
 excerpt: "How to write a PowerShell script that will self elevate the session if it is not being run
 as administrator"
 categories:
@@ -10,6 +10,8 @@ tags:
   - PowerShell
   - Tips
   - Tutorials
+  - PowerShell elevate script
+  - PowerShell elevation
 ---
 
 ## Right-Click to elevate

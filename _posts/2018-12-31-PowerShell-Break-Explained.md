@@ -1,5 +1,5 @@
 ---
-title: "PowerShell break statement - Explained"
+title: "PowerShell break statement"
 excerpt: "An introduction to break statement in PowerShell and its usage"
 categories:
   - PowerShell
