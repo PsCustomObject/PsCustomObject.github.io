@@ -83,14 +83,14 @@ A little know fact is that *[Active Directory schema](https://docs.microsoft.com
 
 ```powershell
 # Define user DN
-[string]$ceoUser = 'CN=ceo\, user,OU=UsersDC=sds,DC=automation,DC=lab'
+[string]$ceoUser = 'CN=ceo\, user,OU=Users,DC=automation,DC=lab'
 
 
 # Define LDAP filter
 [string]$ldapFilter = '(manager:1.2.840.113556.1.4.1941:=$ceoUser)'
 
 # Same as above just with full DN declaration
-#[string]$ldapFilter = '(manager:1.2.840.113556.1.4.1941:=CN=ceo\, user,OU=UsersDC=sds,DC=automation,DC=lab)'
+#[string]$ldapFilter = '(manager:1.2.840.113556.1.4.1941:=CN=ceo\, user,OU=Users,DC=automation,DC=lab)'
 
 # Get report chain
 [array]$allUsers = Get-AdUser -LDAPFilter $ldapFilter
@@ -106,7 +106,7 @@ If for some reason the active directory module is not available on the machine w
 
 ```powershell
 # Define user DN
-[string]$ceoUser = 'CN=ceo\, user,OU=UsersDC=sds,DC=automation,DC=lab'
+[string]$ceoUser = 'CN=ceo\, user,OU=Users,DC=automation,DC=lab'
 
 
 # Define LDAP filter
@@ -127,7 +127,7 @@ There is much more to this accelerator but I'll leave exploration to the reader'
 CacheResults             : True
 ClientTimeout            : -00:00:01
 PropertyNamesOnly        : False
-Filter                   : (manager:1.2.840.113556.1.4.1941:=CN=ceo\, user,OU=UsersDC=sds,DC=automation,DC=lab)
+Filter                   : (manager:1.2.840.113556.1.4.1941:=CN=ceo\, user,OU=Users,DC=automation,DC=lab)
 PageSize                 : 200 # This is very important as if not set only fist 1000 results will be returned
 PropertiesToLoad         : {}
 ReferralChasing          : External
