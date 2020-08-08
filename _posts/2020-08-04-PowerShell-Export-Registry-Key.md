@@ -45,7 +45,8 @@ You can find the full function code in my [GitHub function repository](https://g
 # Export keys and remove any binary data
 Export-Registry -KeyPath $registryKey -ExportFormat xml -ExportPath 'C:\Temp\TestExport.xml' -NoBinaryData
 ```
-The above will check if the specified key exist via the **[Test-IsRegistryKey](https://github.com/PsCustomObject/PowerShell-Functions/blob/master/Test-IsRegistryKey.ps1)** helper function and once validated export the key in *XML* format. 
+
+The above will check if the specified key exist via the **[Test-IsRegistryKey](https://github.com/PsCustomObject/PowerShell-Functions/blob/master/Test-IsRegistryKey.ps1)** helper function and once validated export the key in *XML* format.
 
 Here's the sample export
 
