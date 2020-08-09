@@ -13,7 +13,7 @@ tags:
 header:
     teaser: "/assets/images/AD_Logo.png"
 
-    last_modified_at: 2020-08-09T18:54:02-06:00
+    last_modified_at: 2020-08-09T18:54:02-01:00
 ---
 
 ## The problem
