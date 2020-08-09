@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "PsCustomObject"
   avatar           : "/assets/images/pscustomobject.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I do automate stuff for fun and work. Some would say DevOps I prefer Systems Engineer who loves to code. I do PowerShell, C#, Python, HTML and sometimes JavaScript. I believe **C** is the best language out there and that code should always be clean and easy to read. Long time wet shaver as all good things take time."
+  bio              : "I do automate stuff for fun and work. Some would say DevOps I prefer Systems Engineer who loves to code. I speak PowerShell, C#, Python, Go(lang). I believe **C** is still one of the best languages out there even if it has been ages since I wrote anything in it, nowadays only use **Go** whenever I need something compiled or high performance. I strongly believe in clean and easy to read code leaving aliases and *shortcuts* for forums showoffs."
   location         : "PID 0"
   email            : "PsCustomObject@outlook.com"
   links:
