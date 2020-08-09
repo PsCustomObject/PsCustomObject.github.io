@@ -75,4 +75,4 @@ $True
 **Important:** Function has been written with Active Directory DN format in mind, which does not strictly adhere to LDAP standards, so function will not match DNs like *UID=jsmith,DC=example,DC=net* or *1.3.6.1.4.1.1466.0=#04024869,DC=example,DC=com* which are perfectly valid DNs.
 {: .notice--danger}
 
-As usual you can find code function in my **[PowerShell Functions Repository](https://github.com/PsCustomObject/PowerShell-Functions)** or in my **[Toolbox](https://github.com/PsCustomObject/IT-ToolBox)** module.
+As usual you can find code function in my **[PowerShell Functions Repository](https://github.com/PsCustomObject/PowerShell-Functions)** or in my **[IT-Toolbox](https://github.com/PsCustomObject/IT-ToolBox)** module.
