@@ -1,6 +1,6 @@
 ---
-title: "PowerShell - Get users reporting to manager"
-excerpt: "Subtitle - How do I get the full report chain for a specific manager from Active Directory"
+title: "PowerShell - Get Active Directory reports"
+excerpt: "In this article I'm sharing a function that will gets you all users directly or indirectly reporting to a specific manager"
 categories:
   - PowerShell
   - HowTo
@@ -13,8 +13,6 @@ tags:
 toc: false
 header:
     teaser: "/assets/images/AD_Logo.png"
-
-    last_modified_at: 2020-08-09T18:54:02-01:00
 ---
 
 In my post [PowerShell - Get users reporting to manager](https://pscustomobject.github.io/powershell/howto/identity%20management/Active-Directory-Get-Report-Chain/) I have described the different approaches we can use to get a list of users reporting, directly or inderectly, to a specific manager.
