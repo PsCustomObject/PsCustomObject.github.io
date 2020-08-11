@@ -1,5 +1,5 @@
 ---
-title: "PowerShell check if string is a distinguished name"
+title: "PowerShell - Check if string is a distinguished name"
 excerpt: "In this post we will explore how to use PowerShell and some regex magic to check if a string is a valid distinguishedName (DN)"
 categories:
   - PowerShell

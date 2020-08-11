@@ -1,6 +1,6 @@
 ---
-title: "Get all members of a group"
-excerpt: "In this article we are going to explore how to get all direct and indirect members of a specific group in Active Directory"
+title: "PowerShell - Get all members of a group recursively"
+excerpt: "In this article we are going to explore how we can use PowerShell to get all members of a group even if nested"
 categories:
   - PowerShell
   - HowTo
@@ -73,6 +73,6 @@ ObjectClass       : group
 ObjectGUID        : e715c1c2-d596-4fc4-975c-7e30ed9c2c8b
 ```
 
-Again this approach is lightning fast and can return thousand of results in couple of seconds making it a suitable candiate for larger deployments.
+Again this approach is lightning fast and can return thousand of results in couple of seconds making it a suitable candidate for larger deployments.
 
 As I did with [Get-ReportChain](https://pscustomobject.github.io/powershell/howto/identity%20management/PowerShell-Get-Users-Manager/) I will wrap this up as a function and make it available in my [IT-ToolBox module](https://github.com/PsCustomObject/IT-ToolBox)
