@@ -16,7 +16,7 @@ toc: true
 
 ## Get-ADGroupMember - Timeout limit was exceeded
 
-**Note:** [I have published an updated article providing a more performant approach to the issue with added benefit of returning results in a recurisive way](https://pscustomobject.github.io/powershell/howto/identity%20management/Get-User-Group-Membership/).
+**Note: [I have published an updated article providing a more performant approach to the issue with added benefit of returning results in a recurisive way]**(https://pscustomobject.github.io/powershell/howto/identity%20management/Get-User-Group-Membership/).
 {: .notice--danger}
 
 The *Get-ADGroupMember* cmdlet returns  the members of an Active Directory group. Members can be users, other groups or computers.
