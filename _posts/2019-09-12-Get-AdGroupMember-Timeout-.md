@@ -1,7 +1,7 @@
 ---
 title: "Get-ADGroupMember : The operation returned because the timeout limit was exceeded"
 excerpt: "When using Get-AdGroupMember cmdlet with a group with a large number of members the The operation returned because the timeout limit was exceeded error could be shown. Let's see how to solve this."
-last_modified_at: 2019-09-15T21:35:02-05:00
+last_modified_at: 2020-08-14T12:02:02-01:00
 categories:
   - PowerShell
   - PowerShell Tips
@@ -15,6 +15,9 @@ toc: true
 ---
 
 ## Get-ADGroupMember - Timeout limit was exceeded
+
+**Note:** [I have published an updated article providing a more performant approach to the issue with added benefit of returning results in a recurisive way](https://pscustomobject.github.io/powershell/howto/identity%20management/Get-User-Group-Membership/).
+{: .notice--danger}
 
 The *Get-ADGroupMember* cmdlet returns  the members of an Active Directory group. Members can be users, other groups or computers.
 

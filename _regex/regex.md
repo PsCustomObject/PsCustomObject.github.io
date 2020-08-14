@@ -7,6 +7,3 @@ There is a quote from [James Werner Zawinski](https://en.wikipedia.org/wiki/Jami
 > Some people, when confronted with a problem, think "I know, I'll use regular expressions." Now they have two problems.
 
 I cannot but agree with the above statement but also think *regular expression* (regex for short) are a powerful tool in the developer/sysadmin arsenal even if, I have to admit, every time I need to use them I go down the rabbit hole risking not to come out of it :-).
-
-
-
