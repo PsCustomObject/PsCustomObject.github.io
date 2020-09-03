@@ -67,8 +67,8 @@ ObjectClass       : user
 ObjectGUID        : e3153344-be4d-409f-afba-4569b36c9922
 
 DistinguishedName : CN=TestGroup,OU=Distribution Groups,DC=automation,DC=lab
-mail              : Den-IT-APAC-Operations@dhrdental.com
-Name              : DEN-IT-APAC-Operations
+mail              : GRoup1@automation.lab
+Name              : Group1
 ObjectClass       : group
 ObjectGUID        : e715c1c2-d596-4fc4-975c-7e30ed9c2c8b
 ```
