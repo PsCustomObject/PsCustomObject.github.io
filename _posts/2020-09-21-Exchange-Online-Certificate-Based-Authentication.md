@@ -93,7 +93,7 @@ Open *Certificate Manager* MMC console and under *Certificates Current User / Pe
 
 In the Azure Portal select *Certificates and Secretes* from the left blade and *Upload certificate* navigating to the path where the certificate has been expoted/stored
 
-![ExOV2 Certificate Authentication Certificate Upload](/assets/images/assets/images/Azure_Certificate_Upload.png)
+![ExOV2 Certificate Authentication Certificate Upload](/assets/images/Azure_Certificate_Upload.png)
 
 **Note:** Write down the certificate thumbprint displayed in the Azure page as we will need this later on.
 {: .notice--primary}
@@ -105,19 +105,19 @@ What we can do is granting a **[AzureAD Directory Role](https://docs.microsoft.c
 
 With the *Azure AD* blade selected go to **Roles and administrators** and select **Exchange Administrator** confirming with the *Add Assignment* button
 
-![ExOV2 Certificate Authentication Role Assignment](/assets/images/assets/images/Azure_Exchange_Admin_Role.png)
+![ExOV2 Certificate Authentication Role Assignment](/assets/images/Azure_Exchange_Admin_Role.png)
 
 In *Select Member* windows you will need to search application by GUID and select it
 
-![Application Role Assignment](/assets/images/assets/images/Azure_Exchange_Assignment.png)
+![Application Role Assignment](/assets/images/Azure_Exchange_Assignment.png)
 
 In the *Add Assignment* page be sure to select **Active** under *Assignment Type* and tick the **Permanently Assign** checkbox
 
-![Assignment Page](/assets/images/assets/images/Add_Assignment_Page.png)
+![Assignment Page](/assets/images/Add_Assignment_Page.png)
 
 Once configuration is complete you will see a page similar the following
 
-![Assignment Confirmation](/assets/images/assets/images/Azure_Assignment_Confirmation.png) where you can review applied configuration and make any required change.
+![Assignment Confirmation](/assets/images/Azure_Assignment_Confirmation.png) where you can review applied configuration and make any required change.
 
 ## Exchange Online Certificate Based authentication - Testing connection
 
@@ -137,7 +137,7 @@ Where *certThumbPrint* is the certificate thumbprint we created and uploaded to 
 
 And here's the result
 
-![Get Mailbox result](/assets/images/assets/images/Exchange_Get_Mailbox.png)
+![Get Mailbox result](/assets/images/Exchange_Get_Mailbox.png)
 
 ## Closing notes
 
