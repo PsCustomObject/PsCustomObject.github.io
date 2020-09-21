@@ -19,17 +19,17 @@ header:
     teaser: "/assets/images/ExchangeLogo.png"
 ---
 
-Microsoft released to GA the new version of *Exchange Online Management* module, version *2.0.3* at the time this article, which introces **Certificate Based Authencation** for PowerShell sessions. *Basic Authentication* has been already deprecated and originally planned for removal in *Ocober 2020* but due CoVid-19 outbreak this has been post-poned to 2021 as you can [read here](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508).
+Microsoft released to GA the new version of *Exchange Online Management* module, version *2.0.3* at the time this article, which introduces **Certificate Based Authentication** for PowerShell sessions. *Basic Authentication* has been already deprecated and originally planned for removal in *October 2020* but due CoVid-19 outbreak this has been postponed to 2021 as you can [read here](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508).
 
 I have been using the module preview in production for quite some time but held back publishing this article so to have all places in place as GA.
 
 ## Exchange Online Certificate Based authentication - Register Azure Application
 
-The first step to deploy Certificate Based authentication is to register a new *Azure Application*. Navigate *Azure Active Directory* in the Azure portal and select **App Registrations** (alternatively use the search function whcih is what I usually do)
+The first step to deploy Certificate Based authentication is to register a new *Azure Application*. Navigate *Azure Active Directory* in the Azure portal and select **App Registrations** (alternatively use the search function which is what I usually do)
 
 ![Azure Application Registration](/assets/images/Azure_Application_Registration_Blade.png)
 
-In the app registrations under *Owned applications* we can list all applications that we registered under our account, in my case this is still empty, and under *All applications* as the name implies all application registered tenant wide. 
+In the app registrations under *Owned applications* we can list all applications that we registered under our account, in my case this is still empty, and under *All applications* as the name implies all application registered tenant wide.
 
 ![Azure owned applications](/assets/images/Azure_Owned_Applications.png)
 
@@ -46,7 +46,7 @@ Once done click on the **Register** button, provision will only take a couple of
 
 ### Exchange Online Certificate Based authentication - Grant API Permissions
 
-Once the application has been registered we need to configre/grant API permissions that will define what our application can and cannot do. Either seelct *API Permissions* from the left blade or from the link directly below the API properties and select **Add permission**
+Once the application has been registered we need to configure/grant API permissions that will define what our application can and cannot do. Either select *API Permissions* from the left blade or from the link directly below the API properties and select **Add permission**
 
 ![ExOV2 Certificate Authentication Application](/assets/images/Configure_API_Permissions.png)
 
@@ -58,13 +58,13 @@ From the **Request API Permissions** scroll all the way down the *Supported Lega
 ![ExOV2 Certificate Authentication Application](/assets/images/Exchange_API_Permissions.png)
 ![ExOV2 Certificate Authentication Application](/assets/images/Exchange_API_Permissions._2.png)
 
-The last step invovles clicking the **Grant Admin Consent for <your tenant name>** so that permissions will be deployed for all mailboxes.
+The last step involves clicking the **Grant Admin Consent for <your tenant name>** so that permissions will be deployed for all mailboxes.
 
 ![ExOV2 Certificate Authentication Application](/assets/images/EXO_Grant_Admin_Consent.png)
 
 ## Exchange Online Certificate Based authentication - Configure Authentication
 
-With the application created configured in AzureAD we need to configure authentication against AzureAD. When using *[application permissions model](https://en.wikipedia.org/wiki/Application_permissions)* authenticaiton is performed via a **client secret**, a token, or a **certificate**. Token authentication is considered, rightly so, *less secure* for this reason only certificate one is supported by Exchange Online/Microsoft.
+With the application created configured in AzureAD we need to configure authentication against AzureAD. When using *[application permissions model](https://en.wikipedia.org/wiki/Application_permissions)* authentication is performed via a **client secret**, a token, or a **certificate**. Token authentication is considered, rightly so, *less secure* for this reason only certificate one is supported by Exchange Online/Microsoft.
 
 In the scope of Exchange OnLine authentication it is unimportant if we're using a self signed or publicly trusted certificate as long as **we have the associated private key**.
 
@@ -98,7 +98,7 @@ In the Azure Portal select *Certificates and Secretes* from the left blade and *
 **Note:** Write down the certificate thumbprint displayed in the Azure page as we will need this later on.
 {: .notice--primary}
 
-## Exchange Online Certificate Based authentication - Grant permissiosn
+## Exchange Online Certificate Based authentication - Grant permissions
 
 As I mentioned in the **Grant API Permissions** paragraph Graph API does not support any Exchange management operations nor we can use Exchange **RBAC** model as that only applies to user objects not applications, like in our case, which are represented by a **Service Principal**.
 What we can do is granting a **[AzureAD Directory Role](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#exchange-service-administrator-permissions)** to our application Service Principal.
@@ -141,6 +141,6 @@ And here's the result
 
 ## Closing notes
 
-This was quite a long post but steps to get up and running with Exchange Online Certificate based authentication are numerous even if not difficult to implemnt but well worth following. 
+This was quite a long post but steps to get up and running with Exchange Online Certificate based authentication are numerous even if not difficult to implement but well worth following.
 
 Certificate Based authentication resolves a number of challenges administrators had to face up to this point, chief among all [storing credentials](https://pscustomobject.github.io/powershell/howto/Store-Credentials-in-PowerShell-Script/) which is inherently insecure.
