@@ -55,12 +55,12 @@ From the **Request API Permissions** scroll all the way down the *Supported Lega
 **Note:** I will not go into much detail as much has already been written about this but Exchange does not natively support new *Graph* API that's why Exchange is listed under *Legacy API*.
 {: .notice--primary}
 
-![ExOV2 Certificate Authentication Application](/assets/images/assets/images/Exchange_API_Permissions.png)
-![ExOV2 Certificate Authentication Application](/assets/images/assets/images/Exchange_API_Permissions._2.png)
+![ExOV2 Certificate Authentication Application](/assets/images/Exchange_API_Permissions.png)
+![ExOV2 Certificate Authentication Application](/assets/images/Exchange_API_Permissions._2.png)
 
 The last step invovles clicking the **Grant Admin Consent for <your tenant name>** so that permissions will be deployed for all mailboxes.
 
-![ExOV2 Certificate Authentication Application](/assets/images/assets/images/EXO_Grant_Admin_Consent.png)
+![ExOV2 Certificate Authentication Application](/assets/images/EXO_Grant_Admin_Consent.png)
 
 ## Exchange Online Certificate Based authentication - Configure Authentication
 
