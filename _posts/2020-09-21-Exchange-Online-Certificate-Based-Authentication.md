@@ -77,7 +77,6 @@ From the **Request API Permissions** scroll all the way down the *Supported Lega
   <img src="/assets/images/Exchange_API_Permissions.png"></a>
 	<a href="https://pscustomobject.github.io//assets/images/Exchange_API_Permissions._2.png">
   <img src="/assets/images/Exchange_API_Permissions._2.png"></a>
-	<figcaption>API Permissions</figcaption>
 </figure>
 
 The last step involves clicking the **Grant Admin Consent for <your tenant name>** so that permissions will be deployed for all mailboxes.
