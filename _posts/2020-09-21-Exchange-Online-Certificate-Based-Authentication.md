@@ -27,6 +27,12 @@ I have been using the module preview in production for quite some time but held 
 
 The first step to deploy Certificate Based authentication is to register a new *Azure Application*. Navigate *Azure Active Directory* in the Azure portal and select **App Registrations** (alternatively use the search function which is what I usually do)
 
+Testing clickable images:
+
+<figure>
+<img src="/assets/images/Azure_Application_Registration_Blade.png"></a>
+</figure>
+
 ![Azure Application Registration](/assets/images/Azure_Application_Registration_Blade.png)
 
 In the app registrations under *Owned applications* we can list all applications that we registered under our account, in my case this is still empty, and under *All applications* as the name implies all application registered tenant wide.
