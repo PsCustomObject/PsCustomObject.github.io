@@ -30,23 +30,30 @@ The first step to deploy Certificate Based authentication is to register a new *
 Testing clickable images:
 
 <figure>
-<a href="https://pscustomobject.github.io/assets/images/Azure_Application_Registration_Blade.png">
-<img src="/assets/images/Azure_Application_Registration_Blade.png"></a>
+  <a href="https://pscustomobject.github.io/assets/images/Azure_Application_Registration_Blade.png">
+  <img src="/assets/images/Azure_Application_Registration_Blade.png"></a>
 </figure>
-
-![Azure Application Registration](/assets/images/Azure_Application_Registration_Blade.png)
 
 In the app registrations under *Owned applications* we can list all applications that we registered under our account, in my case this is still empty, and under *All applications* as the name implies all application registered tenant wide.
 
-![Azure owned applications](/assets/images/Azure_Owned_Applications.png)
+<figure>
+  <a href="https://pscustomobject.github.io/assets/images/Azure_Owned_Applications.png">
+  <img src="/assets/images/Azure_Owned_Applications.png"></a>
+</figure>
 
 Click on the **New Registration** and fill the various fields accordingly, unless you have specific needs all default values should suffice for most configurations/deployments. I am assuming a single tenant deployment in the following example
 
-![EXO Certificate Authentication Application](/assets/images/ExoV2_Registration.png)
+<figure>
+  <a href="https://pscustomobject.github.io/assets/images/ExoV2_Registration.png">
+  <img src="/assets/images/ExoV2_Registration.png"></a>
+</figure>
 
 Once done click on the **Register** button, provision will only take a couple of seconds.
 
-![EXO Certificate Authentication Application](/assets/images/Azure_Application_Registration_Summary.png)
+<figure>
+  <a href="https://pscustomobject.github.io/assets/images/Azure_Application_Registration_Summary.png">
+  <img src="/assets/images/Azure_Application_Registration_Summary.png"></a>
+</figure>
 
 **Note:** The only field really needed in the *Name* one just be sure to chose a descriptive name that is easy for you to remember.
 {: .notice--danger}
@@ -55,19 +62,30 @@ Once done click on the **Register** button, provision will only take a couple of
 
 Once the application has been registered we need to configure/grant API permissions that will define what our application can and cannot do. Either select *API Permissions* from the left blade or from the link directly below the API properties and select **Add permission**
 
-![ExOV2 Certificate Authentication Application](/assets/images/Configure_API_Permissions.png)
+<figure>
+  <a href="https://pscustomobject.github.io//assets/images/Configure_API_Permissions.png">
+  <img src="/assets/images/Configure_API_Permissions.png"></a>
+</figure>
 
 From the **Request API Permissions** scroll all the way down the *Supported Legacy APIs* and select **Exchange**, **Application Permissions** and finally tick **Exchange.ManageAsApp** under the *Exchange* section
 
 **Note:** I will not go into much detail as much has already been written about this but Exchange does not natively support new *Graph* API that's why Exchange is listed under *Legacy API*.
 {: .notice--primary}
 
-![ExOV2 Certificate Authentication Application](/assets/images/Exchange_API_Permissions.png)
-![ExOV2 Certificate Authentication Application](/assets/images/Exchange_API_Permissions._2.png)
+<figure class="half">
+	<a href="https://pscustomobject.github.io//assets/images/Exchange_API_Permissions.png">
+  <img src="/assets/images/Exchange_API_Permissions.png"></a>
+	<a href="https://pscustomobject.github.io//assets/images/Exchange_API_Permissions._2.png">
+  <img src="/assets/images/Exchange_API_Permissions._2.png"></a>
+	<figcaption>API Permissions</figcaption>
+</figure>
 
 The last step involves clicking the **Grant Admin Consent for <your tenant name>** so that permissions will be deployed for all mailboxes.
 
-![ExOV2 Certificate Authentication Application](/assets/images/EXO_Grant_Admin_Consent.png)
+<figure>
+  <a href="https://pscustomobject.github.io//assets/images/EXO_Grant_Admin_Consent.png">
+  <img src="/assets/images/EXO_Grant_Admin_Consent.png"></a>
+</figure>
 
 ## Exchange Online Certificate Based authentication - Configure Authentication
 
@@ -100,7 +118,10 @@ Open *Certificate Manager* MMC console and under *Certificates Current User / Pe
 
 In the Azure Portal select *Certificates and Secretes* from the left blade and *Upload certificate* navigating to the path where the certificate has been expoted/stored
 
-![ExOV2 Certificate Authentication Certificate Upload](/assets/images/Azure_Certificate_Upload.png)
+<figure>
+  <a href="https://pscustomobject.github.io//assets/images/Azure_Certificate_Upload.png">
+  <img src="/assets/images/Azure_Certificate_Upload.png"></a>
+</figure>
 
 **Note:** Write down the certificate thumbprint displayed in the Azure page as we will need this later on.
 {: .notice--primary}
@@ -112,19 +133,33 @@ What we can do is granting a **[AzureAD Directory Role](https://docs.microsoft.c
 
 With the *Azure AD* blade selected go to **Roles and administrators** and select **Exchange Administrator** confirming with the *Add Assignment* button
 
-![ExOV2 Certificate Authentication Role Assignment](/assets/images/Azure_Exchange_Admin_Role.png)
+<figure>
+  <a href="https://pscustomobject.github.io//assets/images/Azure_Exchange_Admin_Role.png">
+  <img src="/assets/images/Azure_Exchange_Admin_Role.png"></a>
+</figure>
 
 In *Select Member* windows you will need to search application by GUID and select it
 
-![Application Role Assignment](/assets/images/Azure_Exchange_Assignment.png)
+<figure>
+  <a href="https://pscustomobject.github.io//assets/images/Azure_Exchange_Assignment.png">
+  <img src="/assets/images/Azure_Exchange_Assignment.png"></a>
+</figure>
 
 In the *Add Assignment* page be sure to select **Active** under *Assignment Type* and tick the **Permanently Assign** checkbox
 
-![Assignment Page](/assets/images/Add_Assignment_Page.png)
+<figure>
+  <a href="https://pscustomobject.github.io//assets/images/Add_Assignment_Page.png">
+  <img src="/assets/images/Add_Assignment_Page.png"></a>
+</figure>
 
 Once configuration is complete you will see a page similar the following
 
-![Assignment Confirmation](/assets/images/Azure_Assignment_Confirmation.png) where you can review applied configuration and make any required change.
+<figure>
+  <a href="https://pscustomobject.github.io//assets/images/Azure_Assignment_Confirmation.png">
+  <img src="/assets/images/Azure_Assignment_Confirmation.png"></a>
+</figure>
+
+where you can review applied configuration and make any required change.
 
 ## Exchange Online Certificate Based authentication - Testing connection
 
@@ -144,7 +179,10 @@ Where *certThumbPrint* is the certificate thumbprint we created and uploaded to 
 
 And here's the result
 
-![Get Mailbox result](/assets/images/Exchange_Get_Mailbox.png)
+<figure>
+  <a href="https://pscustomobject.github.io//assets/images/Exchange_Get_Mailbox.png">
+  <img src="/assets/images/Exchange_Get_Mailbox.png"></a>
+</figure>
 
 ## Closing notes
 
