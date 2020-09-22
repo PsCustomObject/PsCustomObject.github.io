@@ -30,7 +30,8 @@ The first step to deploy Certificate Based authentication is to register a new *
 Testing clickable images:
 
 <figure>
-<img src="/assets/images/Azure_Application_Registration_Blade.png">
+<a href="https://pscustomobject.github.io/assets/images/Azure_Application_Registration_Blade.png">
+<img src="/assets/images/Azure_Application_Registration_Blade.png"></a>
 </figure>
 
 ![Azure Application Registration](/assets/images/Azure_Application_Registration_Blade.png)
