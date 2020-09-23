@@ -40,7 +40,7 @@ To create the *SecureString* object the following syntax is used
 Once the SecureString object has been created the *PSCredential* object can be created with the following syntax
 
 ```powershell
-[pscredential]$credOject = New-Object System.Management.Automation.PSCredential ($userName, $secStringPassword)
+[pscredential]$credObject = New-Object System.Management.Automation.PSCredential ($userName, $secStringPassword)
 ```
 
 The resultant *pscredential* object can be passed to any cmdlet requiring/using the **-PSCredential** parameter.
