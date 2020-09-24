@@ -2,13 +2,13 @@
 title: "Check if computer is connected to Domain Network"
 excerpt: "How to check if a computer is connected to the domain network"
 categories:
-
   - PowerShell
   - HowTo
 tags:
   - PowerShell
   - Domain Network
   - Tips
+  - How to check if computer is connected to domain
 ---
 
 ## Remote or Domain Network?
@@ -46,10 +46,10 @@ Putting all together this can easily be turned into a script similar the followi
 ```powershell
 try
 {
-    # Check if computer is connected to domain network
-	[void]::([System.DirectoryServices.ActiveDirectory.Domain]::GetComputerDomain())
-	
-	Write-Host 'Domain Network'
+  # Check if computer is connected to domain network
+  [void]::([System.DirectoryServices.ActiveDirectory.Domain]::GetComputerDomain())
+
+  Write-Host 'Domain Network'
 }
 catch
 {
