@@ -1,5 +1,5 @@
 ---
-title: "PowerShell Delete Files Older than a Number of Days"
+title: "PowerShell delete old files"
 excerpt: "Learn how you can use PowerShell to automatically delete files and folders older than a number of days"
 categories:
   - PowerShell

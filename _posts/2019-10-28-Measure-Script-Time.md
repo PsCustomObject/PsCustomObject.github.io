@@ -1,5 +1,5 @@
 ---
-title: "PowerShell - Measure Script execution time"
+title: "PowerShell Measure Script execution time"
 excerpt: "Learn how to measure execution time of PowerShell scripts and commands using different techniques and approaches"
 last_modified_at: 2019-11-01T17:27:48-05:00
 categories:
@@ -63,7 +63,7 @@ I use, *abuse* would be a better fit, the **Get-Date** cmdlet and measuring scri
 ```powershell
 [int]$startMs = (Get-Date).Millisecond
 
-0..10000 | ForEach-Object {$i++}
+0..10000 | ForEach-Object { $i++ }
 
 [int]$endMs = (Get-Date).Millisecond
 

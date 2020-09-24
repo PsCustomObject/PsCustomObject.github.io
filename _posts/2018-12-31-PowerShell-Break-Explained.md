@@ -3,7 +3,6 @@ title: "PowerShell break statement"
 excerpt: "An introduction to break statement in PowerShell and its usage"
 categories:
   - PowerShell
-  - Post Series - Statements
 tags:
   - PowerShell
   - PowerShell Basics
@@ -52,7 +51,7 @@ Write-Host 'This is outside the loop'
 
 The above code will start incrementing the *$myNumber* variable when it has  value of *10* the while loop will be stopped and the *This is outside the loop* line will be printed.
 
-The same can also be applied to a *foreach* loop like this: 
+The same can also be applied to a *foreach* loop like this:
 
 ```powershell
 # Users list from AD
