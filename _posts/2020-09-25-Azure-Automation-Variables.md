@@ -63,7 +63,15 @@ An unencrypted variable can be created in the Azure portal going to **[Automatio
 The same operation can be achieved via PowerShell assuming the **Az** module is installed on the system:
 
 ```powershell
-New-AzAutomationVariable -ResourceGroupName $azResourceGroup  –AutomationAccountName $azAccount –Name 'Test Variable' –Encrypted $false –Value 'Test Value'
+$paramNewAzAutomationVariable = @{
+    ResourceGroupName     = $azResourceGroup
+    AutomationAccountName = $azAccount
+    Name                  = 'Test Variable'
+    Encrypted             = $false
+    Value                 = 'Test Value'
+}
+
+New-AzAutomationVariable @paramNewAzAutomationVariable
 
 # Output
 Value                 : Test Value
@@ -90,7 +98,15 @@ As you can see values of the variable is visible both in the PowerShell output a
 Creation *encrypted* variables is identical in terms of steps in the console and via PowerShell simply requires us to specify the *-Encrypted $True* parameter.
 
 ```powershell
-New-AzAutomationVariable -ResourceGroupName $azResourceGroup  –AutomationAccountName $azAccount –Name 'Test Encrypted Variable' –Encrypted $true –Value 'Test Value'
+$paramNewAzAutomationVariable = @{
+    ResourceGroupName     = $azResourceGroup
+    AutomationAccountName = $azAccount
+    Name                  = 'Test Encrypted Variable'
+    Encrypted             = $true
+    Value                 = 'Test Value'
+}
+
+New-AzAutomationVariable @paramNewAzAutomationVariable
 
 # Output
 Value                 :
@@ -124,7 +140,15 @@ Now that we know how to create azure automation variables let's see how to work 
 Or from PowerShell
 
 ```powershell
-Set-AzAutomationVariable -ResourceGroupName $azResourceGroup -AutomationAccountName $azAccount -Name 'Test Variable' -Value 'Setting new value from PowerShell' -Encrypted $False
+$paramSetAzAutomationVariable = @{
+    ResourceGroupName     = $azResourceGroup
+    AutomationAccountName = $azAccount
+    Name                  = 'Test Variable'
+    Value                 = 'Setting new value from PowerShell'
+    Encrypted             = $False
+}
+
+Set-AzAutomationVariable @paramSetAzAutomationVariable
 
 Value                 : Setting new value from PowerShell
 Encrypted             : False
@@ -146,7 +170,15 @@ When working with an encrypted variable things will be slightly different. **Enc
 From PowerShell command will not be much different but, again, we will not get back the value from the cmdlet
 
 ```powershell
-Set-AzAutomationVariable -ResourceGroupName $azResourceGroup -AutomationAccountName $azAccount -Name 'Test Encrypted Variable' -Value 'Setting new value from PowerShell' -Encrypted $true
+$paramSetAzAutomationVariable = @{
+    ResourceGroupName     = $azResourceGroup
+    AutomationAccountName = $azAccount
+    Name                  = 'Test Encrypted Variable'
+    Value                 = 'Setting new value from PowerShell'
+    Encrypted             = $true
+}
+
+Set-AzAutomationVariable @paramSetAzAutomationVariable
 
 Value                 :
 Encrypted             : True
@@ -164,7 +196,7 @@ Up to this point we've seen how to create and update Azure Automation variables,
 *Az* module makes available a cmdlet for the purpose
 
 ```powershell
-PS C:\Users\Lethe> Get-AzAutomationVariable -ResourceGroupName $azureResourceGroup -AutomationAccountName $azureAccount -Name 'Test Variable'
+Get-AzAutomationVariable -ResourceGroupName $azureResourceGroup -AutomationAccountName $azureAccount -Name 'Test Variable'
 
 Value                 : Setting new value from PowerShell
 Encrypted             : False
