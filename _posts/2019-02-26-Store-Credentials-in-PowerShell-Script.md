@@ -142,4 +142,4 @@ In the article we have seen different approaches to store passwords in PowerShel
 
 Among the methods illustrated I find last one easier to implement as encrypted passwords can be centrally stored on a file and sourced from multiple scripts using the correct one for the application or service that script needs to connect to.
 
-All the code and used functions will be available in my GitHub account shortly and will be made part of my *IT-Toolbox* which will be released soon(tm).
+All the functions used in the post are available through my **[IT-ToolBox](https://github.com/PsCustomObject/IT-ToolBox)** module.
