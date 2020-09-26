@@ -123,7 +123,7 @@ Now that we know how to create azure automation variables let's see how to work 
 
 Or from PowerShell
 
-```PowerShell
+```powershell
 Set-AzAutomationVariable -ResourceGroupName $azResourceGroup -AutomationAccountName $azAccount -Name 'Test Variable' -Value 'Setting new value from PowerShell' -Encrypted $False
 
 Value                 : Setting new value from PowerShell
