@@ -69,7 +69,7 @@ Taking this a step further we can save the *secure string*  to a file that is th
 [SecureString]$secureString = $userPassword | ConvertTo-SecureString -AsPlainText -Force 
 
 # Get content of the string
-[string]$stringObject = Convert-FromSecureString
+[string]$stringObject = ConvertFrom-SecureString
 
 # Save Content to file
 $stringObject | Set-Content -Path 'C:\SomeDir\Secure.txt'
