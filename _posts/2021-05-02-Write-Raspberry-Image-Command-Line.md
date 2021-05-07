@@ -1,6 +1,6 @@
 ---
 title: "Write RaspBerry image to SD card via command line"
-excerpt: ""
+excerpt: "In this post we will explore how to use bash to write an OS image to an SD card for use with RaspBerryPI"
 categories:
   - Linux
   - Azure
@@ -9,7 +9,7 @@ tags:
   - Linux
   - Lab
 
-toc: true
+toc: false
 header:
     teaser: "/assets/images/Kubernetes_Logo.png"
 ---
