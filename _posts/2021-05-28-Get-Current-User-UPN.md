@@ -44,7 +44,7 @@ Issue is none of them will easily return the **UserPrincipalName** of the curren
 
 This can easily be achieved with the following command:
 
-```PowerShell
+```powershell
 ([ADSI]"LDAP://<SID=$([System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value)>").UserPrincipalName
 ```
 
