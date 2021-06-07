@@ -126,6 +126,11 @@ As you can see when creating an encrypted variable Value is *omitted* in the out
   <img src="/assets/images/Azure_Automation_Encrypted_Variable.png"></a>
 </figure>
 
+<figure>
+  <a href="https://pscustomobject.github.io//assets/images/Add_Application.png">
+  <img src="/assets/images/Add_Application.png"></a>
+</figure>
+
 This is the expected behavior as encrypted variables are *secured* with a unique key generated for each **automation account**. It goes alone encrypted variables are more secure in nature but it has to be kept in mind that, once created, azure automation variables have been created **values cannot be seen only updated**.
 
 ### Update and Retrieve Azure Automation variable values
