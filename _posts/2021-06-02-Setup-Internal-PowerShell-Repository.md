@@ -49,29 +49,29 @@ Once all requirements are in place open Visual Studio and  create a project usin
 Application name is not important just avoid *NuGet* as this would create a conflict with one of the *packages* we need to install as part of the dependencies, in my example I've used **NuGetRepository** but it can really be anything
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Application_Configuration.png">
-  <img src="/assets/images/NugetArticle/Application_Configuration.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Application_Configuration.png">
+  <img src="/assets/images/NugetArticle/Application_Configuration.png"></a>
 </figure>
 
 In the screen that will appear simply select the *Empty* template and then the *Create*  button
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Project_Configuration.png">
-  <img src="/assets/images/NugetArticle/Project_Configuration.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Project_Configuration.png">
+  <img src="/assets/images/NugetArticle/Project_Configuration.png"></a>
 </figure>
 
 Once project has finished loading/being created *right-click* on the project name in *solution explorer* and select **Manage NuGet Packages**
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Manage_NuGet_Package.png">
-  <img src="/assets/images/NugetArticle/Manage_NuGet_Package.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Manage_NuGet_Package.png">
+  <img src="/assets/images/NugetArticle/Manage_NuGet_Package.png"></a>
 </figure>
 
 In the *NuGetRepository* window select the *Broswe* tab and search for package **NuGet.Server** and click on the **Install** button.
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Install_NuGet_Component.png">
-  <img src="/assets/images/NugetArticle/Install_NuGet_Component.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Install_NuGet_Component.png">
+  <img src="/assets/images/NugetArticle/Install_NuGet_Component.png"></a>
 </figure>
 
 Keep I am using the latest stable release available at the time of this writing but you can select a different version of the package suiting your needs.
@@ -81,8 +81,8 @@ This step will take some time, depending on your connection speed, and a window 
 Once the installation step is complete I highly recommend to change the build type from *Debug*, default for new projects, to *Release* as this will disable all debug logging that is otherwise enabled for the solution.
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Set_Build_Type.png">
-  <img src="/assets/images/NugetArticle/Set_Build_Type.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Set_Build_Type.png">
+  <img src="/assets/images/NugetArticle/Set_Build_Type.png"></a>
 </figure>
 
 Once this is done go to *Build / Build Solution* menu, or press F6 if you're lazy like me, to *package* together all files making up the solution.
@@ -90,8 +90,8 @@ Once this is done go to *Build / Build Solution* menu, or press F6 if you're laz
 This will create a folder structure, under the path previously specified, containing all files required by the solution. Project path is visible in the **Properties** window under the *Project Folder* field
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Project_Path.png">
-  <img src="/assets/images/NugetArticle/Project_Path.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Project_Path.png">
+  <img src="/assets/images/NugetArticle/Project_Path.png"></a>
 </figure>
 
 **Note:** By default solution will be build under the  **C:\Users\username\source\repos\AppName\AppName\** path
