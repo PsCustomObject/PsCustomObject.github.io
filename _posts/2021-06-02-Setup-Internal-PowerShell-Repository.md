@@ -10,7 +10,8 @@ tags:
   - Tips
 
 toc: true
-
+header:
+    teaser: "/assets/images/PowerShell_Logo.png"
 ---
 
 ## PowerShell repositories
