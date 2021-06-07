@@ -94,7 +94,7 @@ This will create a folder structure, under the path previously specified, contai
   <img src="/assets/images/NugetArticle/Project_Path.png"></a>
 </figure>
 
-**Note:** By default solution will be build under the  **C:\Users\<username>\source\repos\<AppName>\<AppName>** path
+**Note:** By default solution will be build under the  **C:\Users\username\source\repos\AppName\AppName\** path
 
 ## Install required Server Components
 
