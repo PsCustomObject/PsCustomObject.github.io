@@ -42,8 +42,8 @@ Once all requirements are in place open Visual Studio and  create a project usin
 </figure>
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/VS_Web_Application.png">
-  <img src="/assets/images/NugetArticle/VS_Web_Application.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/VS_Web_Application.png">
+  <img src="/assets/images/NugetArticle/VS_Web_Application.png"></a>
 </figure>
 
 Application name is not important just avoid *NuGet* as this would create a conflict with one of the *packages* we need to install as part of the dependencies, in my example I've used **NuGetRepository** but it can really be anything
