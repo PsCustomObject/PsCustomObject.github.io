@@ -152,8 +152,8 @@ Comment out or delete one of the instances of **<compilation>** tag so that resu
 We can finally deploy the *NuGet* application to IIS to do so open **IIS Manager / Expand <Server Name> / Sites** right-click on Default Web Site and select **Add Application**
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Add_Application.png">
-  <img src="/assets/images/NugetArticle/Add_Application.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/Add_Application.png">
+  <img src="/assets/images/Add_Application.png"></a>
 </figure>
 
 In the window that appears provide a name (alias) for the application and specify the path where application files reside
