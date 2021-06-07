@@ -94,7 +94,7 @@ This will create a folder structure, under the path previously specified, contai
   <img src="/assets/images/NugetArticle/Project_Path.png"></a>
 </figure>
 
-**Note:** By default solution will be build under the  **C:\Users\username\source\repos\AppName\AppName\** path
+**Note:** By default solution will be build under the  C:\Users\username\source\repos\AppName\AppName\ path
 
 ## Install required Server Components
 
@@ -118,8 +118,8 @@ Once all components are in place copy the solution files to a directory on the s
 As a refrence here's how the content of my application folder looks like on my test server
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/IIS_Application.png">
-  <img src="/assets/images/NugetArticle/IIS_Application.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/IIS_Application.png">
+  <img src="/assets/images/NugetArticle/IIS_Application.png"></a>
 </figure>
 
 ### Update Web.Config configuration file
@@ -152,22 +152,22 @@ Comment out or delete one of the instances of **\<compilation\>** tag so that re
 We can finally deploy the *NuGet* application to IIS to do so open **IIS Manager / Expand <Server Name> / Sites** right-click on Default Web Site and select **Add Application**
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Add_Application.png">
-  <img src="/assets/images/Add_Application.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Add_Application.png">
+  <img src="/assets/images/NugetArticle/Add_Application.png"></a>
 </figure>
 
 In the window that appears provide a name (alias) for the application and specify the path where application files reside
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Application_Alias.png">
-  <img src="/assets/images/NugetArticle/Application_Alias.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Application_Alias.png">
+  <img src="/assets/images/NugetArticle/Application_Alias.png"></a>
 </figure>
 
 To test the configuration point your browser to **http://localhost/Nuget** which should yield the following page
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Nuget_Page.png">
-  <img src="/assets/images/NugetArticle/Nuget_Page.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Nuget_Page.png">
+  <img src="/assets/images/NugetArticle/Nuget_Page.png"></a>
 </figure>
 
 ### Configure Package Directory
