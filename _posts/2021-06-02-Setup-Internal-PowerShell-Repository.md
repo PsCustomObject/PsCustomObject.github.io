@@ -9,7 +9,7 @@ tags:
   - PowerShell
   - Tips
 
-toc: false
+toc: true
 header:
     teaser: "/assets/images/PowerShell_Logo.png"
 ---
@@ -60,7 +60,7 @@ In the screen that will appear simply select the *Empty* template and then the *
   <img src="/assets/images/NugetArticle/Project_Configuration.png"></a>
 </figure>
 
-Once project has finished loading/being created *right-click* on the project name in *solution explorer* and select **Manage NuGet Packages** 
+Once project has finished loading/being created *right-click* on the project name in *solution explorer* and select **Manage NuGet Packages**
 
 <figure>
   <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Manage_NuGet_Package.png">
@@ -87,14 +87,14 @@ Once the installation step is complete I highly recommend to change the build ty
 
 Once this is done go to *Build / Build Solution* menu, or press F6 if you're lazy like me, to *package* together all files making up the solution.
 
-This will create a folder structure, under the path previousely specified, containing all files required by the solution. Project path is visible in the **Properties** window under the *Project Folder* field
+This will create a folder structure, under the path previously specified, containing all files required by the solution. Project path is visible in the **Properties** window under the *Project Folder* field
 
 <figure>
   <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Project_Path.png">
   <img src="/assets/images/NugetArticle/Project_Path.png"></a>
 </figure>
 
-**Note:** By deffault solution will be build under the  **C:\Users\<username>\source\repos\<AppName>\<AppName>** path
+**Note:** By default solution will be build under the  **C:\Users\<username>\source\repos\<AppName>\<AppName>** path
 
 ## Install required Server Components
 
@@ -113,7 +113,7 @@ Install-WindowsFeature @paramInstallWindowsFeature
 Install-WindowsFeature Web-Server,Web-Net-Ext45,Web-Asp-Net45,Web-ISAPI-Filter,Web-ISAPI-Ext -IncludeManagementTools
 ```
 
-Once all components are in place copy the solution files to a directory on the server with the default being *C:\inetpub\wwwroot*. Path is not really impornt and could be anything you'd like, I will just sitck with the detault.
+Once all components are in place copy the solution files to a directory on the server with the default being *C:\inetpub\wwwroot*. Path is not really import and could be anything you'd like, I will just stick with the default.
 
 As a refrence here's how the content of my application folder looks like on my test server
 
@@ -124,7 +124,7 @@ As a refrence here's how the content of my application folder looks like on my t
 
 ### Update Web.Config configuration file
 
-The **web.config** file is located in the project root folder, assuming default path this will be *C:\inetpub\wwwroot\NuGetRepository*, open it with a text editor and under the **<system.web>** section you should see line similar the following (actual .Net Framework vrsion could vary)
+The **web.config** file is located in the project root folder, assuming default path this will be *C:\inetpub\wwwroot\NuGetRepository*, open it with a text editor and under the **<system.web>** section you should see line similar the following (actual .Net Framework version could vary)
 
 ```xml
   <system.web>
