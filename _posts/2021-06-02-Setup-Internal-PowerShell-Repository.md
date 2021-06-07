@@ -37,8 +37,8 @@ Here's what you will need to follow this article and setup your own PowerShell r
 Once all requirements are in place open Visual Studio and  create a project using the *ASP.Web Application (Visual C#)* template.
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/VS_Create_New_Project.png">
-  <img src="/assets/images/NugetArticle/VS_Create_New_Project.png"></a>
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/VS_Create_New_Project.png">
+  <img src="/assets/images/NugetArticle/VS_Create_New_Project.png"></a>
 </figure>
 
 <figure>
