@@ -32,50 +32,45 @@ Here's what you will need to follow this article and setup your own PowerShell r
 - The ASP.NET and web development workload installed [here's](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2019) a guide on how to modify an existing Visual Studio installation in case you don't have the appropriate workload installed already
 - A server running a supported copy of **Windows Server** I am using Windows 2019 but 2016 will do just fine
 
-<figure>
-  <a href="https://pscustomobject.github.io//assets/images/Azure_Automation_Unencrypted_Variable.png">
-  <img src="/assets/images/Azure_Automation_Unencrypted_Variable.png"></a>
-</figure>
-
 ## Create the Visual Studio Project
 
 Once all requirements are in place open Visual Studio and  create a project using the *ASP.Web Application (Visual C#)* template.
 
 <figure>
-  <a href="https://pscustomobject.github.io/assets/images/NugetArticle/VS_Create_New_Project.png">
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/VS_Create_New_Project.png">
   <img src="/assets/images/NugetArticle/VS_Create_New_Project.png"></a>
 </figure>
 
 <figure>
-  <a href="https://pscustomobject.github.io/assets/images/NugetArticle/VS_Web_Application.png">
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/VS_Web_Application.png">
   <img src="/assets/images/NugetArticle/VS_Web_Application.png"></a>
 </figure>
 
 Application name is not important just avoid *NuGet* as this would create a conflict with one of the *packages* we need to install as part of the dependencies, in my example I've used **NuGetRepository** but it can really be anything
 
 <figure>
-  <a href="https://pscustomobject.github.io/assets/images/NugetArticle/Application_Configuration.png">
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Application_Configuration.png">
   <img src="/assets/images/NugetArticle/Application_Configuration.png"></a>
 </figure>
 
 In the screen that will appear simply select the *Empty* template and then the *Create*  button
 
 <figure>
-  <a href="https://pscustomobject.github.io/assets/images/NugetArticle/Project_Configuration.png">
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Project_Configuration.png">
   <img src="/assets/images/NugetArticle/Project_Configuration.png"></a>
 </figure>
 
 Once project has finished loading/being created *right-click* on the project name in *solution explorer* and select **Manage NuGet Packages** 
 
 <figure>
-  <a href="https://pscustomobject.github.io/assets/images/NugetArticle/Manage_NuGet_Package.png">
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Manage_NuGet_Package.png">
   <img src="/assets/images/NugetArticle/Manage_NuGet_Package.png"></a>
 </figure>
 
 In the *NuGetRepository* window select the *Broswe* tab and search for package **NuGet.Server** and click on the **Install** button.
 
 <figure>
-  <a href="https://pscustomobject.github.io/assets/images/NugetArticle/Install_NuGet_Component.png">
+  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Install_NuGet_Component.png">
   <img src="/assets/images/NugetArticle/Install_NuGet_Component.png"></a>
 </figure>
 
