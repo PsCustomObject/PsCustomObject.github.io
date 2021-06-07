@@ -32,6 +32,11 @@ Here's what you will need to follow this article and setup your own PowerShell r
 - The ASP.NET and web development workload installed [here's](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2019) a guide on how to modify an existing Visual Studio installation in case you don't have the appropriate workload installed already
 - A server running a supported copy of **Windows Server** I am using Windows 2019 but 2016 will do just fine
 
+<figure>
+  <a href="https://pscustomobject.github.io//assets/images/Azure_Automation_Unencrypted_Variable.png">
+  <img src="/assets/images/Azure_Automation_Unencrypted_Variable.png"></a>
+</figure>
+
 ## Create the Visual Studio Project
 
 Once all requirements are in place open Visual Studio and  create a project using the *ASP.Web Application (Visual C#)* template.
