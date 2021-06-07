@@ -98,7 +98,7 @@ This will create a folder structure, under the path previously specified, contai
 
 ## Install required Server Components
 
-Once the solution has been build in Visual Studio move on the server that will be hosting the repository and launch the following cmdlet from an elevated PowerShell session to install reuqired *IIS* components
+Once the solution has been build in Visual Studio move on the server that will be hosting the repository and launch the following cmdlet from an elevated PowerShell session to install required *IIS* components
 
 ```powershell
 # Splatted version
@@ -124,7 +124,7 @@ As a refrence here's how the content of my application folder looks like on my t
 
 ### Update Web.Config configuration file
 
-The **web.config** file is located in the project root folder, assuming default path this will be *C:\inetpub\wwwroot\NuGetRepository*, open it with a text editor and under the **<system.web>** section you should see line similar the following (actual .Net Framework version could vary)
+The **web.config** file is located in the project root folder, assuming default path this will be *C:\inetpub\wwwroot\NuGetRepository*, open it with a text editor and under the **\<system.web\>** section you should see line similar the following (actual .Net Framework version could vary)
 
 ```xml
   <system.web>
@@ -135,7 +135,7 @@ The **web.config** file is located in the project root folder, assuming default 
   </system.web>
 ```
 
-Comment out or delete one of the instances of **<compilation>** tag so that resultant file will be similar the following
+Comment out or delete one of the instances of **\<compilation\>** tag so that resultant file will be similar the following
 
 ```xml
   <system.web>
@@ -184,7 +184,7 @@ In the default configuration packages are stored under the same path where the a
 
 ### Configure Repository API Key
 
-Up to this point the repository is ready and can be used to *download* apckages from it but if we need to *upload* data, in our example PowerShell modules, to it we would need some form of authentication which in NuGet is accomplished through an API key.
+Up to this point the repository is ready and can be used to *download* packages from it but if we need to *upload* data, in our example PowerShell modules, to it we would need some form of authentication which in NuGet is accomplished through an API key.
 
 First of all generate a unique API key, I generally use a GUID generated via *New-Guid* cmdlet, open the *web.config* file and update the **apiKey** value as in the following example
 
