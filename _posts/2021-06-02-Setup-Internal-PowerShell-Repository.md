@@ -32,6 +32,8 @@ Here's what you will need to follow this article and setup your own PowerShell r
 - The ASP.NET and web development workload installed [here's](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2019) a guide on how to modify an existing Visual Studio installation in case you don't have the appropriate workload installed already
 - A server running a supported copy of **Windows Server** I am using Windows 2019 but 2016 will do just fine
 
+**Note:** If you do not have or cannot install Visual Studio at the end of the post I have posted a link to my [GitHub Repository](https://github.com/PsCustomObject/Nuget-PowerShell-Repository/tree/main/NuGetRepository/NuGetRepository) 
+
 ## Create the Visual Studio Project
 
 Once all requirements are in place open Visual Studio and  create a project using the *ASP.Web Application (Visual C#)* template.
@@ -207,3 +209,12 @@ If you want to disable authentication all together you can simply set the **requ
 This guide should set you in the right path for configuring your own internal PowerShell module repository but this is just the tip of the iceberg.
 
 In the next articles I will explain how to register a repository and push modules to it.
+
+## GitHub Link
+
+I have created a GitHub repository where I've posted both the package and the full Visual Studio Solution so you can simply download the files and be up and running in no time.
+
+- [This is the direct link to the application files](https://github.com/PsCustomObject/Nuget-PowerShell-Repository/tree/main/NuGetRepository/NuGetRepository) that you can simply copy over to IIS
+- [This is the link to the base repository](https://github.com/PsCustomObject/Nuget-PowerShell-Repository) containing readme, changelog etc.
+
+I will keep this repository up to date when new versions of NuGet are released.
