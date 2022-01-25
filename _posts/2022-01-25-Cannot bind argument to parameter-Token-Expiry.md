@@ -49,7 +49,7 @@ It took me quite a bit to figure this out as no exception during the connection 
 When I was about to give up and open a ticket with Microsoft, which is usually as helpful as freezer in the North Pole, I discovered by chance that opening connection to Exchange Online **first** and **only afterwards** to the Exchange on-prem was working as intended, allowing me to interact with both the Online service and my local Exchange.
 
 **Note:** I have experienced/tested this with version 2.0.4 and 2.0.5 of Exchange Online PowerShell module but other versions could be affected as well.
-{: .notice—-warning}
+{: .notice--warning}
 
 I did not dig deep into the root cause of the issue but plan to do this tomorrow and already sent my feedback to exocmdletpreview {at} service {fullstop} microsoft {fullstop} com but I doubt I will hear anything from that channel. I plan to open a ticket anyhow to at least have an official statement on this.
 

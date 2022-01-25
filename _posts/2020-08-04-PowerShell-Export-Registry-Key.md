@@ -12,7 +12,7 @@ header:
     teaser: "/assets/images/WindowsRegistry.png"
 ---
 
-Window registry has been for many years the joy and pain of every Windows Systems Administrator and if memory does not fail me it was even part of some of the old NT4 exams (the sweet sting of nostalgia!)
+Window registry has been for many years the joy and pain of every Windows Systems Administrator and if memory does not fail me it was even part of some of the old NT4 exams (the sweet sting of nostalgia!).
 
 ![MCSE Windows NT](/assets/images/WindowsNTBook.jpg)
 

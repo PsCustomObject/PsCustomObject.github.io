@@ -200,7 +200,7 @@ function Get-ReportChain
 }
 ```
 
-Function accepts **SamAccountName**, **UserPrincipalName** or **DistinguishedName** of a user account and will reutrn an array containing all direct and indirect reports of the user.
+Function accepts **SamAccountName**, **UserPrincipalName** or **DistinguishedName** of a user account and will return an array containing all direct and indirect reports of the user.
 
 ```powershell
 # Get reports for user

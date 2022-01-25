@@ -11,7 +11,6 @@ tags:
   - PowerShell Timer
   - PowerShell StopWatch
   - StopWatch how-to
-  - PowerShell measure
   - PowerShell Execution Time
 ---
 
@@ -71,7 +70,7 @@ I use, *abuse* would be a better fit, the **Get-Date** cmdlet and measuring scri
 Write-Host $($startMs - $endMs)
 ```
 
-In the above example we initialize a variable containing begin of operation milliseconds, again have PowerShell count from 1 to 10000, set another variable at the end of the cycle and finally print out difference between the start and end time giving us elapsed milliseconds.
+In the above example we initialise a variable containing begin of operation milliseconds, again have PowerShell count from 1 to 10000, set another variable at the end of the cycle and finally print out difference between the start and end time giving us elapsed milliseconds.
 
 **Warning Notice:** I personally discourage, and never use myself, this approach for different reasons. *First* it makes code more difficult to read and generally **slower** due use of multiple variables and extra calculation. *Second* it poses problems with the elapsed time itself, what if the example above  would require 5 seconds to execute? Would it still work according to you?
 {: .notice--warning}

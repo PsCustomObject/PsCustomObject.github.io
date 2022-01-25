@@ -29,7 +29,7 @@ $adUsers = Get-AdUser -Filter '*' -Server $adDomainController
 
 The above will return an array of AD objects containing all users matching the used filter.
 
-Of course you can initialize an empty array with the following syntax
+Of course you can initialise an empty array with the following syntax
 
 ```powershell
 $myArray = @()
@@ -38,7 +38,7 @@ $myArray = @()
 [array]$myArray = @()
 ```
 
-The above will initialize an empty array that we can, for example, fill with an AD query or adding static elements like this
+The above will initialise an empty array that we can, for example, fill with an AD query or adding static elements like this
 
 ```powershell
 $myArray = (1,2,3,4,5)

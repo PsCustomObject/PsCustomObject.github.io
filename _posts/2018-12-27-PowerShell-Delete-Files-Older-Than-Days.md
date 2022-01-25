@@ -73,7 +73,7 @@ foreach ($file in $filesToPurge)
 }
 ```
 
-The above code has an issue though. Maybe no file in defined folder is older that the define time span period while this would not generate any error it is a good idea to add a small clause to our code like this:
+The above code has an issue though. Maybe no file in defined folder is older that the defined time span period while this would not generate any error it is a good idea to add a small clause to our code like this:
 
 ```powershell
 if ($filesToPurge.Count -gt 0)
@@ -108,7 +108,7 @@ There are probably more features that could make the script even more useful and
 
 I am developing something to accommodate the above requirements as it is something I do rather frequently, it is not quite ready yet but I will share as soon code has been written and tested.
 
-## Update January 5th 2019
+## Update January 5 2019
 
 I have released a complete solution to perform automatic cleanup of files in folders called **Remove-OldFiles.ps1** it does all that I described in the post in addition to support:
 

@@ -42,7 +42,7 @@ $firstString -eq $SecondString
 $true
 ```
 
-Most of the times this is not an issue but there are cases, for example when generating DisplayNames for users, where you want to *sanitize* the string so that it will use proper **Title Case**.
+Most of the times this is not an issue but there are cases, for example when generating DisplayNames for users, where you want to *sanitise* the string so that it will use proper **Title Case**.
 
 ## PowerShell convert string to Title Case
 
