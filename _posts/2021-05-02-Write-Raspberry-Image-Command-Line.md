@@ -16,7 +16,7 @@ header:
 
 I am in the process of rebuilding my *Docker/Kubernetes* portable cluster which I build using a couple of RaspberryPi 4 and as part of this I needed to *reflash* the various SD cards where operating system for each node is installed.
 
-Usually [Balena Etcher](https://www.balena.io/etcher/) is my go-to tool for such endeavors but being in a rush and not easy way to download the tool on my Linux box I simply used the good old command line, here is how this is done.
+Usually [Balena Etcher](https://www.balena.io/etcher/) is my go-to tool for such endeavours but being in a rush and not easy way to download the tool on my Linux box I simply used the good old command line, here is how this is done.
 
 First of all we need to locate the device mapped to our SD card, in my case I'm using a microSD to USB adapter, which can be done with the following command:
 

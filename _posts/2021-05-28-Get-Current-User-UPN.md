@@ -48,6 +48,6 @@ This can easily be achieved with the following command:
 ([ADSI]"LDAP://<SID=$([System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value)>").UserPrincipalName
 ```
 
-This command,despite not as user friendly as the other commands, will return the full UPN of the user for example **PsCustomObject@domain.com**.
+This command, despite not as user friendly as the other commands, will return the full UPN of the user for example **PsCustomObject@domain.com**.
 
 I encourage you to explore the other available methods and properties of the *[System.Security.Principal.WindowsIdentity]* [class](https://docs.microsoft.com/en-us/dotnet/api/system.security.principal.windowsidentity?view=net-5.0) as it can be really handy when trying to get details about the current user.

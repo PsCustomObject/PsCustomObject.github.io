@@ -18,7 +18,7 @@ header:
 
 ## Azure Automation Variables as Shared Resources
 
-Shared Resources in Azure Automation allow us to reuse credentials, modules, schedules, connections, certificates and **variables** which will be will be the main focus of this post.
+Shared Resources in Azure Automation allow us to reuse credentials, modules, schedules, connections, certificates and **variables** which will be will be the main focus of the post.
 
 To better understand the importance of shared resources and *variables in Azure Automation* let's go through a practical example. I have a runbook pulling data from a web service which requires to reference an API secret as part of the process to obtain an authentication token.
 
@@ -131,11 +131,11 @@ As you can see when creating an encrypted variable Value is *omitted* in the out
   <img src="/assets/images/Add_Application.png"></a>
 </figure>
 
-This is the expected behavior as encrypted variables are *secured* with a unique key generated for each **automation account**. It goes alone encrypted variables are more secure in nature but it has to be kept in mind that, once created, azure automation variables have been created **values cannot be seen only updated**.
+This is the expected behaviour as encrypted variables are *secured* with a unique key generated for each **automation account**. It goes alone encrypted variables are more secure in nature but it has to be kept in mind that, once created, azure automation variables have been created **values cannot be seen only updated**.
 
 ### Update and Retrieve Azure Automation variable values
 
-Now that we know how to create azure automation variables let's see how to work with them and update their values. Recall I had a typo in the unencrypted variable, trailing '[' character, let's fix that from the console
+Now that we know how to create azure automation variables lets see how to work with them and update their values. Recall I had a typo in the unencrypted variable, trailing '[' character, let's fix that from the console
 
 <figure>
   <a href="https://pscustomobject.github.io//assets/images/Azure_Automation_Update_Variable_Value.png">
@@ -195,7 +195,7 @@ LastModifiedTime      : 26.09.2020 19:14:46 +02:00
 Description
 ```
 
-## Getting Variable value
+## Getting Variable Values
 
 Up to this point we've seen how to create and update Azure Automation variables, let's explore how to get values for configured variables.
 *Az* module makes available a cmdlet for the purpose
@@ -216,7 +216,7 @@ Description           : Fixed typo in value
 **Note:** Omitting the *-Name* parameter will return all configured variables
 {: .notice--primary}
 
-As I mentioned it is not possible to retrieve values for encrypted variables as they're available within the runbook at runtime via the **Get-AutomationVariable** cmdlet. Using the *Test Encrypted Variable* as example I've created a small script that will show this behavior
+As I mentioned it is not possible to retrieve values for encrypted variables as they're available within the runbook at runtime via the **Get-AutomationVariable** cmdlet. Using the *Test Encrypted Variable* as example I've created a small script that will show this behaviour
 
 ```powershell
 $encryptedVariableValue = Get-AutomationVariable -Name 'Test Encrypted Variable'

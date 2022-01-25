@@ -55,7 +55,7 @@ Once done click on the **Register** button, provision will only take a couple of
   <img src="/assets/images/Azure_Application_Registration_Summary.png"></a>
 </figure>
 
-**Note:** The only field really needed in the *Name* one just be sure to chose a descriptive name that is easy for you to remember.
+**Note:** The only field really needed in the *Name* one just be sure to choose a descriptive name that is easy for you to remember.
 {: .notice--danger}
 
 ### Exchange Online Certificate Based authentication - Grant API Permissions
@@ -115,7 +115,7 @@ Thumbprint                                Subject
 
 Open *Certificate Manager* MMC console and under *Certificates Current User / Personal / Certificates* right-click on the certificate and select *All Tasks / Export*. Just follow the export wizard be sure to select *Do not export private key* and select **CER** as the export format.
 
-In the Azure Portal select *Certificates and Secretes* from the left blade and *Upload certificate* navigating to the path where the certificate has been expoted/stored
+In the Azure Portal select *Certificates and Secretes* from the left blade and *Upload certificate* navigating to the path where the certificate has been exported/stored
 
 <figure>
   <a href="https://pscustomobject.github.io//assets/images/Azure_Certificate_Upload.png">
@@ -158,7 +158,7 @@ Once configuration is complete you will see a page similar the following
   <img src="/assets/images/Azure_Assignment_Confirmation.png"></a>
 </figure>
 
-where you can review applied configuration and make any required change.
+Where you can review applied configuration and make any required change.
 
 ## Exchange Online Certificate Based authentication - Testing connection
 
