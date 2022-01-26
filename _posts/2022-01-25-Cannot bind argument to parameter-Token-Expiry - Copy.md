@@ -18,13 +18,13 @@ header:
 
 ## Exchange Online Certificate Based authentication
 
-Microsoft is, _finally_, disabling **basic authentication** (read username and password) in Exchange Online in favour of **Certificate Based authentication**.
+Microsoft is, _finally_, disabling **basic authentication** (read username and password) in Exchange Online in favor of **Certificate Based authentication**.
 
 Once this change is fully implemented, around mid February at least for some tenants, connecting via username and passwords to Exchange Online will not be possible anymore.
 
 You can read my article on how to implement _Certificate Based authentication_ for Exchange Online [here](https://pscustomobject.github.io/powershell/office365/exchange/Exchange-Online-Certificate-Based-Authentication/).
 
-As a result of this change I started updating one of our automations, responsible for the whole lifecycle of our mailboxes, to ditch old credential objects in favour of the more secure Certificate Authentication.
+As a result of this change I started updating one of our automations, responsible for the whole life-cycle of our mailboxes, to ditch old credential objects in favor of the more secure Certificate Authentication.
 
 This is when I encountered the _‌cannot bind argument to parameter 'token expiry time' because it is null._ error message.
 
