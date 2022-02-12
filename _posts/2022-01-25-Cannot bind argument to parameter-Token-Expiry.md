@@ -26,15 +26,15 @@ You can read my article on how to implement _Certificate Based authentication_ f
 
 As a result of this change I started updating one of our automations, responsible for the whole life-cycle of our mailboxes, to ditch old credential objects in favor of the more secure Certificate Authentication.
 
-This is when I encountered the _‌cannot bind argument to parameter 'token expiry time' because it is null._ error message.
+This is when I encountered the _cannot bind argument to parameter 'token expiry time' because it is null._ error message.
 
 ## Multiple PowerShell Exchange Sessions
 
-When operating an hybrid environment it is pretty common to open, in the same window/session, a PowerShell connection to both Exchange on-prem and Exchange online.
+When operating an hybrid environment it is pretty common to open, in the same window/session, a PowerShell connection to both Exchange on-prem and Exchange Online.
 
-This is required as part of the configuration, usually creation of the mailbox, takes place in on-prem for example via the _New-RemoteMailbox_ cmdlet while other parts of the configuration are performed directly online.
+This is required as part of the configuration, usually creation of the mailbox, takes place in on-prem for example via the _New-RemoteMailbox_ cmdlet while other parts of the configuration are performed directly online for example when delegating mailbox permissions. 
 
-This morning while debugging my workflow I’ve noticed that while trying to retrieve mailbox information from the on-prem server an exception was being thrown
+While debugging my workflow I have noticed that, while trying to retreive mailbox information from the on-prem server, an exception was being thrown
 
 ```powershell
 # Cmdlet I was running
@@ -44,13 +44,14 @@ Get-RemoteMailbox -Identity $userUpn
 Cannot bind argument to parameter 'token expiry time' because it is null.
 ```
 
-It took me quite a bit to figure this out as no exception during the connection phase was being thrown by either module.
+It took me a bit to figure this out as no exception was thrown during the connection *phase* either nor there was any other obvious pointer.
 
-When I was about to give up and open a ticket with Microsoft, which is usually as helpful as freezer in the North Pole, I discovered by chance that opening connection to Exchange Online **first** and **only afterwards** to the Exchange on-prem was working as intended, allowing me to interact with both the Online service and my local Exchange.
+When I was about to give up and open a ticket with Microsoft, which is usually as helpful as freezer in the North Pole, I discovered that establishing a connection to Exchange Online followed by a connection to the on-prem server was yielding the desired result. In my workflow I had this the other way around, first local Exchange and then Online service, which was causing the issue.
 
 **Note:** I have experienced/tested this with version 2.0.4 and 2.0.5 of Exchange Online PowerShell module but other versions could be affected as well.
 {: .notice--warning}
 
-I did not dig deep into the root cause of the issue but plan to do this tomorrow and already sent my feedback to exocmdletpreview {at} service {fullstop} microsoft {fullstop} com but I doubt I will hear anything from that channel. I plan to open a ticket anyhow to at least have an official statement on this.
+I did not dig deep into the root cause of the issue but plan to do this tomorrow and already sent my feedback to exocmdletpreview {at} service {dot} microsoft {dot} com but I doubt I will hear anything from that channel. 
+I will anyhow open a ticket with support to at least have an official statement/clarification on this.
 
 As soon as I have any news I will update the post until then I hope you can find the information useful.
