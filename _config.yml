@@ -107,7 +107,6 @@ author:
   name             : "PsCustomObject"
   avatar           : "/assets/images/pscustomobject.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I’m a Systems Engineer with a passion for automation, turning complex tasks into streamlined processes both for work and fun.\nSome might call it DevOps; I call it doing what I love. Fluent in PowerShell, C#, Python, and Go(lang), I also have a nostalgic appreciation for **C**.\nNowadays, **Go** is my go-to for high-performance needs. I pride myself on hand-crafting every line of code—no AI shortcuts here!\nJoin me in my journey, where clean, readable code is the norm, and automation is an art form."
-"
 
   location         : "PID 0"
   email            : "PsCustomObject@outlook.com"
