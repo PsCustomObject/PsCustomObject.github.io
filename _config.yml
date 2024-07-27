@@ -106,7 +106,8 @@ analytics:
 author:
   name             : "PsCustomObject"
   avatar           : "/assets/images/pscustomobject.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I'm a Systems Engineer with a passion for automation, turning complex tasks into streamlined processes both for work and fun.\nSome might call it DevOps; I call it doing what I love. \nFluent in PowerShell, C#, Python, and Go(lang), I also have a nostalgic appreciation for C. \nNowadays, Go is my go-to for high-performance needs. \nI pride myself on hand-crafting every line of code—no AI shortcuts here! \nJoin me in my journey, where clean, readable code is the norm, and automation is an art form."
+  bio              : "I’m a Systems Engineer with a passion for automation, turning complex tasks into streamlined processes both for work and fun.\nWhile some might call it DevOps, I simply love to code. Fluent in PowerShell, C#, Python, and Go(lang), I also have a soft spot for **C**, even though it's been a while since I last wrote in it.\nNowadays, **Go** is my go-to for anything that needs to be compiled or demands high performance.\n\nI’m a firm believer in writing clean, readable code—leaving the aliases and shortcuts for those who enjoy showing off. Here, you'll find hand-crafted code—no AI-generated shortcuts—because I take pride in writing every line myself.\nJoin me as I share my journey and tips on making automation work for you!"
+"
 "
 
   location         : "PID 0"
