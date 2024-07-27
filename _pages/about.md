@@ -67,6 +67,8 @@ Comment, write me an e-mail, open an issue report or a PR anything will do!
 
 To support meaningful causes, this site does run advertisements. However, I want you to know that all earnings from these ads are dedicated to charitable organizations.
 
-I personally support groups such as Doctors Without Borders and associations that aid children and individuals with autism—causes that are very close to my heart.
+I personally support groups such as *Doctors Without Borders* and associations that aid children and individuals with autism, causes that are very close to my heart.
 
-By visiting this site, you're already contributing to these important efforts, and I'm deeply grateful for your support. If you're able, please consider whitelisting this site to help me continue supporting these meaningful causes.
+By visiting this site, you're already contributing to these important efforts, and I'm deeply grateful for your support.
+
+If you're able, please consider whitelisting this site to help me continue supporting these meaningful causes.
