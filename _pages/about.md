@@ -47,13 +47,11 @@ Each piece of code is not just theoretical—it's tested and proven in productio
 
 I believe in *eating my own dog food*, so you can trust that the solutions provided are practical and battle-tested.
 
-## Join the Community
+## Stay in touch
 
 I invite you to explore the content, engage with the community, and share your own experiences. Let's collaborate and continue pushing the boundaries of what automation can achieve.
 
 Thank you for visiting my site. I'm excited to share this journey with you and help you navigate the ever-evolving world of IT automation!
-
-## Stay in touch
 
 Comment, write me an e-mail, open an issue report or a PR anything will do!
 
@@ -63,4 +61,4 @@ To support meaningful causes, this site does run advertisements. However, I want
 
 I personally support groups such as Doctors Without Borders and associations that aid children and individuals with autism—causes that are very close to my heart.
 
-By visiting this site, you’re contributing to these important efforts, and for that, I’m deeply grateful if you could consider disabling your AD Blocker.
+By visiting this site, you're contributing to these important efforts, and for that, I'm deeply grateful if you could consider disabling your AD Blocker.
