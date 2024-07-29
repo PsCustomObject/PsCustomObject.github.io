@@ -271,7 +271,6 @@ function Get-UniqueUPN
     
     while (Test-UPNExist -UPN $uniqueUPN -Server $ADServer)
     {
-        
         $uniqueUPN = '{0}{1}@{2}' -f ($baseUPN.Split('@')[0]), $counter, $UPNSuffix
         
         $counter++
@@ -291,8 +290,6 @@ Here's a summary explanation of the parameters:
   - *$UPNSuffix* - A string representing the domain suffix for the UPN
   - *FirstNameFormat* - The format of the first name in the UPN (e.g. Full or First letter of name)
   - *IncludeMiddleName* - Switch parameter indicating to cmdlet if Middle Name should be used or not in the UPN generation
-  - *DuplicateSuffix* - By default if a duplicate is found a progressive number is added to the UPN, using this paramter you can specify a *custom* character to use
-  - *CustomDuplicateSuffix* - Allows us to specify the custom suffix for duplicates
   - *$Server* - A string representing the name of the  LDAP server to query. Parameter is optional and if omitted function will automatically select the closest global catalog server
   - *$Separator* - The separator to use between the name parts. If not specified a '.' (dot) is used
 
