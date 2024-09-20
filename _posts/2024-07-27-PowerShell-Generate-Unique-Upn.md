@@ -1,6 +1,6 @@
 ---
 title: "PowerShell - Generate Unique UPN"
-excerpt: "In this short I will share two new cmdlets I have developed to generate forest wide unique UPN handling the different edge cases."
+excerpt: "In this short post I will share two new cmdlets I have developed to generate forest wide unique UPN handling the different edge cases."
 categories:
   - PowerShell
   - Howto
