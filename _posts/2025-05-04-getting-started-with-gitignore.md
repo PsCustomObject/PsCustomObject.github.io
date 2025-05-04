@@ -33,7 +33,7 @@ To create a `.gitignore` file:
 
 Example:
 
-```gitignore
+```bash
 # Ignore node_modules directory
 node_modules/
 
