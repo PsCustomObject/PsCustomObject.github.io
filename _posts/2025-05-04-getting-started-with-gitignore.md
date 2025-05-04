@@ -27,23 +27,7 @@ To create a `.gitignore` file:
 
    ```bash
    touch .gitignore
-
     ```
-
-3. Open the file in your preferred text editor and add patterns for files/directories to ignore.
-
-Example:
-
-```gitignore
-# Ignore node_modules directory
-node_modules/
-
-# Ignore all .log files
-*.log
-
-# Ignore build output
-dist/
-```
 
 3. Open the file in your preferred text editor and add patterns for files/directories to ignore.
 
