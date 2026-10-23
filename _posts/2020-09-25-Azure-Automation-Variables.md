@@ -22,7 +22,7 @@ Shared Resources in Azure Automation allow us to reuse credentials, modules, sch
 
 To better understand the importance of shared resources and *variables in Azure Automation* let's go through a practical example. I have a runbook pulling data from a web service which requires to reference an API secret as part of the process to obtain an authentication token.
 
-When running the script through a scheduled task or through on-prem System Center Orchestrator you would either need to store the key in plain text in the script itself or use methods described in my post *[Store Credentials in PowerShell Script](https://pscustomobject.github.io/powershell/howto/Store-Credentials-in-PowerShell-Script/)*
+When running the script through a scheduled task or through on-prem System Center Orchestrator you would either need to store the key in plain text in the script itself or use methods described in my post *[Store Credentials in PowerShell Script](https://singularvector.github.io/powershell/howto/Store-Credentials-in-PowerShell-Script/)*
 
 ```powershell
 # Plain text
@@ -53,7 +53,7 @@ As the name implies an *unencrypted* variables are stored in Azure with their va
 An unencrypted variable can be created in the Azure portal going to **[Automation Account] / [Shared Resources] / [Variables]** and selecting **Add Variable** being sure to select *No* under the **Encrypted** section.
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Azure_Automation_Unencrypted_Variable.png">
+  <a href="https://singularvector.github.io//assets/images/Azure_Automation_Unencrypted_Variable.png">
   <img src="/assets/images/Azure_Automation_Unencrypted_Variable.png"></a>
 </figure>
 
@@ -87,7 +87,7 @@ Description           :
 Once variable has been created it will be visible in the console:
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Azure-Automatin-Unencrypted-Variables-Console.png">
+  <a href="https://singularvector.github.io//assets/images/Azure-Automatin-Unencrypted-Variables-Console.png">
   <img src="/assets/images/Azure-Automatin-Unencrypted-Variables-Console.png"></a>
 </figure>
 
@@ -122,12 +122,12 @@ Description           :
 As you can see when creating an encrypted variable Value is *omitted* in the output, in the *variables* blade it will be displayed like this
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Azure_Automation_Encrypted_Variable.png">
+  <a href="https://singularvector.github.io//assets/images/Azure_Automation_Encrypted_Variable.png">
   <img src="/assets/images/Azure_Automation_Encrypted_Variable.png"></a>
 </figure>
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Add_Application.png">
+  <a href="https://singularvector.github.io//assets/images/Add_Application.png">
   <img src="/assets/images/Add_Application.png"></a>
 </figure>
 
@@ -138,7 +138,7 @@ This is the expected behaviour as encrypted variables are *secured* with a uniqu
 Now that we know how to create azure automation variables let’s see how to work with them and update their values. Recall I had a typo in the unencrypted variable, trailing '[' character, let's fix that from the console
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Azure_Automation_Update_Variable_Value.png">
+  <a href="https://singularvector.github.io//assets/images/Azure_Automation_Update_Variable_Value.png">
   <img src="/assets/images/Azure_Automation_Update_Variable_Value.png"></a>
 </figure>
 
@@ -168,7 +168,7 @@ Description           : Fixed typo in value
 When working with an encrypted variable things will be slightly different. **Encrypted variables can only have their value updated but never shown** to do so simply click the *Edit value* button and then save it
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Azure_Automation_Update_Encrypted_Variable.png">
+  <a href="https://singularvector.github.io//assets/images/Azure_Automation_Update_Encrypted_Variable.png">
   <img src="/assets/images/Azure_Automation_Update_Encrypted_Variable.png"></a>
 </figure>
 
@@ -227,7 +227,7 @@ Write-output "The encrypted variable value is: $encryptedVariableValue"
 And here the result from Azure Automation test pane:
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Azure_Automation_Encrypted_Variable_Runbook.png">
+  <a href="https://singularvector.github.io//assets/images/Azure_Automation_Encrypted_Variable_Runbook.png">
   <img src="/assets/images/Azure_Automation_Encrypted_Variable_Runbook.png"></a>
 </figure>
 

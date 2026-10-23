@@ -214,7 +214,7 @@ $anotherArray
 500
 ```
 
-**Note:** I wrote a detailed explanation of what happens when using the above notation in my previous article [Add or remove elements from an array](https://pscustomobject.github.io/powershell/Add-Remove-Items-From-Array/). In a nutshell PowerShell is creating a copy of the array and copying all values and adding the one we specified.
+**Note:** I wrote a detailed explanation of what happens when using the above notation in my previous article [Add or remove elements from an array](https://singularvector.github.io/powershell/Add-Remove-Items-From-Array/). In a nutshell PowerShell is creating a copy of the array and copying all values and adding the one we specified.
 
 ### Remove Elements in an Array
 

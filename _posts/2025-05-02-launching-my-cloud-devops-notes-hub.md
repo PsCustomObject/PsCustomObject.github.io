@@ -17,7 +17,7 @@ toc: false
 
 Cloud infrastructure and infrastructure as code are part of my wider systems engineering work. This companion notebook brings together technical references, study plans and hands-on experiments, building on more than 20 years across Windows, Linux, identity and automation.
 
-🎉 **It's live here**: [Terraforming My Career](https://pscustomobject.github.io/terraforming-my-career/)
+🎉 **It's live here**: [Terraforming My Career](https://singularvector.github.io/terraforming-my-career/)
 
 ---
 
@@ -47,4 +47,4 @@ Over time, this space will grow into a personal knowledge base and lab journal �
 ---
 
 💡 _Want to build something similar?_
-Check out the [GitHub repo](https://github.com/PsCustomObject/terraforming-my-career), fork it, and feel free to reach out.
+Check out the [GitHub repo](https://github.com/SingularVector/terraforming-my-career), fork it, and feel free to reach out.

@@ -13,10 +13,10 @@ tags:
 
 ## PSBoundParameters Automatic variable
 
-Automatic variable *PSBoundParameters* is a special [hashtable](https://pscustomobject.github.io/powershell/PowerShell-HashTables/) containing all parameters that are passed to a script or a **function**.
+Automatic variable *PSBoundParameters* is a special [hashtable](https://singularvector.github.io/powershell/PowerShell-HashTables/) containing all parameters that are passed to a script or a **function**.
 
 *PSBoundParameters* can be used to call a subordinate function or cmdlet passing the same parameters.
-PowerShell will automatically [splat](https://pscustomobject.github.io/powershell%20tips/PowerShell-Command-Splatting/) the hashtable's values instead of having to type each of the parameters individually.
+PowerShell will automatically [splat](https://singularvector.github.io/powershell%20tips/PowerShell-Command-Splatting/) the hashtable's values instead of having to type each of the parameters individually.
 
 ## Get function parameters - The bad way
 

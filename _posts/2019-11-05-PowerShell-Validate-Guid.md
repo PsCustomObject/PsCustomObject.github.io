@@ -29,7 +29,7 @@ a3fc3a10-705b-4177-88e1-d9e2f55ec98f
 
 The above will both generate a valid GUID but when we need to validate input is in the correct format there is no equivalent reason for which I wrote a small function named **Test-IsGuid** which will return *True* is input string is a valid GUID or *False* in case it is not.
 
-You can find the function code in my [function repository](https://github.com/PsCustomObject/PowerShell-Functions) and here for reference:
+You can find the function code in my [function repository](https://github.com/SingularVector/PowerShell-Functions) and here for reference:
 
 ```powershell
 function Test-IsGuid

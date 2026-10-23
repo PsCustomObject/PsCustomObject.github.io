@@ -68,11 +68,11 @@ The protection described here must not be assumed on Linux or macOS. Microsoft d
 
 ## Use an Encrypted String in Script
 
-My **[IT-ToolBox](https://github.com/PsCustomObject/IT-ToolBox)** module provides `New-StringEncryption` and `New-StringDecryption`. I adapted the original helpers from code credited to the TechNet Gallery in the 2019 version of this article. The module has since evolved; the current functions retain their names but use a different interface and ciphertext format.
+My **[IT-ToolBox](https://github.com/SingularVector/IT-ToolBox)** module provides `New-StringEncryption` and `New-StringDecryption`. I adapted the original helpers from code credited to the TechNet Gallery in the 2019 version of this article. The module has since evolved; the current functions retain their names but use a different interface and ciphertext format.
 
 ### IT-ToolBox 3.0: explicit passphrase and authenticated encryption
 
-This example targets **IT-ToolBox 3.0.0**, whose manifest requires **PowerShell 7.4 or later**, on a platform with .NET AES-GCM support. Use the [module’s setup instructions and string-encryption documentation](https://github.com/PsCustomObject/IT-ToolBox#string-encryption) rather than assuming an older installed copy has the same behaviour.
+This example targets **IT-ToolBox 3.0.0**, whose manifest requires **PowerShell 7.4 or later**, on a platform with .NET AES-GCM support. Use the [module’s setup instructions and string-encryption documentation](https://github.com/SingularVector/IT-ToolBox#string-encryption) rather than assuming an older installed copy has the same behaviour.
 
 ```powershell
 Import-Module IT-ToolBox -RequiredVersion 3.0.0
@@ -87,13 +87,13 @@ $decryptedValue = New-StringDecryption -EncryptedString $encryptedValue `
     -EncryptPassPhrase $encryptionPassphrase
 ```
 
-The current implementation uses AES-256-GCM, a fresh random salt and nonce, and PBKDF2-HMAC-SHA256 with 600,000 iterations. Its output begins with `ITTB1.`. Decryption rejects an incorrect passphrase or modified authenticated payload instead of returning plaintext. These details were checked against [the module source at commit 5ea85e4](https://github.com/PsCustomObject/IT-ToolBox/tree/5ea85e41a0672847e70716342651af52179ac649).
+The current implementation uses AES-256-GCM, a fresh random salt and nonce, and PBKDF2-HMAC-SHA256 with 600,000 iterations. Its output begins with `ITTB1.`. Decryption rejects an incorrect passphrase or modified authenticated payload instead of returning plaintext. These details were checked against [the module source at commit 5ea85e4](https://github.com/SingularVector/IT-ToolBox/tree/5ea85e41a0672847e70716342651af52179ac649).
 
 This is string encryption, not an identity-bound secret vault. Anyone with the ciphertext and correct passphrase can decrypt it on a compatible host. Do not put the passphrase alongside the ciphertext in source code. Input, passphrase and decrypted output are managed strings; they cannot be reliably erased from memory. If a destination requires `PSCredential`, converting decrypted text to `SecureString` does not undo that plaintext exposure.
 
 ### Historical calls and migration
 
-The original article’s call without `-EncryptPassPhrase` belongs to the historical implementation, not version 3.0. The [legacy functions](https://github.com/PsCustomObject/IT-ToolBox/tree/5ea85e41a0672847e70716342651af52179ac649/Legacy) defaulted the passphrase and salt to the computer name and used a fixed default vector. This explains the original machine-name dependency, but it was not an enforced restriction to the originating machine: reproducing those inputs could reproduce the key elsewhere.
+The original article’s call without `-EncryptPassPhrase` belongs to the historical implementation, not version 3.0. The [legacy functions](https://github.com/SingularVector/IT-ToolBox/tree/5ea85e41a0672847e70716342651af52179ac649/Legacy) defaulted the passphrase and salt to the computer name and used a fixed default vector. This explains the original machine-name dependency, but it was not an enforced restriction to the originating machine: reproducing those inputs could reproduce the key elsewhere.
 
 Version 3.0 requires an explicit passphrase and generates salt and nonce internally. Its decoder deliberately rejects historical ciphertext. Follow the module’s **Legacy migration** instructions in a separate session: recover existing data with the original implementation and original inputs, then re-encrypt it with the modern function. Preserve the original ciphertext until recovery and migration have been verified. Legacy ciphertext does not authenticate its contents.
 
@@ -101,7 +101,7 @@ Version 3.0 requires an explicit passphrase and generates salt and nonce interna
 
 For a secret store integration, review authentication, auditability, rotation and the capabilities of the vault provider. PowerShell [SecretManagement](https://learn.microsoft.com/en-us/powershell/utility-modules/secretmanagement/overview) provides a vault abstraction; Microsoft now describes those modules as feature complete, maintained for security and critical fixes. Do not assume any particular vault configuration will work unattended.
 
-The encryption functions discussed here are part of my **[IT-ToolBox module](https://github.com/PsCustomObject/IT-ToolBox)**; consult its documentation for version-specific usage and migration.
+The encryption functions discussed here are part of my **[IT-ToolBox module](https://github.com/SingularVector/IT-ToolBox)**; consult its documentation for version-specific usage and migration.
 
 For Exchange Online automation, see the [certificate authentication guide]({% post_url 2020-09-21-Exchange-Online-Certificate-Based-Authentication %}) and its current Microsoft references.
 

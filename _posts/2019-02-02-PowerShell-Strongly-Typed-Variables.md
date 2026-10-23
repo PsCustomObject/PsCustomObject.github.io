@@ -77,7 +77,7 @@ myInt = "A string" // We cannot implicitly convert an Int to String
 
 ## Strongly Typed Variables
 
-If you downloaded any of my Gist or functions from [my repository](https://github.com/PsCustomObject?tab=repositories) you probably have noticed that I do use a lot **strongly typed variables**, but before proceeding any further let me clarify *this is not required by PowerShell but it is what I consider a good coding practice*.
+If you downloaded any of my Gist or functions from [my repository](https://github.com/SingularVector?tab=repositories) you probably have noticed that I do use a lot **strongly typed variables**, but before proceeding any further let me clarify *this is not required by PowerShell but it is what I consider a good coding practice*.
 
 So how do we define a *strongly typed* variable? In reality this is not very different from what we have seen in the small C# example, for example to declare a *string* variable we would write code like this:
 

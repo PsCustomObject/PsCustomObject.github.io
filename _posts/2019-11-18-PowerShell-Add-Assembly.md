@@ -14,7 +14,7 @@ tags:
 
 One common technique is loading .Net *assemblies* in PowerShell script or module to leverage functionalities otherwise not available natively in PowerShell.
 
-A good example of this is in my [**PowerScp** module](https://github.com/PsCustomObject/PowerScp) which is distributed together with the **WinSCPnet.dll** assembly which makes required classes and methods available from within the PowerShell session.
+A good example of this is in my [**PowerScp** module](https://github.com/SingularVector/PowerScp) which is distributed together with the **WinSCPnet.dll** assembly which makes required classes and methods available from within the PowerShell session.
 
 ## What is a .Net Assembly and why use them
 

@@ -38,7 +38,7 @@ This matters because recovering some text is not enough to establish that encryp
 
 ## Encrypting and decrypting a string
 
-First, obtain the module using the [repository setup instructions](https://github.com/PsCustomObject/IT-ToolBox), then import the version used in this article:
+First, obtain the module using the [repository setup instructions](https://github.com/SingularVector/IT-ToolBox), then import the version used in this article:
 
 ```powershell
 Import-Module IT-ToolBox -RequiredVersion 3.0.0
@@ -120,7 +120,7 @@ catch [System.Security.Cryptography.CryptographicException]
 
 For this example, use a passphrase comfortably below the maximum length so that the altered value remains within the parameter limit.
 
-The module's [string-encryption tests](https://github.com/PsCustomObject/IT-ToolBox/blob/5ea85e41a0672847e70716342651af52179ac649/Tests/StringEncryption.Tests.ps1) cover more than this: Unicode and multiline strings, empty input, fresh salts and nonces, incorrect passphrases, and changes to the salt, nonce, ciphertext and tag. They also check malformed input and size limits.
+The module's [string-encryption tests](https://github.com/SingularVector/IT-ToolBox/blob/5ea85e41a0672847e70716342651af52179ac649/Tests/StringEncryption.Tests.ps1) cover more than this: Unicode and multiline strings, empty input, fresh salts and nonces, incorrect passphrases, and changes to the salt, nonce, ciphertext and tag. They also check malformed input and size limits.
 
 There is an independent fixture generated with Python's cryptography library. That gives the tests a value produced outside these two functions, rather than relying entirely on an encrypt/decrypt pair that could share the same mistake.
 
@@ -138,7 +138,7 @@ The migration sequence is:
 4. Encrypt the recovered value with the modern function and a strong, separately protected passphrase.
 5. Verify the new value before replacing the original data or changing the consuming script.
 
-Do not load the legacy and modern functions into the same session and assume the function name tells you which implementation is running. They deliberately retain the same names. The [module's migration notes](https://github.com/PsCustomObject/IT-ToolBox#legacy-migration) describe the compatibility boundary.
+Do not load the legacy and modern functions into the same session and assume the function name tells you which implementation is running. They deliberately retain the same names. The [module's migration notes](https://github.com/SingularVector/IT-ToolBox#legacy-migration) describe the compatibility boundary.
 
 ## Where I would use this
 
@@ -150,4 +150,4 @@ The code clears temporary plaintext and key byte arrays, but managed strings can
 
 For service authentication, I would first check whether the service supports a workload identity, managed identity or certificate-based application authentication. When a password is required, a secret store may be the better place to manage access, rotation and retrieval. String encryption is useful, but the script still needs an answer to the question: where does its decryption passphrase come from?
 
-The implementation, tests and version-specific documentation are available in my **[IT-ToolBox repository](https://github.com/PsCustomObject/IT-ToolBox)**. If you already use the older functions, check the migration notes before updating the module.
+The implementation, tests and version-specific documentation are available in my **[IT-ToolBox repository](https://github.com/SingularVector/IT-ToolBox)**. If you already use the older functions, check the migration notes before updating the module.

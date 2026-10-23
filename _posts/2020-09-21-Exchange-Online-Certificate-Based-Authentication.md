@@ -43,28 +43,28 @@ The sections below retain the original screenshots for reference. Use the curren
 The first step to deploy Certificate Based authentication is to register a new *Azure Application*. Navigate *Azure Active Directory* in the Azure portal and select **App Registrations** (alternatively use the search function which is what I usually do)
 
 <figure>
-  <a href="https://pscustomobject.github.io/assets/images/Azure_Application_Registration_Blade.png">
+  <a href="https://singularvector.github.io/assets/images/Azure_Application_Registration_Blade.png">
   <img src="/assets/images/Azure_Application_Registration_Blade.png"></a>
 </figure>
 
 In the app registrations under *Owned applications* we can list all applications that we registered under our account, in my case this is still empty, and under *All applications* as the name implies all application registered tenant wide.
 
 <figure>
-  <a href="https://pscustomobject.github.io/assets/images/Azure_Owned_Applications.png">
+  <a href="https://singularvector.github.io/assets/images/Azure_Owned_Applications.png">
   <img src="/assets/images/Azure_Owned_Applications.png"></a>
 </figure>
 
 Click on the **New Registration** and fill the various fields accordingly, unless you have specific needs all default values should suffice for most configurations/deployments. I am assuming a single tenant deployment in the following example
 
 <figure>
-  <a href="https://pscustomobject.github.io/assets/images/ExoV2_Registration.png">
+  <a href="https://singularvector.github.io/assets/images/ExoV2_Registration.png">
   <img src="/assets/images/ExoV2_Registration.png"></a>
 </figure>
 
 Once done click on the **Register** button, provision will only take a couple of seconds.
 
 <figure>
-  <a href="https://pscustomobject.github.io/assets/images/Azure_Application_Registration_Summary.png">
+  <a href="https://singularvector.github.io/assets/images/Azure_Application_Registration_Summary.png">
   <img src="/assets/images/Azure_Application_Registration_Summary.png"></a>
 </figure>
 
@@ -76,7 +76,7 @@ Once done click on the **Register** button, provision will only take a couple of
 Once the application has been registered we need to configure/grant API permissions that will define what our application can and cannot do. Either select *API Permissions* from the left blade or from the link directly below the API properties and select **Add permission**
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Configure_API_Permissions.png">
+  <a href="https://singularvector.github.io//assets/images/Configure_API_Permissions.png">
   <img src="/assets/images/Configure_API_Permissions.png"></a>
 </figure>
 
@@ -86,16 +86,16 @@ From the **Request API Permissions** scroll all the way down the *Supported Lega
 {: .notice--primary}
 
 <figure class="half">
-	<a href="https://pscustomobject.github.io//assets/images/Exchange_API_Permissions.png">
+	<a href="https://singularvector.github.io//assets/images/Exchange_API_Permissions.png">
   <img src="/assets/images/Exchange_API_Permissions.png"></a>
-	<a href="https://pscustomobject.github.io//assets/images/Exchange_API_Permissions._2.png">
+	<a href="https://singularvector.github.io//assets/images/Exchange_API_Permissions._2.png">
   <img src="/assets/images/Exchange_API_Permissions._2.png"></a>
 </figure>
 
 The last step involves clicking the **Grant Admin Consent for <your tenant name>** to consent to the requested application permission. Management authorisation must also be configured through the appropriate roles.
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/EXO_Grant_Admin_Consent.png">
+  <a href="https://singularvector.github.io//assets/images/EXO_Grant_Admin_Consent.png">
   <img src="/assets/images/EXO_Grant_Admin_Consent.png"></a>
 </figure>
 
@@ -131,7 +131,7 @@ Open *Certificate Manager* MMC console and under *Certificates Current User / Pe
 In the Azure Portal select *Certificates and Secretes* from the left blade and *Upload certificate* navigating to the path where the certificate has been exported/stored
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Azure_Certificate_Upload.png">
+  <a href="https://singularvector.github.io//assets/images/Azure_Certificate_Upload.png">
   <img src="/assets/images/Azure_Certificate_Upload.png"></a>
 </figure>
 
@@ -147,28 +147,28 @@ Do not assign a permanent Exchange Administrator role simply to reproduce these 
 With the *Azure AD* blade selected go to **Roles and administrators** and select **Exchange Administrator** confirming with the *Add Assignment* button
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Azure_Exchange_Admin_Role.png">
+  <a href="https://singularvector.github.io//assets/images/Azure_Exchange_Admin_Role.png">
   <img src="/assets/images/Azure_Exchange_Admin_Role.png"></a>
 </figure>
 
 In *Select Member* windows you will need to search application by GUID and select it
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Azure_Exchange_Assignment.png">
+  <a href="https://singularvector.github.io//assets/images/Azure_Exchange_Assignment.png">
   <img src="/assets/images/Azure_Exchange_Assignment.png"></a>
 </figure>
 
 In the *Add Assignment* page be sure to select **Active** under *Assignment Type* and tick the **Permanently Assign** checkbox
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Add_Assignment_Page.png">
+  <a href="https://singularvector.github.io//assets/images/Add_Assignment_Page.png">
   <img src="/assets/images/Add_Assignment_Page.png"></a>
 </figure>
 
 Once configuration is complete you will see a page similar the following
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Azure_Assignment_Confirmation.png">
+  <a href="https://singularvector.github.io//assets/images/Azure_Assignment_Confirmation.png">
   <img src="/assets/images/Azure_Assignment_Confirmation.png"></a>
 </figure>
 
@@ -193,7 +193,7 @@ Where *certThumbPrint* is the certificate thumbprint we created and uploaded to 
 And here's the result
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/Exchange_Get_Mailbox.png">
+  <a href="https://singularvector.github.io//assets/images/Exchange_Get_Mailbox.png">
   <img src="/assets/images/Exchange_Get_Mailbox.png"></a>
 </figure>
 
@@ -201,4 +201,4 @@ And here's the result
 
 This was quite a long post but steps to get up and running with Exchange Online Certificate based authentication are numerous even if not difficult to implement but well worth following.
 
-Certificate Based authentication resolves a number of challenges administrators had to face up to this point, chief among all [storing credentials](https://pscustomobject.github.io/powershell/howto/Store-Credentials-in-PowerShell-Script/) without storing a user password in the script. The certificate’s private key is itself a credential and must be protected.
+Certificate Based authentication resolves a number of challenges administrators had to face up to this point, chief among all [storing credentials](https://singularvector.github.io/powershell/howto/Store-Credentials-in-PowerShell-Script/) without storing a user password in the script. The certificate’s private key is itself a credential and must be protected.

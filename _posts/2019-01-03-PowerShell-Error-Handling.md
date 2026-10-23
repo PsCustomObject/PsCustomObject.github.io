@@ -124,7 +124,7 @@ The same holds true for an interactive PowerShell session of course.
 
 ## The $Error Variable
 
-When an error occurs during execution, be it terminating or not, information is logged to a variable called **$Error** which is nothing else than an [arraylist object](https://pscustomobject.github.io/powershell/Add-Remove-Items-From-Array/)
+When an error occurs during execution, be it terminating or not, information is logged to a variable called **$Error** which is nothing else than an [arraylist object](https://singularvector.github.io/powershell/Add-Remove-Items-From-Array/)
 
 ```powershell
 $Error.GetType()
@@ -200,7 +200,7 @@ Among the various properties the two you I usually tend to use more are:
 - **$Error[0].Exception** - Contains the original exception object as it was thrown to PowerShell
 - **$Error[0].InvocationInfo** - Contains details about the context which the command was executed, if available
 
-The former is handy to log exception thrown by scripts in my [script log file](https://github.com/PsCustomObject/New-LogEntry) the latter is useful when troubleshooting script execution to know what exactly went wrong and where.
+The former is handy to log exception thrown by scripts in my [script log file](https://github.com/SingularVector/New-LogEntry) the latter is useful when troubleshooting script execution to know what exactly went wrong and where.
 
 But there is more, the **Exception** object *hides* some additional useful properties and methods that are not immediately visible.
 

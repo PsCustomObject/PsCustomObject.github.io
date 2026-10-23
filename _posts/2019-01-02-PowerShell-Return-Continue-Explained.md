@@ -15,7 +15,7 @@ tags:
 
 ## PowerShell return, continue and exit statements
 
-In the previous post [PowerShell break statement - Explained](https://pscustomobject.github.io/powershell/PowerShell-Break-Explained/) we have seen how we can use the *break* statement to interrupt script execution, we also briefly mentioned other statements like *continue*, *return* and *exit* which we are going to cover in this article.
+In the previous post [PowerShell break statement - Explained](https://singularvector.github.io/powershell/PowerShell-Break-Explained/) we have seen how we can use the *break* statement to interrupt script execution, we also briefly mentioned other statements like *continue*, *return* and *exit* which we are going to cover in this article.
 
 ## Continue statement
 

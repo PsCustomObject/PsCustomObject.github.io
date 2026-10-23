@@ -48,7 +48,7 @@ $Repository = @{
 Register-PSRepository @Repository
 ```
 
-Was just yielding the following [exception](https://pscustomobject.github.io/powershell/PowerShell-Error-Handling/)
+Was just yielding the following [exception](https://singularvector.github.io/powershell/PowerShell-Error-Handling/)
 
 ```powershell
 Register-PSRepository : Use 'Register-PSRepository -Default' to register the PSGallery repository.
