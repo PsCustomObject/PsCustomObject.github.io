@@ -1,0 +1,38 @@
+# Curated topic groups. Original article categories and URLs stay unchanged.
+- id: powershell
+  title: PowerShell & automation
+  description: Scripts, reusable functions and practical solutions for systems administration.
+  categories:
+  - PowerShell
+  - PowerShell Tips
+- id: linux
+  title: Linux & the terminal
+  description: SSH, command-line tools and configuration notes for everyday infrastructure
+    work.
+  categories:
+  - Linux
+- id: identity
+  title: Identity & Microsoft 365
+  description: Active Directory, Exchange, account management and identity automation.
+  categories:
+  - Identity Management
+  - Exchange
+  - Office365
+  - Office 365
+- id: infrastructure
+  title: Cloud & infrastructure
+  description: Azure Automation, virtualisation and notes on cloud infrastructure.
+  categories:
+  - Azure
+  - Windows
+  - DevOps
+- id: python
+  title: Python
+  description: Practical techniques for working with files, packages and automation.
+  categories:
+  - Python
+- id: git
+  title: Git & version control
+  description: Repository housekeeping and practical version-control techniques.
+  categories:
+  - git

@@ -1,0 +1,15 @@
+---
+layout: discovery
+---
+{% assign archive_posts = site.posts | where_exp: "post", "post.hidden != true" %}
+<div class="discovery-toolbar"><span>{{ archive_posts | size }} articles in the archive</span><a href="{{ '/articles/' | relative_url }}">Browse every article &rarr;</a></div>
+<div class="discovery-topics">
+{% for topic in site.data.topics %}
+  {% include topic-posts.html topic=topic %}
+  {% if topic_posts.size > 0 %}
+  {% assign topic_url = topic.id | prepend: '/topics/' | append: '/' %}
+  <article class="discovery-topic"><p class="discovery-count">{{ topic_posts | size }} {% if topic_posts.size == 1 %}article{% else %}articles{% endif %}</p><h2><a href="{{ topic_url | relative_url }}">{{ topic.title | escape }}</a></h2><p>{{ topic.description | escape }}</p><a class="discovery-topic-link" href="{{ topic_url | relative_url }}">Explore topic <span aria-hidden="true">&nearr;</span><span class="sr-only">: {{ topic.title | escape }}</span></a></article>
+  {% endif %}
+{% endfor %}
+</div>
+<p class="discovery-footnote">Some articles cover more than one topic. Each topic brings the relevant guides together.</p>

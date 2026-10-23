@@ -22,14 +22,14 @@ layout: default
 </section>
 <section class="home-section home-topics" aria-labelledby="topics-heading">
  <div class="home-section-heading"><div><p class="home-eyebrow">FOLLOW A THREAD</p><h2 id="topics-heading">What are you working on?</h2></div></div>
- <div class="home-topic-links"><a href="{{ '/categories/#powershell' | relative_url }}"><span>PowerShell</span><small>Scripts, functions &amp; practical fixes</small><b aria-hidden="true">↗</b></a><a href="{{ '/categories/#linux' | relative_url }}"><span>Linux</span><small>Tools &amp; notes from the terminal</small><b aria-hidden="true">↗</b></a><a href="{{ '/categories/#python' | relative_url }}"><span>Python</span><small>Small tools &amp; useful techniques</small><b aria-hidden="true">↗</b></a></div>
+ <div class="home-topic-links"><a href="{{ '/topics/powershell/' | relative_url }}"><span>PowerShell</span><small>Scripts, functions &amp; practical fixes</small><b aria-hidden="true">↗</b></a><a href="{{ '/topics/linux/' | relative_url }}"><span>Linux</span><small>Tools &amp; notes from the terminal</small><b aria-hidden="true">↗</b></a><a href="{{ '/topics/python/' | relative_url }}"><span>Python</span><small>Small tools &amp; useful techniques</small><b aria-hidden="true">↗</b></a></div>
 </section>
 <aside class="home-lab" aria-labelledby="lab-heading"><div><p class="home-eyebrow">INFRASTRUCTURE IN PRACTICE</p><h2 id="lab-heading">Terraforming my career.</h2><p>A companion notebook for cloud infrastructure, automation and hands-on experiments. Practical approaches, technical decisions and lessons from engineering work.</p></div><a class="home-text-link" href="https://pscustomobject.github.io/terraforming-my-career/">Open the notes <span aria-hidden="true">↗</span></a></aside>
 {% else %}
 <section class="home-hero"><h1>Articles — page {{ paginator.page }}</h1></section>
 {% endif %}
 <section class="home-section home-latest" id="latest" aria-labelledby="latest-heading">
-  <div class="home-section-heading"><div><p class="home-eyebrow">THE JOURNAL</p><h2 id="latest-heading">Latest articles</h2></div><a class="home-text-link" href="{{ '/year-archive/' | relative_url }}">All articles <span aria-hidden="true">↗</span></a></div>
+  <div class="home-section-heading"><div><p class="home-eyebrow">THE JOURNAL</p><h2 id="latest-heading">Latest articles</h2></div><a class="home-text-link" href="{{ '/articles/' | relative_url }}">All articles <span aria-hidden="true">↗</span></a></div>
   {% if paginator %}{% assign home_posts = paginator.posts %}{% else %}{% assign home_posts = site.posts %}{% endif %}
   <div class="home-post-list">
   {% for post in home_posts %}

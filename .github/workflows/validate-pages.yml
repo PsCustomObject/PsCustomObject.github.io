@@ -3,7 +3,7 @@ name: Validate GitHub Pages build
 on:
   pull_request:
   push:
-    branches: [upgrade/minimal-mistakes-4.28.1, design/homepage-preview]
+    branches: [upgrade/minimal-mistakes-4.28.1, design/homepage-preview, navigation/topic-hub]
   workflow_dispatch:
 
 permissions:
@@ -28,6 +28,11 @@ jobs:
           cmp ads.txt _site/ads.txt
           test -s _site/feed.xml
           test -s _site/sitemap.xml
+          for route in articles topics search topics/powershell topics/linux topics/identity topics/infrastructure topics/python topics/git; do
+            test -s "_site/$route/index.html"
+          done
+          test "$(grep -o 'id="search"' _site/search/index.html | wc -l)" -eq 1
+          test "$(grep -o 'id="results"' _site/search/index.html | wc -l)" -eq 1
       - name: Retain generated site for inspection
         uses: actions/upload-artifact@v4
         with:

@@ -1,0 +1,4 @@
+<article class="discovery-post">
+  <time class="discovery-date" datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: '%d %b %Y' }}</time>
+  <div><h3><a href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a></h3>{% if include.post.excerpt %}<p>{{ include.post.excerpt | strip_html | truncate: 170 }}</p>{% endif %}</div>
+</article>

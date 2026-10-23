@@ -1,10 +1,10 @@
-# main links
+# Main navigation; existing archive routes remain available.
 main:
+  - title: "Articles"
+    url: /articles/
+  - title: "Topics"
+    url: /topics/
   - title: "About"
     url: /about/
-  #- title: "Posts by Year"
-  #  url: /year-archive/
-  - title: "Posts by Category"
-    url: /categories/
-  - title: "Posts by Year"
-    url: /year-archive/
+  - title: "Search"
+    url: /search/

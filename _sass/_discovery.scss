@@ -1,0 +1,51 @@
+/* Site-owned discovery pages. Existing article typography remains unchanged. */
+.discovery#main { box-sizing: border-box; max-width: 1120px; margin: 0 auto; padding: 52px 28px 70px; font: 16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+.discovery * { box-sizing: border-box; }
+.discovery h1,.discovery h2,.discovery h3 { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing: -.6px; }
+.discovery a { text-decoration: none; }
+.discovery a:focus-visible { outline: 2px solid #8bdace; outline-offset: 5px; }
+.discovery-heading h1 { margin: 10px 0 16px; font-size: clamp(36px,5vw,52px); line-height: 1.15; }
+.discovery-eyebrow { margin: 0; color: #8bdace; font: 11px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace; letter-spacing: 1.6px; }
+.discovery-intro { color: #b8c0cb; max-width: 720px; font-size: 18px; margin: 0 0 30px; }
+.discovery-toolbar { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; align-items: center; border-top: 1px solid #424a57; padding: 18px 0 24px; font-size: 13px; color: #b8c0cb; }
+.discovery-toolbar a,.discovery-back,.discovery-back-top { color: #8bdace; }
+.discovery-back { display: inline-block; margin-bottom: 22px; font-size: 14px; }
+.discovery-topics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.discovery-topic { background: #2b313d; border: 1px solid #424a57; border-radius: 5px; padding: 25px; display: flex; flex-direction: column; }
+.discovery-topic .discovery-count { color: #8bdace; margin: 0 0 16px; font: 12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace; }
+.discovery-topic h2 { font-size: 24px; line-height: 1.25; margin: 0 0 15px; }
+.discovery-topic h2 a { color: #eef1f5; }
+.discovery-topic > p:not(.discovery-count) { font-size: 14px; color: #b8c0cb; margin: 0 0 25px; }
+.discovery-topic-link { display: flex; justify-content: space-between; margin-top: auto; padding-top: 15px; border-top: 1px solid #424a57; font-size: 13px; color: #8bdace; }
+.discovery-footnote { color: #b8c0cb; font-size: 13px; margin: 24px 0 0; }
+.discovery-post { display: grid; grid-template-columns: 110px 1fr; gap: 25px; padding: 23px 0; border-top: 1px solid #424a57; }
+.discovery-date { color: #b8c0cb; font: 12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace; padding-top: 3px; }
+.discovery-post h3 { font-size: 21px; line-height: 1.35; margin: 0 0 8px; }
+.discovery-post h3 a { color: #eef1f5; }
+.discovery-post h3 a:hover,.discovery-topic h2 a:hover { color: #8bdace; }
+.discovery-post p { font-size: 14px; line-height: 1.7; color: #b8c0cb; margin: 0; }
+.discovery-years { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+.discovery-years a { display: inline-block; border: 1px solid #424a57; border-radius: 4px; padding: 7px 12px; color: #eef1f5; font-size: 13px; }
+.discovery-years span { color: #b8c0cb; }
+.discovery-year { scroll-margin-top: 25px; margin-top: 32px; }
+.discovery-year > h2 { font-size: 28px; margin: 0 0 15px; }
+.discovery-back-top { display: inline-block; font-size: 12px; margin: 12px 0 10px; }
+.layout--search #main { max-width: 1120px; padding: 45px 28px 70px; }
+.layout--search #main > .archive { width: 100%; float: none; padding: 0; margin: 0; }
+.layout--search .search__toggle { display: none; }
+.layout--search .page__title { font-size: 42px; }
+.layout--search .archive > p,.layout--search .discovery-search-label { font-size: 16px; }
+.layout--search .discovery-search-label { display: block; margin: 26px 0 10px; font-weight: 600; }
+.layout--search input#search { border: 1px solid #667384; background: #20252e; color: #eef1f5; border-radius: 4px; font-size: 20px; padding: 15px; width: 100%; }
+.layout--search input#search:focus { outline: 2px solid #8bdace; outline-offset: 3px; }
+.layout--search .results { font-size: 16px; }
+@media (max-width: 850px) { .discovery-topics { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 560px) {
+ .discovery#main { padding: 34px 22px 45px; }
+ .discovery-topics { grid-template-columns: 1fr; gap: 15px; }
+ .discovery-intro { font-size: 16px; }
+ .discovery-post { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
+ .discovery-post h3 { font-size: 20px; }
+ .discovery-toolbar { font-size: 12px; }
+ .layout--search #main { padding: 32px 22px 45px; }
+}
