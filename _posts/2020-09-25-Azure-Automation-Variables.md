@@ -18,7 +18,7 @@ header:
 
 ## Azure Automation Variables as Shared Resources
 
-Shared Resources in Azure Automation allow us to reuse credentials, modules, schedules, connections, certificates and **variables** which will be will be the main focus of the post.
+Shared Resources in Azure Automation allow us to reuse credentials, modules, schedules, connections, certificates and **variables** which will be the main focus of the post.
 
 To better understand the importance of shared resources and *variables in Azure Automation* let's go through a practical example. I have a runbook pulling data from a web service which requires to reference an API secret as part of the process to obtain an authentication token.
 
@@ -32,11 +32,11 @@ When running the script through a scheduled task or through on-prem System Cente
 New-StringDecryption -EncryptedString $apiSecret
 ```
 
-While both approaches will work that's not without drawbacks implying security considerations. Another consideration is the fact secret key at some point could change and, if a large number of scripts/runbooks, is using it we would need to update code all of solutions using it. This is were *Azure Automation variables* come into play.
+While both approaches will work that's not without drawbacks implying security considerations. Another consideration is the fact secret key at some point could change and, if a large number of scripts/runbooks, is using it we would need to update code all of solutions using it. This is where *Azure Automation variables* come into play.
 
 ## Azure Automation Variables Types
 
-Azure Automations supports two types of variables *Encrypted* and *Unenrcrypted* with the following types being supported:
+Azure Automation supports two types of variables *Encrypted* and *Unencrypted* with the following types being supported:
 
 - Integers
 - Strings
@@ -135,7 +135,7 @@ This is the expected behaviour as encrypted variables are *secured* with a uniqu
 
 ### Update and Retrieve Azure Automation variable values
 
-Now that we know how to create azure automation variables lets see how to work with them and update their values. Recall I had a typo in the unencrypted variable, trailing '[' character, let's fix that from the console
+Now that we know how to create azure automation variables let’s see how to work with them and update their values. Recall I had a typo in the unencrypted variable, trailing '[' character, let's fix that from the console
 
 <figure>
   <a href="https://pscustomobject.github.io//assets/images/Azure_Automation_Update_Variable_Value.png">

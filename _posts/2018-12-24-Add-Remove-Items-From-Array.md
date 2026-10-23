@@ -1,6 +1,6 @@
 ---
 title: "PowerShell add or remove elements from an Array"
-excerpt: "Learn how to create you can add and remove elements from a PowerShell array through the use of list objects."
+excerpt: "Learn how to add and remove elements from a PowerShell array using list objects."
 categories:
   - PowerShell
 tags:
@@ -48,7 +48,7 @@ The above will add elements 1 to 5 to *myArray* object instantiating a new objec
 
 ## PowerShell Add Elements to an Array
 
-We have see how to create and assign values to an array but what if we want to add a sixth element to *myArray*? If you try the following
+We have seen how to create and assign values to an array but what if we want to add a sixth element to *myArray*? If you try the following
 
 ```powershell
 $myArray.Add(6)
@@ -87,7 +87,7 @@ All of this is transparent to the user so you won't see any difference.
 
 ## Add Elements to an Array - Enter ArrayList
 
-If you want to avoid all the copying/moving data you can instantiate *myArray* as a **[ArrayList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.arraylist?view=netframework-4.7.2)** which is dynamic and will allow you to add remove elements on the fly
+If you want to avoid all the copying/moving data you can instantiate *myArray* as a **[ArrayList](https://docs.microsoft.com/en-us/dotnet/api/system.collections.arraylist?view=netframework-4.7.2)** which is dynamic and will allow you to add and remove elements on the fly
 
 ```powershell
 # Initialize object
@@ -120,7 +120,7 @@ The above example will call the *New-Object* method to instantiate a new *ArrayL
 [System.Collections.ArrayList]$myArray = @()
 ```
 
-In addition of being shorter it has the added benefit of avoiding the negative performance hit of *New-Object* and optimizing code is always a good idea especially when dealing with larger scripts.
+In addition to being shorter it has the added benefit of avoiding the negative performance hit of *New-Object* and optimizing code is always a good idea especially when dealing with larger scripts.
 
 As an alternative you can cast PowerShell Array to *ArrayList*
 
@@ -130,7 +130,7 @@ $myArray = [System.Collections.ArrayList]@()
 
 ## Closing Notes
 
-When writing code, despite not being required by PowerShell, I try to alway declare the object's type as that is helpful to know, at any given moment, Properties and Methods supported by the object so I alway write
+When writing code, despite not being required by PowerShell, I try to always declare the object's type as that is helpful to know, at any given moment, Properties and Methods supported by the object so I always write
 
 ```powershell
 [string]$myString = 'Some Text'

@@ -22,7 +22,7 @@ In this series of posts I will try to clarify and illustrate proper usage and pi
 
 I will start with the easier to describe the **break** statement, its function is simply to **exit a program loop or switch statement immediately**.
 
-Let' see an example with a while loop:
+Let's see an example with a while loop:
 
 ```powershell
 # Count from 0 to 100 but exit as soon you
@@ -126,7 +126,7 @@ switch ($userDepartment)
 
 The above code will reach the *IT* clause take any action defined and will continue with anything outside the switch block.
 
-Omitting the *break* statement in the above example would simply cause PowerShell to go through remaining conditions, skipping them as there is no match, before continue execution of any code outside the switch block.
+Omitting the *break* statement in the above example would simply cause PowerShell to go through remaining conditions, skipping them as there is no match, before continuing execution of any code outside the switch block.
 
 There are situations where this behavior not only is not desirable but could potentially create issues.
 

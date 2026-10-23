@@ -75,7 +75,7 @@ In the above example we initialise a variable containing begin of operation mill
 **Warning Notice:** I personally discourage, and never use myself, this approach for different reasons. *First* it makes code more difficult to read and generally **slower** due use of multiple variables and extra calculation. *Second* it poses problems with the elapsed time itself, what if the example above  would require 5 seconds to execute? Would it still work according to you?
 {: .notice--warning}
 
-## Method 3 - The The .NET **Stopwatch** class
+## Method 3 - The .NET **Stopwatch** class
 
 The last method is even my preferred one, the **[stopwatch class](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch?view=netframework-4.8)** which works exactly like a real life stopwatch, you start it, it will keep marking execution time and finally you stop it getting back execution time.
 
@@ -107,7 +107,7 @@ IsRunning           Property   bool IsRunning {get;}
 
 ```
 
-The above example shows the *stopwatch* class has an *Elapsed* properties which will return a timespan object containing the same information we observed in the first example making it easy to gather information about performances of our script, let's see this in action (keep in mind I've left it running for a bit so this is not representative of actual performances)
+The above example shows the *stopwatch* class has an *Elapsed* property which will return a timespan object containing the same information we observed in the first example making it easy to gather information about performances of our script, let's see this in action (keep in mind I've left it running for a bit so this is not representative of actual performances)
 
 ```powershell
 PS C:\Users\lethe> $stopwatch.Elapsed
@@ -143,7 +143,7 @@ $stopwatch.Stop()
 
 This will not produce any output so it is up to us saving details of the stopwatch and eventually communicating this back to the user.
 
-Among the various methods described in this post this is my preferred as it is the less performant intensive and giving precise results.
+Among the various methods described in this post this is my preferred as it is the least performance-intensive and giving precise results.
 
 As PowerShell does not include a built-in cmdlet for this I ended up writing my own function, part of my [IT-ToolBox PowerShell Module](https://github.com/PsCustomObject/IT-ToolBox) that I use daily in my scripts.
 

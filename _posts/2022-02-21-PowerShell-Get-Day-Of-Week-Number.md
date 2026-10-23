@@ -44,4 +44,4 @@ There are situations where rather than returning a string with the day name it c
 1
 ```
 
-This is specially handy when inserting data into SQL datbase supporting dates as _TinyInt_ data types.
+This is especially handy when inserting data into SQL database supporting dates as _TinyInt_ data types.

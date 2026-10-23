@@ -20,7 +20,7 @@ I think the best definition of *error* or *exception* handling I can quote is th
 
 In other words **exception handling** is the art of pre-empting any unforeseen or unexpected situation which could arise during program or script execution. I chose word *art* on purpose as it takes time and practice to master it.
 
-In the post I will got through **error types**, **error action preference**, the **$Error** variable, **try/catch/finally** blocks and will finally cover the **$LastExitCode** variable to trap errors generated *outside* PowerShell processes.
+In the post I will go through **error types**, **error action preference**, the **$Error** variable, **try/catch/finally** blocks and will finally cover the **$LastExitCode** variable to trap errors generated *outside* PowerShell processes.
 
 It seems a lot of material but **Exception Handling** is an essential part of any well written script, without it you risk to implement to quickly lose control of what your script did or *did not*.
 
@@ -28,7 +28,7 @@ I have broken down the post into sections to make navigation easier given the am
 
 ## Exception Handling - An Example
 
-Before diving error types I want to introduce a small example which hopefully will help illustrate pitfalls of a script not implementing exception handling.
+Before diving into error types I want to introduce a small example which hopefully will help illustrate pitfalls of a script not implementing exception handling.
 
 Imagine we've been tasked with the creation of a script that will check a specific application folder and delete all temporary files an application is creating in it, script should run daily on a schedule.
 
@@ -48,13 +48,13 @@ foreach ($tempFile in $tempFiles)
 Write-Host 'Script execution complete!'
 ```
 
-Once tested our script we schedule it and take on another task, unfortunately the user account under which the scheduled task runs has no permissions to access the folder so script won't be able to complete successfully. As we implemented no proper exception handling we would find out about this only when files would start accumulating filing up the disk on the server.
+Once tested our script we schedule it and take on another task, unfortunately the user account under which the scheduled task runs has no permissions to access the folder so script won't be able to complete successfully. As we implemented no proper exception handling we would find out about this only when files would start accumulating filling up the disk on the server.
 
 This is a very simple example to show why you **should always** implement exception handling in your scripts.
 
 ## Error Types
 
-In PowerShell we have two error type *Terminating Errors* and *Non-Terminating Errors* which I describe in more details below.
+In PowerShell we have two error types *Terminating Errors* and *Non-Terminating Errors* which I describe in more details below.
 
 ### Terminating Errors
 
@@ -77,7 +77,7 @@ Among non-terminating errors:
 
 If you're wondering error reporting is defined by the cmdlet developer and [MSDN](https://docs.microsoft.com/it-it/powershell/developer/cmdlet/error-reporting-concepts) has more information about this.
 
-**Note:** sure to remember difference between **terminating** and **non-terminating** errors as it is essential to proper exception handling in your code.
+**Note:** Be sure to remember the difference between **terminating** and **non-terminating** errors as it is essential to proper exception handling in your code.
 
 ## Error Action Preference
 
@@ -88,7 +88,7 @@ We know that a *terminating* error will halt script execution but what of *non-t
 The **$ErrorActionPreference** supports the following values:
 
 - **SilentlyContinue** - Execution continues and any error message is suppressed
-- **Stop** - Pretty self explanatory, it forces execution to top conceptually identical to a *terminating* error
+- **Stop** - Pretty self explanatory, it forces execution to stop conceptually identical to a *terminating* error
 - **Continue** - This is the default setting. Errors will be displayed and execution continue
 - **Inquire** - As the name implies it will ask for user input to check if execution should proceed
 - **Ignore** - Error is completely ignored and **not** logged to the error stream
