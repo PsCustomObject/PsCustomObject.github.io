@@ -1,5 +1,6 @@
 ---
 title: "About"
+description: "Meet Daniele, the systems and infrastructure engineer behind PsCustomObject, with 20+ years of experience across Windows, Linux, identity and automation."
 permalink: /about/
 toc: true
 ---

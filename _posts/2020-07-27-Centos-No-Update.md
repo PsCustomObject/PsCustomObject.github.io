@@ -9,7 +9,7 @@ tags:
 toc: false
 ---
 
-Today I deployed a new CentOS 8.1 machine, yes I'm still doing some Linux, and immediately after installing the OS I ran the update command which did not yield any result
+After deploying a CentOS 8.1 machine, I ran the update command immediately after installation, but it returned no available updates
 
 ```bash
     dnf update

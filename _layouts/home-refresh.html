@@ -7,8 +7,8 @@ layout: default
 <section class="home-hero" aria-labelledby="home-heading">
   <p class="home-eyebrow">NOTES FROM THE TERMINAL</p>
   <h1 id="home-heading">Practical automation.<br><span>Beyond the script.</span></h1>
-  <p class="home-intro">I’m Daniele, a systems engineer who likes solving a problem once—and making the solution repeatable.</p>
-  <p class="home-summary">PowerShell, Linux and infrastructure automation. Practical notes on AWS, Terraform and Python.</p>
+  <p class="home-intro">I’m Daniele, a systems and infrastructure engineer with 20+ years of experience across Windows, Linux and identity. I build automation that makes complex environments easier to operate and maintain.</p>
+  <p class="home-summary">PowerShell tooling, identity workflows and Linux operations, with Python and infrastructure as code in the wider engineering toolkit.</p>
   <div class="home-actions"><a class="home-button" href="#latest">Read the articles <span aria-hidden="true">↗</span></a><a class="home-text-link" href="https://github.com/PsCustomObject">Explore my code <span aria-hidden="true">↗</span></a></div>
   <div class="home-byline"><span class="home-prompt" aria-hidden="true">&gt;_</span><span>Built, tested, occasionally broken. Written down so you don’t have to start from scratch.</span></div>
 </section>
@@ -22,9 +22,9 @@ layout: default
 </section>
 <section class="home-section home-topics" aria-labelledby="topics-heading">
  <div class="home-section-heading"><div><p class="home-eyebrow">FOLLOW A THREAD</p><h2 id="topics-heading">What are you working on?</h2></div></div>
- <div class="home-topic-links"><a href="{{ '/topics/powershell/' | relative_url }}"><span>PowerShell</span><small>Scripts, functions &amp; practical fixes</small><b aria-hidden="true">↗</b></a><a href="{{ '/topics/linux/' | relative_url }}"><span>Linux</span><small>Tools &amp; notes from the terminal</small><b aria-hidden="true">↗</b></a><a href="{{ '/topics/python/' | relative_url }}"><span>Python</span><small>Small tools &amp; useful techniques</small><b aria-hidden="true">↗</b></a></div>
+ <div class="home-topic-links">{% for topic in site.data.topics %}<a href="{{ topic.id | prepend: '/topics/' | append: '/' | relative_url }}"><span>{{ topic.title | escape }}</span><small>{{ topic.description | escape }}</small><b aria-hidden="true">↗</b></a>{% endfor %}</div>
 </section>
-<aside class="home-lab" aria-labelledby="lab-heading"><div><p class="home-eyebrow">INFRASTRUCTURE IN PRACTICE</p><h2 id="lab-heading">Terraforming my career.</h2><p>A companion notebook for cloud infrastructure, automation and hands-on experiments. Practical approaches, technical decisions and lessons from engineering work.</p></div><a class="home-text-link" href="https://pscustomobject.github.io/terraforming-my-career/">Open the notes <span aria-hidden="true">↗</span></a></aside>
+<aside class="home-lab" aria-labelledby="lab-heading"><div><p class="home-eyebrow">INFRASTRUCTURE IN PRACTICE</p><h2 id="lab-heading">Cloud infrastructure notebook.</h2><p>A companion notebook for cloud infrastructure, automation and hands-on experiments. Practical approaches, technical decisions and lessons from engineering work.</p></div><a class="home-text-link" href="https://pscustomobject.github.io/terraforming-my-career/">Read the infrastructure notes <span aria-hidden="true">↗</span></a></aside>
 {% else %}
 <section class="home-hero"><h1>Articles — page {{ paginator.page }}</h1></section>
 {% endif %}

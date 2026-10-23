@@ -1,6 +1,7 @@
 ---
 layout: discovery
 ---
+{{ content }}
 {% assign archive_posts = site.posts | where_exp: "post", "post.hidden != true" %}
 {% assign years = archive_posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 <div class="discovery-toolbar"><span>{{ archive_posts | size }} articles</span><a href="{{ '/topics/' | relative_url }}">Browse by topic &rarr;</a></div>

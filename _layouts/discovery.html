@@ -6,7 +6,9 @@ layout: default
     {% if page.topic_id %}<a class="discovery-back" href="{{ '/topics/' | relative_url }}">&larr; All topics</a>{% endif %}
     <p class="discovery-eyebrow">{{ page.eyebrow | default: 'FROM THE ARCHIVE' | escape }}</p>
     <h1 id="page-title">{{ page.title | escape }}</h1>
-    {% if page.intro %}<p class="discovery-intro">{{ page.intro | escape }}</p>{% endif %}
+    {% assign intro = page.intro %}
+    {% if page.topic_id %}{% assign topic = site.data.topics | where: "id", page.topic_id | first %}{% assign intro = topic.description %}{% endif %}
+    {% if intro %}<p class="discovery-intro">{{ intro | escape }}</p>{% endif %}
   </header>
   {{ content }}
 </main>

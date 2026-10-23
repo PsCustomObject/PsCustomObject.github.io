@@ -1,19 +1,18 @@
 # Curated topic groups. Original article categories and URLs stay unchanged.
 - id: powershell
   title: PowerShell & automation
-  description: Scripts, reusable functions and practical solutions for systems administration.
+  description: "PowerShell automation for systems administration: reusable functions, error handling, module distribution and practical fixes."
   categories:
   - PowerShell
   - PowerShell Tips
 - id: linux
   title: Linux & the terminal
-  description: SSH, command-line tools and configuration notes for everyday infrastructure
-    work.
+  description: "Linux operations from the terminal: SSH connection management, command-line disk imaging and a CentOS package-update troubleshooting note."
   categories:
   - Linux
 - id: identity
   title: Identity & Microsoft 365
-  description: Active Directory, Exchange, account management and identity automation.
+  description: "Identity and messaging administration with Active Directory, Exchange and Microsoft 365, including account automation and authentication troubleshooting."
   categories:
   - Identity Management
   - Exchange
@@ -21,18 +20,18 @@
   - Office 365
 - id: infrastructure
   title: Cloud & infrastructure
-  description: Azure Automation, virtualisation and notes on cloud infrastructure.
+  description: "Infrastructure operations and automation: Azure Automation, Windows configuration, virtualisation and a companion cloud engineering notebook."
   categories:
   - Azure
   - Windows
   - DevOps
 - id: python
   title: Python
-  description: Practical techniques for working with files, packages and automation.
+  description: "Python techniques for automation: reading file content and checking installed package versions from scripts."
   categories:
   - Python
 - id: git
   title: Git & version control
-  description: Repository housekeeping and practical version-control techniques.
+  description: "Git repository maintenance: use .gitignore to keep generated files, local settings and other unwanted content out of version control."
   categories:
   - git

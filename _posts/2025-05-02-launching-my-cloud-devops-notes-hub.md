@@ -1,6 +1,6 @@
 ---
 title: "🚀 Launching My Cloud & DevOps Notes Hub"
-excerpt: "I’ve launched a dedicated GitHub Pages site to publish my notes, learning plans, and technical documentation as I transition into a Cloud & DevOps role."
+excerpt: "A companion infrastructure notebook covering Terraform, cloud automation and technical references, built on my systems engineering experience."
 categories:
   - DevOps
   - Notes
@@ -15,7 +15,7 @@ tags:
 toc: false
 ---
 
-After months of collecting learning materials, writing study plans, and documenting hands-on experiments in Markdown, I decided it was time to structure and publish my technical notes as a proper GitHub Pages site.
+Cloud infrastructure and infrastructure as code are part of my wider systems engineering work. This companion notebook brings together technical references, study plans and hands-on experiments, building on more than 20 years across Windows, Linux, identity and automation.
 
 🎉 **It's live here**: [Terraforming My Career](https://pscustomobject.github.io/terraforming-my-career/)
 
@@ -23,10 +23,10 @@ After months of collecting learning materials, writing study plans, and document
 
 ## 📘 What You’ll Find
 
-The new site currently includes:
+At launch in May 2025, the notebook included:
 
 - 🛠 **Terraform**: from getting started to change management and teardown
-- 📚 **Learning Plans**: a structured timeline to guide my Cloud & DevOps path
+- 📚 **Learning Plans**: structured study alongside practical infrastructure work
 - 🐳 Sections for **Docker**, **Kubernetes**, and **AWS** (in progress)
 - 📖 **Reading Notes** from books like _Terraform: Up & Running_
 
@@ -36,10 +36,10 @@ Everything is structured in folders, rendered with [Just the Docs](https://just-
 
 ## 🔍 Why I’m Doing This
 
-I believe in learning in public. Publishing my notes helps me:
+Publishing engineering notes helps me:
 
-- Stay accountable to my learning goals
-- Give back to others walking a similar path
+- Keep technical references and lab findings organised
+- Share approaches and tradeoffs with other engineers
 - Build writing discipline and clarity of thought
 
 Over time, this space will grow into a personal knowledge base and lab journal — and you're welcome to follow along.
