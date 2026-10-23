@@ -1,6 +1,6 @@
 ---
 title: "Store Credentials in PowerShell Script"
-excerpt: "How to securely store credentials in a PowerShell script writing them in plain sight"
+excerpt: "Handle PowerShell credentials without hard-coded passwords, with a Windows DPAPI example and clear limits for unattended automation."
 categories:
 
   - PowerShell
@@ -12,134 +12,95 @@ tags:
   - new-object system.management.automation.pscredential
   - PowerShell create credential
   - PowerShell store credentials in file
+last_modified_at: 2026-10-23
 ---
+
+## Choose the authentication model first
+
+For unattended automation, prefer a workload identity, managed identity or certificate-based application authentication when the target service supports it. When a password is unavoidable, retrieve it from a secret store whose access controls and unattended authentication fit the execution account.
+
+An encrypted password is still a credential. Code running as an identity authorised to decrypt it can recover and use it. Encryption at rest does not replace file permissions, least privilege, rotation or control of the automation host.
 
 ## Get-Credential
 
-One  common tasks, when dealing with different servers and services, is the requirement of storing username and passwords in a script to carry on the designed task.  Despite being something so common I still do see this being implemented the wrong way partially caused by the lack of a standard method of or built-in function.
-
-When creating an interactive script we can easily use the *Get-Credential* cmdlet which will ask us for a username and a password creating the required object in the background
+For an interactive script, prompt rather than placing the password in source code:
 
 ```powershell
-# Output from PowerShell core on MacOs
-Get-Credential
-
-PowerShell credential request
-Enter your credentials.
-User: admin
-Password for user admin: **********
-
-
-UserName                     Password
---------                     --------
-admin    System.Security.SecureString
+$credential = Get-Credential
+# Pass $credential to a command that accepts -Credential.
 ```
 
-As I said this works very well when writing script that will be run interactively and a human being is available to input required fields.
+A `PSCredential` packages a username and a `SecureString`; it does not determine how the destination service authenticates. Confirm that the target command supports this authentication method.
 
 ## Plain Text Credentials in Script
 
-First of all a disclaimer **never do this** unless you are testing something in  a lab or protected environment. I cannot count the times I have seen something like this in production
-
-```powershell
-# Define Credentials
-[string]$userName = 'admin'
-[string]$userPassword = 'mySuperSecurePassword'
-
-# Crete credential Object
-[SecureString]$secureString = $userPassword | ConvertTo-SecureString -AsPlainText -Force 
-[PSCredential]$credentialObejct = New-Object System.Management.Automation.PSCredential -ArgumentList $userName, $secureString
-```
-
-It is pretty obvious why this should never be used in production, anybody who has access to our code would be able to easily read username password which are conveniently written in the code.
+Do not put passwords in scripts, command-line arguments or source control. Converting a hard-coded string with `ConvertTo-SecureString -AsPlainText` cannot protect the original literal or remove it from repository history.
 
 ## Store Encrypted password in an external file
 
-As seen in the previous example when creating a *PSCredential* object we need to specify a *SecureString* object as argument created with the *ConvertTo-SecureString* cmdlet.
-
-Inspecting content of the *$secureString* variable after converting it with the *ConvertFrom-SecureString* we will see PowerShell create long string of random characters similar to this *1204890d04c9ddf0115d1…..d3d491bb6d740864117a090d11*, shortened for convenience, which is what internally PowerShell uses.
-
-Taking this a step further we can save the *secure string*  to a file that is then sourced in our script, here's an example:
+The following example is **Windows-only** and uses Windows Data Protection API (DPAPI) without an explicit encryption key. Create the file as the same Windows account, on the same machine, that will read it. Use an existing directory with restrictive permissions; the example path is a placeholder, not a directory created by these commands.
 
 ```powershell
-# Define clear text password
-[string]$userPassword = 'mySuperSecurePassword'
-
-# Crete credential Object
-[SecureString]$secureString = $userPassword | ConvertTo-SecureString -AsPlainText -Force 
-
-# Get content of the string
-[string]$stringObject = ConvertFrom-SecureString
-
-# Save Content to file
-$stringObject | Set-Content -Path 'C:\SomeDir\Secure.txt'
+# One-time interactive setup on the automation host, as its execution account.
+$credentialPath = 'C:\Automation\Secrets\service-password.txt'
+$credential = Get-Credential
+$credential.Password |
+    ConvertFrom-SecureString |
+    Set-Content -LiteralPath $credentialPath
 ```
 
-The above will create a secure string object from our password, extract the encrypted string and save it to a file which can now be used in our scripts. Previous example could be rewritten like this
+Read the file under that same account and machine context:
 
 ```powershell
-# Define Credentials
-[string]$userName = 'admin'
-[string]$passwordText = Get-Content 'C:\SomeDir\Secure.txt'
-
-# Convert to secure string
-[SecureString]$securePwd = $pwdTxt | ConvertTo-SecureString 
-
-# Create credential object
-[PSCredential]$credObject = New-Object System.Management.Automation.PSCredential -ArgumentList $userName, $securePwd
+$credentialPath = 'C:\Automation\Secrets\service-password.txt'
+# Replace with the username supplied during setup.
+$userName = 'CONTOSO\svc-automation'
+$securePassword = (Get-Content -LiteralPath $credentialPath -Raw).Trim() |
+    ConvertTo-SecureString
+$credential = [System.Management.Automation.PSCredential]::new(
+    $userName, $securePassword
+)
 ```
 
-There are couple of points to keep in mind when using this approach
+DPAPI binds this example to a Windows user and machine context. It is not a portable deployment format. Anyone able to run code as that account may be able to decrypt the password; physical access is not required. Restrict the file and execution account, and recreate the encrypted file when changing the deployment context or rotating the password.
 
-- A malicious user can still run the script and *authenticate* as the user *admin* if he gets physical access to the machine
-- If we need to run the same script on multiple machines we will need to create multiple *Secure.txt* files one for each machine on which the script will run
-
-Last point is specifically important as it can become impractical if the same script needs to run on multiple machines. Additionally, as credentials are encrypted using DAPI, **only the user who created the encrypted credentials** on the original machines will be able to access/decrypt them.
-
-**Note:** If you are curious about the last remark I suggest reading more about [Data Protection API](https://en.wikipedia.org/wiki/Data_Protection_API) or for something more technical you can refer to [this article](https://docs.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection)
+The protection described here must not be assumed on Linux or macOS. Microsoft documents that `SecureString` contents are not encrypted on non-Windows systems. See [ConvertTo-SecureString](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring) and [ConvertFrom-SecureString](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertfrom-securestring) for the platform and key-handling details.
 
 ## Use an Encrypted String in Script
 
-**Full Disclosure:** Before I describe this method let me clarify I am not the original author of the code used to do the encryption/decryption part, I simply downloaded it, refined a bit and adapted to my needs. Original code can be found [here](https://gallery.technet.microsoft.com/scriptcenter/PowerShell-Script-410ef9df#content).
+My **[IT-ToolBox](https://github.com/PsCustomObject/IT-ToolBox)** module provides `New-StringEncryption` and `New-StringDecryption`. I adapted the original helpers from code credited to the TechNet Gallery in the 2019 version of this article. The module has since evolved; the current functions retain their names but use a different interface and ciphertext format.
 
-This is what I usually use in my automation scripts to avoid having too many files lying around and it implies storing the password directly in the script code, yes that's not a typo, as it is *encrypted*.
+### IT-ToolBox 3.0: explicit passphrase and authenticated encryption
 
-First of all encrypt the string with the following command after importing the **New-StringEncryption** function
-
-```powershell
-# Create encrypted string
-New-StringEncryption -StringToEncrypt 'MySecurePassword123'
-
-# Output string
-kvKHaoJytKOhWVSLRwpaAb4jBDz0i/s4yUdlhFKpNi0=
-```
-
-This will generate a an encrypted string that can only be decrypted on the same machine that performed the original encryption. Once we have the encrypted string we can input it in script code like this:
+This example targets **IT-ToolBox 3.0.0**, whose manifest requires **PowerShell 7.4 or later**, on a platform with .NET AES-GCM support. Use the [module’s setup instructions and string-encryption documentation](https://github.com/PsCustomObject/IT-ToolBox#string-encryption) rather than assuming an older installed copy has the same behaviour.
 
 ```powershell
-# Decrypt string and convert it to a Secure.String object
-ConvertTo-SecureString -String (New-StringDecryption -EncryptedString 'kvKHaoJytKOhWVSLRwpaAb4jBDz0i/s4yUdlhFKpNi0=') -AsPlainText -Force
+Import-Module IT-ToolBox -RequiredVersion 3.0.0
+
+# Supply these through your application's input and secret-handling mechanism:
+# $valueToProtect       - the string being encrypted
+# $encryptionPassphrase - a strong passphrase, protected separately from ciphertext
+$encryptedValue = New-StringEncryption -StringToEncrypt $valueToProtect `
+    -EncryptPassPhrase $encryptionPassphrase
+
+$decryptedValue = New-StringDecryption -EncryptedString $encryptedValue `
+    -EncryptPassPhrase $encryptionPassphrase
 ```
 
-The **New-StringDecryption** is a companion function to the encrypting one that does exactly what the name implies, takes a *Base64* encoded string and will output the clear text version of it.
+The current implementation uses AES-256-GCM, a fresh random salt and nonce, and PBKDF2-HMAC-SHA256 with 600,000 iterations. Its output begins with `ITTB1.`. Decryption rejects an incorrect passphrase or modified authenticated payload instead of returning plaintext. These details were checked against [the module source at commit 5ea85e4](https://github.com/PsCustomObject/IT-ToolBox/tree/5ea85e41a0672847e70716342651af52179ac649).
 
-Putting all together we would have something like this in our script
+This is string encryption, not an identity-bound secret vault. Anyone with the ciphertext and correct passphrase can decrypt it on a compatible host. Do not put the passphrase alongside the ciphertext in source code. Input, passphrase and decrypted output are managed strings; they cannot be reliably erased from memory. If a destination requires `PSCredential`, converting decrypted text to `SecureString` does not undo that plaintext exposure.
 
-```powershell
-# Define Credentials
-[string]$userName = 'admin'
-[SecureString]$securePwd = ConvertTo-SecureString -String (New-StringDecryption -EncryptedString 'kvKHaoJytKOhWVSLRwpaAb4jBDz0i/s4yUdlhFKpNi0=') -AsPlainText -Force
+### Historical calls and migration
 
-# Create the credential object
-[pscredential]$credentialObject = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $userName, $securePwd
+The original article’s call without `-EncryptPassPhrase` belongs to the historical implementation, not version 3.0. The [legacy functions](https://github.com/PsCustomObject/IT-ToolBox/tree/5ea85e41a0672847e70716342651af52179ac649/Legacy) defaulted the passphrase and salt to the computer name and used a fixed default vector. This explains the original machine-name dependency, but it was not an enforced restriction to the originating machine: reproducing those inputs could reproduce the key elsewhere.
 
-# Code here
-```
+Version 3.0 requires an explicit passphrase and generates salt and nonce internally. Its decoder deliberately rejects historical ciphertext. Follow the module’s **Legacy migration** instructions in a separate session: recover existing data with the original implementation and original inputs, then re-encrypt it with the modern function. Preserve the original ciphertext until recovery and migration have been verified. Legacy ciphertext does not authenticate its contents.
 
 ## Closing Notes
 
-In the article we have seen different approaches to store passwords in PowerShell scripts while not saving them in clear text. It has to be noted none of the illustrated methods is bullet proof but, once again, it is better than storing sensitive information in clear text.
+For a secret store integration, review authentication, auditability, rotation and the capabilities of the vault provider. PowerShell [SecretManagement](https://learn.microsoft.com/en-us/powershell/utility-modules/secretmanagement/overview) provides a vault abstraction; Microsoft now describes those modules as feature complete, maintained for security and critical fixes. Do not assume any particular vault configuration will work unattended.
 
-Among the methods illustrated I find last one easier to implement as encrypted passwords can be centrally stored on a file and sourced from multiple scripts using the correct one for the application or service that script needs to connect to.
+The encryption functions discussed here are part of my **[IT-ToolBox module](https://github.com/PsCustomObject/IT-ToolBox)**; consult its documentation for version-specific usage and migration.
 
-All the functions used in the post are available through my **[IT-ToolBox](https://github.com/PsCustomObject/IT-ToolBox)** module.
+For Exchange Online automation, see the [certificate authentication guide]({% post_url 2020-09-21-Exchange-Online-Certificate-Based-Authentication %}) and its current Microsoft references.

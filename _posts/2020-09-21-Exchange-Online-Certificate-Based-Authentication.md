@@ -1,6 +1,7 @@
 ---
 title: "Exchange Online - Certificate Based Authentication - Step by Step"
-excerpt: "Microsoft is deprecating basic authentication when establishing a connection to Exchange Online in favor of more secure Certificate Based Authentication (CBA). In this step by step article we will explore how to configure all the components from scratch"
+excerpt: "Exchange Online certificate authentication: historical setup walkthrough with current guidance on app permissions, certificate handling and supported connections."
+last_modified_at: 2026-10-23
 categories:
   - PowerShell
   - Office365
@@ -19,15 +20,27 @@ header:
     teaser: "/assets/images/ExchangeLogo.png"
 ---
 
-Microsoft released to GA the new version of *Exchange Online Management* module, version *2.0.3* at the time this article, which introduces **Certificate Based Authentication** for PowerShell sessions. *Basic Authentication* has been already deprecated and originally planned for removal in *October 2020* but due CoVid-19 outbreak this has been postponed to 2021 as you can [read here](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508).
+## Current guidance and scope
 
-I have been using the module preview in production for quite some time but held back publishing this article so to have all places in place as GA.
+**Updated 23 October 2026:** This walkthrough documents the 2020 portal and module 2.0.3. Its screenshots and role-assignment sequence are historical, not a current end-to-end deployment runbook. For new deployments, follow Microsoft’s [app-only authentication procedure](https://learn.microsoft.com/en-us/powershell/exchange/app-only-auth-powershell-v2), including current module prerequisites and supported commands.
+{: .notice--warning}
+
+Certificate authentication remains useful for unattended automation. Separate authentication from authorisation: registering a certificate proves the application’s identity, while API consent and assigned roles govern what it can do. Protect the private key and plan certificate renewal before expiry.
+
+Before adapting the historical steps:
+
+- Use a supported ExchangeOnlineManagement module and PowerShell combination from Microsoft’s prerequisites.
+- Register the application in Microsoft Entra ID, upload only the public certificate, and retain the private key securely on the execution host or in an appropriate key store.
+- Configure `Exchange.ManageAsApp` and admin consent as documented, then assign only the required management roles. The current procedure supports custom role groups with service principals for command restrictions and recipient write scopes; a broad Exchange Administrator assignment is not the default choice for every job.
+- Use a CSP certificate for this app-only flow; Microsoft documents CNG certificates as unsupported here.
+- `-CertificateThumbprint` is a Windows-only connection option. For other hosts, consult the documented certificate-object or file options and their requirements.
+- Where the automation runs in a supported Azure environment, evaluate [managed identity authentication](https://learn.microsoft.com/en-us/powershell/exchange/connect-exo-powershell-managed-identity) to avoid managing a certificate credential yourself.
+
+The sections below retain the original screenshots for reference. Use the current procedure above when portal labels or authorisation steps differ.
 
 ## Exchange Online Certificate Based authentication - Register Azure Application
 
 The first step to deploy Certificate Based authentication is to register a new *Azure Application*. Navigate *Azure Active Directory* in the Azure portal and select **App Registrations** (alternatively use the search function which is what I usually do)
-
-Testing clickable images:
 
 <figure>
   <a href="https://pscustomobject.github.io/assets/images/Azure_Application_Registration_Blade.png">
@@ -69,7 +82,7 @@ Once the application has been registered we need to configure/grant API permissi
 
 From the **Request API Permissions** scroll all the way down the *Supported Legacy APIs* and select **Exchange**, **Application Permissions** and finally tick **Exchange.ManageAsApp** under the *Exchange* section
 
-**Note:** I will not go into much detail as much has already been written about this but Exchange does not natively support new *Graph* API that's why Exchange is listed under *Legacy API*.
+**Historical UI note:** The screenshot uses the portal labels from 2020. Use the current Microsoft procedure to locate the Exchange application permission; the old label is not a statement about Microsoft Graph capabilities.
 {: .notice--primary}
 
 <figure class="half">
@@ -79,7 +92,7 @@ From the **Request API Permissions** scroll all the way down the *Supported Lega
   <img src="/assets/images/Exchange_API_Permissions._2.png"></a>
 </figure>
 
-The last step involves clicking the **Grant Admin Consent for <your tenant name>** so that permissions will be deployed for all mailboxes.
+The last step involves clicking the **Grant Admin Consent for <your tenant name>** to consent to the requested application permission. Management authorisation must also be configured through the appropriate roles.
 
 <figure>
   <a href="https://pscustomobject.github.io//assets/images/EXO_Grant_Admin_Consent.png">
@@ -88,9 +101,9 @@ The last step involves clicking the **Grant Admin Consent for <your tenant name>
 
 ## Exchange Online Certificate Based authentication - Configure Authentication
 
-With the application created configured in AzureAD we need to configure authentication against AzureAD. When using *[application permissions model](https://en.wikipedia.org/wiki/Application_permissions)* authentication is performed via a **client secret**, a token, or a **certificate**. Token authentication is considered, rightly so, *less secure* for this reason only certificate one is supported by Exchange Online/Microsoft.
+For this certificate-based flow, the application uses its certificate and private key to obtain an access token. Tokens are part of the authentication process; the original claim that token authentication is inherently less secure was incorrect.
 
-In the scope of Exchange OnLine authentication it is unimportant if we're using a self signed or publicly trusted certificate as long as **we have the associated private key**.
+Self-signed certificates can be used, but possession of the private key permits authentication as the application. Protect private-key access, rotate certificates and do not commit private keys or their passwords to a repository.
 
 You can easily create a self-signed certificate via PowerShell with the following command:
 
@@ -127,8 +140,9 @@ In the Azure Portal select *Certificates and Secretes* from the left blade and *
 
 ## Exchange Online Certificate Based authentication - Grant permissions
 
-As I mentioned in the **Grant API Permissions** paragraph Graph API does not support any Exchange management operations nor we can use Exchange **RBAC** model as that only applies to user objects not applications, like in our case, which are represented by a **Service Principal**.
-What we can do is granting a **[AzureAD Directory Role](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#exchange-service-administrator-permissions)** to our application Service Principal.
+The following screenshots show the original broad Microsoft Entra directory-role assignment. Current Exchange Online app-only guidance also supports custom role groups assigned through service principals. Use those options when the task needs fewer commands or a restricted recipient write scope; review the complete permission set because grants from different sources combine.
+
+Do not assign a permanent Exchange Administrator role simply to reproduce these screenshots. Choose the authorisation model in the [current app-only procedure](https://learn.microsoft.com/en-us/powershell/exchange/app-only-auth-powershell-v2).
 
 With the *Azure AD* blade selected go to **Roles and administrators** and select **Exchange Administrator** confirming with the *Add Assignment* button
 
@@ -162,7 +176,7 @@ Where you can review applied configuration and make any required change.
 
 ## Exchange Online Certificate Based authentication - Testing connection
 
-After all the above components are in place it's time to test our configuration. Assuming the *Exchange Online Management* PowerShell module version 2.0.3 is installed we can issue the following command to establish a connection
+After configuring the application using current guidance, this connection pattern uses a certificate in the Windows certificate store. Define the three variables below with your own configuration first. The historical module version 2.0.3 is not a deployment prerequisite today.
 
 ```powershell
 $paramConnectExchangeOnline = @{
@@ -187,4 +201,4 @@ And here's the result
 
 This was quite a long post but steps to get up and running with Exchange Online Certificate based authentication are numerous even if not difficult to implement but well worth following.
 
-Certificate Based authentication resolves a number of challenges administrators had to face up to this point, chief among all [storing credentials](https://pscustomobject.github.io/powershell/howto/Store-Credentials-in-PowerShell-Script/) which is inherently insecure.
+Certificate Based authentication resolves a number of challenges administrators had to face up to this point, chief among all [storing credentials](https://pscustomobject.github.io/powershell/howto/Store-Credentials-in-PowerShell-Script/) without storing a user password in the script. The certificate’s private key is itself a credential and must be protected.
