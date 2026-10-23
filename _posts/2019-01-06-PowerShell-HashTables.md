@@ -25,7 +25,7 @@ In this section I will give you a quick rundown of *PowerShell Hashtables* how t
 
 ### Creating a Hashtable
 
-At the very core a *hashtable* is nothing else than a collection of items of the same or different type. Does it sound familiar? If it rings a bell probably it has to do with the fact the same concept applies to **[arrays](https://pscustomobject.github.io/powershell/PowerShell-Arrays/)** with a key difference. A **hashtable** stores each value (or object) using a **key**.
+At the very core a *hashtable* is nothing else than a collection of items of the same or different type. Does it sound familiar? If it rings a bell probably it has to do with the fact the same concept applies to **[arrays](https://singularvector.github.io/powershell/PowerShell-Arrays/)** with a key difference. A **hashtable** stores each value (or object) using a **key**.
 
 Here's an example which should make this clearer:
 
@@ -169,7 +169,7 @@ $ouPath | ForEach-Object{ [pscustomobject]$_ } | Export-CSV -Path $csvPath
 
 ### Converting Hashtables to string
 
-When using a [log function](https://github.com/PsCustomObject/New-LogEntry) that writes data to a log file on disk we cannot simply output the hashtable to the log message but first need to convert it to a proper string format which can be achieved like this
+When using a [log function](https://github.com/SingularVector/New-LogEntry) that writes data to a log file on disk we cannot simply output the hashtable to the log message but first need to convert it to a proper string format which can be achieved like this
 
 ```powershell
 # Convert hashtable to string format

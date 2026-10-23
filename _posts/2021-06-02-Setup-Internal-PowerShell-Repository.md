@@ -16,9 +16,9 @@ header:
 
 ## PowerShell repositories
 
-If you follow my blog you probably know my [GitHub](https://github.com/PsCustomObject) where I share modules like the [IT-ToolBox](https://github.com/PsCustomObject/IT-ToolBox) or handy standalone [Functions](https://github.com/PsCustomObject/PowerShell-Functions) that I developed to solve specific issues.
+If you follow my blog you probably know my [GitHub](https://github.com/SingularVector) where I share modules like the [IT-ToolBox](https://github.com/SingularVector/IT-ToolBox) or handy standalone [Functions](https://github.com/SingularVector/PowerShell-Functions) that I developed to solve specific issues.
 
-In my posts I often talked about [PowerShell Gallery](https://pscustomobject.github.io/powershell/tips/PowerShell-Restore-Default-Repository/) which you probably already used to install a module released by Microsoft or other developers.
+In my posts I often talked about [PowerShell Gallery](https://singularvector.github.io/powershell/tips/PowerShell-Restore-Default-Repository/) which you probably already used to install a module released by Microsoft or other developers.
 
 Both are great tools when sharing code with a large audience over the internet, GitHub Private repositories are scope of this article, but a large chunk of my work involves developing _modules_ that me and my colleagues user internally for automation purposes. These modules usually leverage technologies that are available only in my work environment and sometimes implement functions that would not have much sense outside my company.
 
@@ -32,47 +32,47 @@ Here's what you will need to follow this article and setup your own PowerShell r
 - The ASP.NET and web development workload installed [here's](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2019) a guide on how to modify an existing Visual Studio installation in case you don't have the appropriate workload installed already
 - A server running a supported copy of **Windows Server** I am using Windows 2019 but 2016 will do just fine
 
-**Note:** If you do not have or cannot install Visual Studio at the end of the post I have posted a link to my [GitHub Repository](https://github.com/PsCustomObject/Nuget-PowerShell-Repository/tree/main/NuGetRepository/NuGetRepository)
+**Note:** If you do not have or cannot install Visual Studio at the end of the post I have posted a link to my [GitHub Repository](https://github.com/SingularVector/Nuget-PowerShell-Repository/tree/main/NuGetRepository/NuGetRepository)
 
 ## Create the Visual Studio Project
 
 Once all requirements are in place open Visual Studio and create a project using the _ASP.Web Application (Visual C#)_ template.
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/VS_Create_New_Project.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/VS_Create_New_Project.png">
   <img src="/assets/images/NugetArticle/VS_Create_New_Project.png"></a>
 </figure>
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/VS_Web_Application.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/VS_Web_Application.png">
   <img src="/assets/images/NugetArticle/VS_Web_Application.png"></a>
 </figure>
 
 Application name is not important just avoid _NuGet_ as this would create a conflict with one of the _packages_ we need to install as part of the dependencies, in my example I've used **NuGetRepository** but it can really be anything
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Application_Configuration.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/Application_Configuration.png">
   <img src="/assets/images/NugetArticle/Application_Configuration.png"></a>
 </figure>
 
 In the screen that will appear simply select the _Empty_ template and then the _Create_ button
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Project_Configuration.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/Project_Configuration.png">
   <img src="/assets/images/NugetArticle/Project_Configuration.png"></a>
 </figure>
 
 Once project has finished loading/being created _right-click_ on the project name in _solution explorer_ and select **Manage NuGet Packages**
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Manage_NuGet_Package.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/Manage_NuGet_Package.png">
   <img src="/assets/images/NugetArticle/Manage_NuGet_Package.png"></a>
 </figure>
 
 In the _NuGetRepository_ window select the _Browse_ tab and search for package **NuGet.Server** and click on the **Install** button.
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Install_NuGet_Component.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/Install_NuGet_Component.png">
   <img src="/assets/images/NugetArticle/Install_NuGet_Component.png"></a>
 </figure>
 
@@ -83,7 +83,7 @@ This step will take some time, depending on your connection speed, and a window 
 Once the installation step is complete I highly recommend to change the build type from _Debug_, default for new projects, to _Release_ as this will disable all debug logging that is otherwise enabled for the solution.
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Set_Build_Type.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/Set_Build_Type.png">
   <img src="/assets/images/NugetArticle/Set_Build_Type.png"></a>
 </figure>
 
@@ -92,7 +92,7 @@ Once this is done go to _Build / Build Solution_ menu, or press F6 if you're laz
 This will create a folder structure, under the path previously specified, containing all files required by the solution. Project path is visible in the **Properties** window under the _Project Folder_ field
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Project_Path.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/Project_Path.png">
   <img src="/assets/images/NugetArticle/Project_Path.png"></a>
 </figure>
 
@@ -120,7 +120,7 @@ Once all components are in place copy the solution files to a directory on the s
 As a reference here's how the content of my application folder looks like on my test server
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/IIS_Application.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/IIS_Application.png">
   <img src="/assets/images/NugetArticle/IIS_Application.png"></a>
 </figure>
 
@@ -154,21 +154,21 @@ Comment out or delete one of the instances of **\<compilation\>** tag so that re
 We can finally deploy the _NuGet_ application to IIS to do so open **IIS Manager / Expand <Server Name> / Sites** right-click on Default Web Site and select **Add Application**
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Add_Application.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/Add_Application.png">
   <img src="/assets/images/NugetArticle/Add_Application.png"></a>
 </figure>
 
 In the window that appears provide a name (alias) for the application and specify the path where application files reside
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Application_Alias.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/Application_Alias.png">
   <img src="/assets/images/NugetArticle/Application_Alias.png"></a>
 </figure>
 
 To test the configuration point your browser to **http://localhost/Nuget** which should yield the following page
 
 <figure>
-  <a href="https://pscustomobject.github.io//assets/images/NugetArticle/Nuget_Page.png">
+  <a href="https://singularvector.github.io//assets/images/NugetArticle/Nuget_Page.png">
   <img src="/assets/images/NugetArticle/Nuget_Page.png"></a>
 </figure>
 
@@ -214,7 +214,7 @@ In the next articles I will explain how to register a repository and push module
 
 I have created a GitHub repository where I've posted both the package and the full Visual Studio Solution so you can simply download the files and be up and running in no time.
 
-- [This is the direct link to the application files](https://github.com/PsCustomObject/Nuget-PowerShell-Repository/tree/main/NuGetRepository/NuGetRepository) that you can simply copy over to IIS
-- [This is the link to the base repository](https://github.com/PsCustomObject/Nuget-PowerShell-Repository) containing readme, changelog etc.
+- [This is the direct link to the application files](https://github.com/SingularVector/Nuget-PowerShell-Repository/tree/main/NuGetRepository/NuGetRepository) that you can simply copy over to IIS
+- [This is the link to the base repository](https://github.com/SingularVector/Nuget-PowerShell-Repository) containing readme, changelog etc.
 
 I will keep this repository up to date when new versions of NuGet are released.

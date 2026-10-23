@@ -15,7 +15,7 @@ header:
     teaser: "/assets/images/AD_Logo.png"
 ---
 
-In my other article [Get-ADGroupMember : The operation returned because the timeout limit was exceeded](https://pscustomobject.github.io/powershell/powershell%20tips/Get-AdGroupMember-Timeout/) a user commented
+In my other article [Get-ADGroupMember : The operation returned because the timeout limit was exceeded](https://singularvector.github.io/powershell/powershell%20tips/Get-AdGroupMember-Timeout/) a user commented
 
 > Nice n fast, as long as you don't want recursive members? How to make this include recursive members?
 
@@ -75,4 +75,4 @@ ObjectGUID        : e715c1c2-d596-4fc4-975c-7e30ed9c2c8b
 
 Again this approach is lightning fast and can return thousand of results in couple of seconds making it a suitable candidate for larger deployments.
 
-As I did with [Get-ReportChain](https://pscustomobject.github.io/powershell/howto/identity%20management/PowerShell-Get-Users-Manager/) I will wrap this up as a function and make it available in my [IT-ToolBox module](https://github.com/PsCustomObject/IT-ToolBox)
+As I did with [Get-ReportChain](https://singularvector.github.io/powershell/howto/identity%20management/PowerShell-Get-Users-Manager/) I will wrap this up as a function and make it available in my [IT-ToolBox module](https://github.com/SingularVector/IT-ToolBox)

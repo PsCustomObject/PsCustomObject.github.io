@@ -16,13 +16,13 @@ minimal_mistakes_skin    : "dark" #"default" # "air", "aqua", "contrast", "dark"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "PsCustomObject"
+title                    : "SingularVector"
 title_separator          : "-"
-name                     : "PsCustomObject"
+name                     : "SingularVector"
 description              : "Systems engineering and infrastructure automation by Daniele: 20+ years across Windows, Linux and identity, with practical PowerShell guides and tools."
-url                      : "https://pscustomobject.github.io"
+url                      : "https://singularvector.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "PsCustomObject/PsCustomObject.github.io"
+repository               : "SingularVector/singularvector.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -104,7 +104,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "PsCustomObject"
+  name             : "SingularVector"
   avatar           : "/assets/images/pscustomobject.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Systems and infrastructure engineer with 20+ years of experience across Windows, Linux and identity. I build automation that makes complex environments easier to run, maintain and understand."
   location         : "PID 0"
@@ -115,10 +115,10 @@ author:
     #  url: mailto:PsCustomObject@outlook.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://pscustomobject.github.io/"
+      url: "https://singularvector.github.io/"
     - label: "DevOps Notes"
       icon: "fas fa-fw fa-link"
-      url: "https://pscustomobject.github.io/terraforming-my-career/"
+      url: "https://singularvector.github.io/terraforming-my-career/"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/catanesi/"
@@ -130,7 +130,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/PsCustomObject"
+      url: "https://github.com/SingularVector"
     #- label: "Instagram"
     #  icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -146,13 +146,13 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/PsCustomObject"
+      url: "https://github.com/SingularVector"
     - label: "LinkedIn Profile"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/catanesi/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://pscustomobject.github.io/"
+      url: "https://singularvector.github.io/"
     #- label: "GitLab"
     #  icon: "fab fa-fw fa-gitlab"
       # url:

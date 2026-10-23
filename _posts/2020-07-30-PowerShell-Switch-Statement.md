@@ -143,7 +143,7 @@ As most things in PowerShell even the switch statement is *case insensitive* by 
 
 ## -RegEx
 
-This is one of my favorite and I use it a lot when parsing log files from my *[New-LogEntry](https://github.com/PsCustomObject/New-LogEntry)* function here is a sample snippet
+This is one of my favorite and I use it a lot when parsing log files from my *[New-LogEntry](https://github.com/SingularVector/New-LogEntry)* function here is a sample snippet
 
 ```powershell
 [string]$logMessage = '[Error] - Exception reported'
@@ -227,7 +227,7 @@ Multiple matches would work as you probably have already guessed, here I will be
 
 ## Break and Continue
 
-We've already covered *[break and continue](https://pscustomobject.github.io/powershell/post%20series%20-%20statements/PowerShell-Return-Continue-Explained/)* and they work similarly with a switch statement.
+We've already covered *[break and continue](https://singularvector.github.io/powershell/post%20series%20-%20statements/PowerShell-Return-Continue-Explained/)* and they work similarly with a switch statement.
 
 Let's examine a reworked version of the previous example:
 

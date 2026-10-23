@@ -22,7 +22,7 @@ routes = ["", "about", "articles", "topics"] + ["topics/" + x for x in
 descriptions = []
 for route in routes:
     page = Page(Path("_site") / route / "index.html")
-    url = "https://pscustomobject.github.io/" + (route + "/" if route else "")
+    url = "https://singularvector.github.io/" + (route + "/" if route else "")
     assert page.canonicals == [url], (route, page.canonicals)
     description = page.meta["description"]
     assert description and "Hitchikers" not in description, route

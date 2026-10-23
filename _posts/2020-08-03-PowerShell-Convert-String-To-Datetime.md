@@ -24,7 +24,7 @@ PowerShell makes it very easy to *have fun* with dates and time which is really 
 Wednesday, September 2, 2020 4:45:19 PMM
 ```
 
-As you can guess from the [strong typed variable](https://pscustomobject.github.io/powershell/coding%20habits/powershell%20best%20practice/PowerShell-Strongly-Typed-Variables/) *expirationDate* is a [datetime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netframework-4.8) object and such it supports properties and methods one of which is *.ToString()* which will convert object to a string.
+As you can guess from the [strong typed variable](https://singularvector.github.io/powershell/coding%20habits/powershell%20best%20practice/PowerShell-Strongly-Typed-Variables/) *expirationDate* is a [datetime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netframework-4.8) object and such it supports properties and methods one of which is *.ToString()* which will convert object to a string.
 
 ```powershell
 # Get String from datetime

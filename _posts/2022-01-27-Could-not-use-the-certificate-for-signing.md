@@ -18,9 +18,9 @@ header:
 
 ## Exchange Online Certificate Based authentication
 
-As I have written in my [previous post about TokenExpiry error message Microsoft is retiring ability to connect to Exchange Online via basic authentication](https://pscustomobject.github.io/powershell/exchange/office%20365/Cannot-bind-argument-to-parameter-Token-Expiry/).
+As I have written in my [previous post about TokenExpiry error message Microsoft is retiring ability to connect to Exchange Online via basic authentication](https://singularvector.github.io/powershell/exchange/office%20365/Cannot-bind-argument-to-parameter-Token-Expiry/).
 
-You can read my article on how to implement _Certificate Based authentication_ for Exchange Online [here](https://pscustomobject.github.io/powershell/office365/exchange/Exchange-Online-Certificate-Based-Authentication/).
+You can read my article on how to implement _Certificate Based authentication_ for Exchange Online [here](https://singularvector.github.io/powershell/office365/exchange/Exchange-Online-Certificate-Based-Authentication/).
 
 ## Could not use the certificate for signing error message
 

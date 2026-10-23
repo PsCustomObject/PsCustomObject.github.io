@@ -34,7 +34,7 @@ While this works generally speaking I am not a big fan of calling external execu
 
 Being confronted with this specific requirement/challenge I decided to come up with something *native*. Result is the *Export-Registry* function which allows export of key both in **XML** and **CSV** format. I've added the latter as I find it handy for reporting purposes.
 
-You can find the full function code in my [GitHub function repository](https://github.com/PsCustomObject/PowerShell-Functions) but here's couple of examples.
+You can find the full function code in my [GitHub function repository](https://github.com/SingularVector/PowerShell-Functions) but here's couple of examples.
 
 ```powershell
 # Define registry keys to export
@@ -46,7 +46,7 @@ You can find the full function code in my [GitHub function repository](https://g
 Export-Registry -KeyPath $registryKey -ExportFormat xml -ExportPath 'C:\Temp\TestExport.xml' -NoBinaryData
 ```
 
-The above will check if the specified key exist via the **[Test-IsRegistryKey](https://github.com/PsCustomObject/PowerShell-Functions/blob/master/Test-IsRegistryKey.ps1)** helper function and once validated export the key in *XML* format.
+The above will check if the specified key exist via the **[Test-IsRegistryKey](https://github.com/SingularVector/PowerShell-Functions/blob/master/Test-IsRegistryKey.ps1)** helper function and once validated export the key in *XML* format.
 
 Here's the sample export
 

@@ -57,4 +57,4 @@ catch
 }
 ```
 
-Using a simple [Try/Catch](https://pscustomobject.github.io/powershell/PowerShell-Error-Handling/) block we have our script verify if computer should execute some code or not.
+Using a simple [Try/Catch](https://singularvector.github.io/powershell/PowerShell-Error-Handling/) block we have our script verify if computer should execute some code or not.

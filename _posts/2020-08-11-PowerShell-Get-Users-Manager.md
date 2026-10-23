@@ -15,7 +15,7 @@ header:
     teaser: "/assets/images/AD_Logo.png"
 ---
 
-In my post [PowerShell - Get users reporting to manager](https://pscustomobject.github.io/powershell/howto/identity%20management/Active-Directory-Get-Report-Chain/) I have described the different approaches we can use to get a list of users reporting, directly or indirectly, to a specific manager.
+In my post [PowerShell - Get users reporting to manager](https://singularvector.github.io/powershell/howto/identity%20management/Active-Directory-Get-Report-Chain/) I have described the different approaches we can use to get a list of users reporting, directly or indirectly, to a specific manager.
 
 In the post I have explained how we can use *LDAP Filter* and *OID* **1.2.840.113556.1.4.1941** to get results in a lightning fast manner.
 
@@ -222,4 +222,4 @@ DirectReports     : {}
 
 As you can see the cmdlet will return information about the user reports together with a set of *default* properties. If you need to have more properties in the output the **-Properties** switch can be used which accepts an array containing properties to be returned exactly as the standard AD cmdlet specifying the *'\*'* string all available properties will be returned.
 
-**Note:** Cmdlet has a dependency on *two* external functions [Test-IsValidDn](https://pscustomobject.github.io/powershell/howto/identity%20management/PowerShell-Check-If-String-Is-A-DN/) and **Test-IsEmailAddress** both of which are available through my **[IT-ToolBox module](https://github.com/PsCustomObject/IT-ToolBox)**
+**Note:** Cmdlet has a dependency on *two* external functions [Test-IsValidDn](https://singularvector.github.io/powershell/howto/identity%20management/PowerShell-Check-If-String-Is-A-DN/) and **Test-IsEmailAddress** both of which are available through my **[IT-ToolBox module](https://github.com/SingularVector/IT-ToolBox)**

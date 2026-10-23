@@ -94,7 +94,7 @@ else
 }
 ```
 
-You can find the complete code in the following [gist](https://gist.github.com/PsCustomObject/d73c19c85296b6436d9de33ba25197cc)
+You can find the complete code in the following [gist](https://gist.github.com/SingularVector/d73c19c85296b6436d9de33ba25197cc)
 
 ## Further Script Development
 
@@ -117,6 +117,6 @@ I have released a complete solution to perform automatic cleanup of files in fol
 - Custom retention policies
 - Ignored path(s)
 
-You can find source code either [here](https://github.com/PsCustomObject/Remove-Old-Files) or over [Technet Galleries](https://gallery.technet.microsoft.com/Cleanup-Old-Files-bde3af13)
+You can find source code either [here](https://github.com/SingularVector/Remove-Old-Files) or over [Technet Galleries](https://gallery.technet.microsoft.com/Cleanup-Old-Files-bde3af13)
 
 Hope you can find the script useful and of course if you have any feature you'd like to see implemented don't hesitate to open an issue in Git!

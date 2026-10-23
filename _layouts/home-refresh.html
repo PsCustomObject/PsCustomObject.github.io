@@ -9,7 +9,7 @@ layout: default
   <h1 id="home-heading">Practical automation.<br><span>Beyond the script.</span></h1>
   <p class="home-intro">I’m Daniele, a systems and infrastructure engineer with 20+ years of experience across Windows, Linux and identity. I build automation that makes complex environments easier to operate and maintain.</p>
   <p class="home-summary">PowerShell tooling, identity workflows and Linux operations, with Python and infrastructure as code in the wider engineering toolkit.</p>
-  <div class="home-actions"><a class="home-button" href="#latest">Read the articles <span aria-hidden="true">↗</span></a><a class="home-text-link" href="https://github.com/PsCustomObject">Explore my code <span aria-hidden="true">↗</span></a></div>
+  <div class="home-actions"><a class="home-button" href="#latest">Read the articles <span aria-hidden="true">↗</span></a><a class="home-text-link" href="https://github.com/SingularVector">Explore my code <span aria-hidden="true">↗</span></a></div>
   <div class="home-byline"><span class="home-prompt" aria-hidden="true">&gt;_</span><span>Built, tested, occasionally broken. Written down so you don’t have to start from scratch.</span></div>
 </section>
 <section class="home-section" aria-labelledby="featured-heading">
@@ -24,7 +24,7 @@ layout: default
  <div class="home-section-heading"><div><p class="home-eyebrow">FOLLOW A THREAD</p><h2 id="topics-heading">What are you working on?</h2></div></div>
  <div class="home-topic-links">{% for topic in site.data.topics %}<a href="{{ topic.id | prepend: '/topics/' | append: '/' | relative_url }}"><span>{{ topic.title | escape }}</span><small>{{ topic.description | escape }}</small><b aria-hidden="true">↗</b></a>{% endfor %}</div>
 </section>
-<aside class="home-lab" aria-labelledby="lab-heading"><div><p class="home-eyebrow">INFRASTRUCTURE IN PRACTICE</p><h2 id="lab-heading">Cloud infrastructure notebook.</h2><p>A companion notebook for cloud infrastructure, automation and hands-on experiments. Practical approaches, technical decisions and lessons from engineering work.</p></div><a class="home-text-link" href="https://pscustomobject.github.io/terraforming-my-career/">Read the infrastructure notes <span aria-hidden="true">↗</span></a></aside>
+<aside class="home-lab" aria-labelledby="lab-heading"><div><p class="home-eyebrow">INFRASTRUCTURE IN PRACTICE</p><h2 id="lab-heading">Cloud infrastructure notebook.</h2><p>A companion notebook for cloud infrastructure, automation and hands-on experiments. Practical approaches, technical decisions and lessons from engineering work.</p></div><a class="home-text-link" href="https://singularvector.github.io/terraforming-my-career/">Read the infrastructure notes <span aria-hidden="true">↗</span></a></aside>
 {% else %}
 <section class="home-hero"><h1>Articles — page {{ paginator.page }}</h1></section>
 {% endif %}

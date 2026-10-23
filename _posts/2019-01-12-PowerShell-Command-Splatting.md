@@ -74,7 +74,7 @@ Using splatted commands has another big advantage, it allows us to implement *dy
 
 In our *Set-AdUser* example we used an *if else* statement writing twice the same command with a slight variation. What if we need to check for 4 or even 8 different conditions? We would end up writing the same command over and over just with a slight variation in parameters which, in addition to duplication, could lead to typos and errors.
 
-This is where *command splatting* and *dynamic parameters* come into play. It is probably clear by now but splatting is using a **[hashtable](https://pscustomobject.github.io/powershell/PowerShell-HashTables/)** to build the parameter set and *hashtables* support elements addition.
+This is where *command splatting* and *dynamic parameters* come into play. It is probably clear by now but splatting is using a **[hashtable](https://singularvector.github.io/powershell/PowerShell-HashTables/)** to build the parameter set and *hashtables* support elements addition.
 
 Rather than using a complex *if else* chain or *switch* statement to build up our command we can rewrite our example like this
 

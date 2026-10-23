@@ -153,6 +153,6 @@ As you can see function will parse the file and output an object that is easy to
 
 ### Function availability
 
-Function is available in my GitHub repository for functions [here](https://github.com/PsCustomObject/PowerShell-Functions) and will soon be made available in my [IT-ToolBox](https://github.com/PsCustomObject/IT-ToolBox) module as well.
+Function is available in my GitHub repository for functions [here](https://github.com/SingularVector/PowerShell-Functions) and will soon be made available in my [IT-ToolBox](https://github.com/SingularVector/IT-ToolBox) module as well.
 
 If you find any issue or have any question do not hesitate to leave me a comment here or open an issue in GitHub.

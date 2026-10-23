@@ -45,5 +45,5 @@ Once the SecureString object has been created the *PSCredential* object can be c
 
 The resultant *pscredential* object can be passed to any cmdlet requiring/using the **-PSCredential** parameter.
 
-**Note:** This is just an example so I use a plain text password in my script this is never a good idea or practice in a production environment. If storing credentials in a script is a requirement follow instructions in [this article](https://pscustomobject.github.io/powershell/howto/Store-Credentials-in-PowerShell-Script/) where I describe alternatives methods which are way more secure than a plain text string. Functions mentioned in the article can be found in my [IT-Toolbox Module](https://github.com/PsCustomObject/IT-ToolBox)
+**Note:** This is just an example so I use a plain text password in my script this is never a good idea or practice in a production environment. If storing credentials in a script is a requirement follow instructions in [this article](https://singularvector.github.io/powershell/howto/Store-Credentials-in-PowerShell-Script/) where I describe alternatives methods which are way more secure than a plain text string. Functions mentioned in the article can be found in my [IT-Toolbox Module](https://github.com/SingularVector/IT-ToolBox)
 {: .notice--primary}

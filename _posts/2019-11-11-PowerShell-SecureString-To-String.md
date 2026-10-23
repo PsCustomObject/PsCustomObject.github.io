@@ -24,7 +24,7 @@ But what if we need to reverse the process? PowerShell has a handy cmdlet aptly 
 ConvertFrom-SecureString -SecureString $secStringPassword
 ```
 
-The above will produce **an encrypted** standard string, I have described this process in my post [about storing credentials in a script](https://pscustomobject.github.io/powershell/howto/Store-Credentials-in-PowerShell-Script/#store-encrypted-password-in-an-external-file), which is not what we're looking for.
+The above will produce **an encrypted** standard string, I have described this process in my post [about storing credentials in a script](https://singularvector.github.io/powershell/howto/Store-Credentials-in-PowerShell-Script/#store-encrypted-password-in-an-external-file), which is not what we're looking for.
 
 To get the *unencrypted* string we will to leverage built-in .Net methods which, while not as straightforward as a cmdlet, will get the job done here's the syntax
 
