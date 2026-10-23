@@ -4,64 +4,35 @@ permalink: /about/
 toc: true
 ---
 
-## Transforming IT Landscapes with Automation
+## The engineer behind PsCustomObject
 
-Welcome to [PSCustomObject](https://pscustomobject.github.io/), where we delve into the transformative power of automation in IT.
+I’m Daniele, a systems and infrastructure engineer with more than 20 years of experience across Windows, Linux, identity and automation.
 
-Whether you're interested in mastering PowerShell, exploring cloud technologies, or learning about automation with different programming languages, you've come to the right place.
+I work on the systems people depend on every day: servers, directories, messaging platforms and the processes that connect them. I like understanding how an environment works, finding the parts that create unnecessary effort, and building something better.
 
-## My Journey: From Manual Tasks to Automated Solutions
+If the same task keeps landing on someone’s desk, I want to know whether it needs a person at all.
 
-I'm Daniele, and I've spent my career transforming IT environments from manual, time-consuming processes into streamlined, automated workflows.
+## How I work
 
-Throughout my professional journey, I've had the opportunity to work with a diverse range of organizations, helping them embrace automation and achieve significant efficiency gains.
+Automation is a substantial part of my engineering work. That includes PowerShell tooling, identity workflows and reusable functions, alongside the configuration and operation of Windows and Linux systems.
 
-My mission has always been to replace *doing everything by hand with seamless*, *run-by-robots* solutions that drive efficiency and scalability. Easy as that!
+Writing the code is part of the job. Understanding the environment, handling failures and making the result maintainable matter just as much. I value clear names, useful logs, sensible error handling and documentation that explains the decisions behind a solution.
 
-Some key points about my past engagements include:
+I want the next person opening a script to understand what it does without having to reconstruct my train of thought. That next person is quite often me, six months later.
 
-- **Efficiency Enhancements:** I've played a pivotal role in helping organizations move away from labor-intensive manual tasks to sophisticated automation solutions that drive operational efficiency and scalability.
-- **Strategic Transformations:** My expertise has contributed to major IT transformations, enabling companies to optimize their processes and leverage automation to meet their unique needs and goals.
-- **Impactful Solutions:** Whether it's through designing custom automation workflows or integrating advanced technologies, my work has consistently aimed at solving complex challenges and delivering impactful results.
+## What you’ll find here
 
-## My Expertise: Crafting the Perfect Tool
+PsCustomObject is where I share practical engineering work: guides, troubleshooting notes, scripts and configurations that solve a specific problem.
 
-With hands-on experience in a variety of programming languages and technologies, I specialize in crafting tailored solutions to meet specific needs:
+PowerShell has deep roots here. You’ll also find Linux tooling, Python and infrastructure automation, with cloud infrastructure and infrastructure as code forming part of the wider picture. I explain the reasoning, assumptions and limitations so you can judge whether an approach fits your environment.
 
-- **PowerShell**: Mastering scripting for automation and system management.
-- **Go**: Developing efficient, high-performance applications and tools.
-- **Python**: Building versatile tools and scripts for diverse applications.
-- **C#**: Creating robust applications and integrations.
-- **Cloud Technologies**: Leveraging the power of the cloud to enhance scalability and flexibility.
+My [PowerShell Functions](https://github.com/PsCustomObject/PowerShell-Functions) repository contains individual tools for administration and automation. [IT-ToolBox](https://github.com/PsCustomObject/IT-ToolBox) brings reusable tools together in a module. The companion [infrastructure notebook](https://pscustomobject.github.io/terraforming-my-career/) collects technical references, configurations and hands-on work.
 
-## Teaching and Training: Sharing Knowledge
+## Get in touch
 
-In addition to my technical expertise, I have a long history as a trainer and educator. I'm passionate about sharing my knowledge and helping others grow their skills.
+I enjoy a good technical discussion, especially when it leads to a simpler solution or catches something I missed.
 
-Whether through workshops, webinars, or written content, I aim to empower you with the tools and insights needed to succeed in the world of automation.
-
-## What You'll Find Here
-
-- **In-Depth Guides:** Comprehensive tutorials primarily focusing on PowerShell, with additional content on Go, Python, C#, and more.
-- **Automation Insights:** Practical advice and strategies for implementing automation across various platforms and technologies.
-- **Cloud Solutions:** Tips and best practices for utilizing cloud services effectively.
-- **Educational Content:** Resources and training materials to help you enhance your skills and knowledge.
-
-## Open Source and Tested Code
-
-All the code shared on this blog is freely available for you to use and adapt. You can find it in my [GitHub repository](https://github.com/PsCustomObject).
-
-Each piece of code is not just theoretical—it's tested and proven in production environments, ensuring that what you're learning and implementing is reliable and effective.
-
-I believe in *eating my own dog food*, so you can trust that the solutions provided are practical and battle-tested.
-
-## Stay in touch
-
-I invite you to explore the content, engage with the community, and share your own experiences. Let's collaborate and continue pushing the boundaries of what automation can achieve.
-
-Thank you for visiting my site. I'm excited to share this journey with you and help you navigate the ever-evolving world of IT automation!
-
-Comment, write me an e-mail, open an issue report or a PR anything will do!
+You can find me on [GitHub](https://github.com/PsCustomObject) and [LinkedIn](https://www.linkedin.com/in/catanesi/), or [send me an email](mailto:PsCustomObject@outlook.com). For questions or improvements to a particular tool, an issue or pull request in its repository is the best place to start.
 
 ## Supporting Charitable Causes
 
