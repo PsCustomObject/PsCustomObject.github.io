@@ -19,7 +19,7 @@
       {% include after-content.html %}
     </div>
 
-    {% if site.search == true %}
+    {% if site.search == true and page.layout != "search" %}
       <div class="search-content">
         {% include_cached search/search_form.html locale=locale %}
       </div>

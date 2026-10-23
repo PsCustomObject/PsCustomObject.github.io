@@ -1,0 +1,8 @@
+---
+layout: discovery
+---
+{% assign archive_posts = site.posts | where_exp: "post", "post.hidden != true" %}
+{% assign years = archive_posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+<div class="discovery-toolbar"><span>{{ archive_posts | size }} articles</span><a href="{{ '/topics/' | relative_url }}">Browse by topic &rarr;</a></div>
+<nav class="discovery-years" aria-label="Jump to publication year">{% for year in years %}<a href="#year-{{ year.name }}">{{ year.name }} <span>({{ year.items | size }})</span></a>{% endfor %}</nav>
+{% for year in years %}<section id="year-{{ year.name }}" class="discovery-year" aria-labelledby="heading-{{ year.name }}"><h2 id="heading-{{ year.name }}">{{ year.name }}</h2><div class="discovery-posts">{% for post in year.items %}{% include discovery-post.html post=post %}{% endfor %}</div><a class="discovery-back-top" href="#page-title">Back to top &uarr;</a></section>{% endfor %}

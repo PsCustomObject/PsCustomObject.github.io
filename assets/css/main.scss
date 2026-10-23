@@ -26,3 +26,6 @@ html {
 
 // Site-owned homepage styles; keep separate from upstream theme files.
 @import "homepage";
+
+// Site-owned topic hub, archive and search-page styling.
+@import "discovery";

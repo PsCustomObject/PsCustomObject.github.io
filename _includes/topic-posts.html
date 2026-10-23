@@ -1,0 +1,7 @@
+{%- comment -%}Resolve overlapping categories into one dated, deduplicated topic list.{%- endcomment -%}
+{%- assign topic_posts = "" | split: "," -%}
+{%- for category in include.topic.categories -%}
+  {%- assign category_posts = site.categories[category] -%}
+  {%- if category_posts -%}{%- assign topic_posts = topic_posts | concat: category_posts -%}{%- endif -%}
+{%- endfor -%}
+{%- assign topic_posts = topic_posts | uniq | sort: "date" | reverse | where_exp: "post", "post.hidden != true" -%}
