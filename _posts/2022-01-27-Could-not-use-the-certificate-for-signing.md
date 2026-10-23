@@ -63,7 +63,7 @@ OpenSSL pkcs12 -export -in "temp.cer" -inkey "temp.rsa" -out "RSACertificate.pfx
 **Note:** In the above commands I am not using a password for the certificate as everything is local to my machine but a password is definitely *required* when exporting a certificate together with the private key.
 {: .notice--warning}
 
-Once the new pfx file has been created all *temporary* certificates can be safely removed form the system and connection to Exchange Online will go through just fine. 
+Once the new pfx file has been created all *temporary* certificates can be safely removed from the system and connection to Exchange Online will go through just fine. 
 
 Again if you can use PowerShell 7 you will not face this issue but in case you're stuck with version 5.1 and facing this error message hopefully this post can save you some headaches. 
 

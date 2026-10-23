@@ -10,7 +10,7 @@ tags:
   - Functions
 ---
 
-Some time ago I've been faced with a challenge, well a file format I should say, I was not expecting parsing an *EML* file format which, in total honestly, I thought extinct.
+Some time ago I've been faced with a challenge, well a file format I should say, I was not expecting parsing an *EML* file format which, in total honesty, I thought extinct.
 
 To give you some background I implemented a solution sending notifications to a dedicated *Microsoft Teams* channel containing some information that needed to be parsed by a script and eventually take some actions.
 
@@ -20,7 +20,7 @@ I initially thought this would have been rather easy. I was wrong.
 
 EML file format is defined in [rfc0822](https://www.ietf.org/rfc/rfc0822.txt) with an extension in [rfc1521](https://www.ietf.org/rfc/rfc1521.txt) defining MIME entities but as far as I know there is no official definition of the file format.
 
-Anyhow EML is the format *MS Teams* is using to store email messages that are sent to the a team's address and while retrieving the EML file itself is rather easy extracting any meaningful data from it proved another story.
+Anyhow EML is the format *MS Teams* is using to store email messages that are sent to a team's address and while retrieving the EML file itself is rather easy extracting any meaningful data from it proved another story.
 
 ## EML as a text file
 
@@ -37,7 +37,7 @@ $emlFile = Get-Content -Path $pathToEmlFile
 $emlFile = $emlFile -match $subjectRegex
 ```
 
-The above was working while tasting the solution in an interactive session but when I started feeding real production data to the script the parsed data was missing key data I knew was in the original eml file (if you're working the subject line contained a *[DO NOT MODIFY]* tag followed by two listing email addresses, so a rather long string).
+The above was working while testing the solution in an interactive session but when I started feeding real production data to the script the parsed data was missing key data I knew was in the original eml file (if you're working the subject line contained a *[DO NOT MODIFY]* tag followed by two listing email addresses, so a rather long string).
 
 Issue was being caused by character limit in the subject line which was being broken down to a new line making my filter useless.
 
@@ -155,4 +155,4 @@ As you can see function will parse the file and output an object that is easy to
 
 Function is available in my GitHub repository for functions [here](https://github.com/PsCustomObject/PowerShell-Functions) and will soon be made available in my [IT-ToolBox](https://github.com/PsCustomObject/IT-ToolBox) module as well.
 
-If you find any issue or have any question do not hesitate to to leave me a comment here or open an issue in GitHub.
+If you find any issue or have any question do not hesitate to leave me a comment here or open an issue in GitHub.

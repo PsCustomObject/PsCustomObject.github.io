@@ -30,7 +30,7 @@ $myEmptyArray = @()
 $anotherArray = 100 .. 110
 ```
 
-An array has a **length** properties which we can use to get the number of elements in the array, for example *$anotherArray* from the previous example will have a length of **10**
+An array has a **length** property which we can use to get the number of elements in the array, for example *$anotherArray* from the previous example will have a length of **10**
 
 ```powershell
 # Get number of elements
@@ -155,7 +155,7 @@ The same happens with *arrays* but we have the option to create a *strongly type
 [int32[]]$intArray = 1300,22,4578,8000
 ```
 
-**Note:** In the above example the doubt square brackets **[ ]** after the type *int32* tell PowerShell what follows is an array.
+**Note:** In the above example the square brackets **[ ]** after the type *int32* tell PowerShell what follows is an array.
 
 ## Manipulating Arrays Elements
 
@@ -248,7 +248,7 @@ $newArray = $anotherArray[0,1,3]
 
 ### Deleting an array
 
-To remove array's content but not the array itself you can simply assign a *$null* value to it. This will remove all data contained in the array but no the object itself
+To remove array's content but not the array itself you can simply assign a *$null* value to it. This will remove all data contained in the array but not the object itself
 
 ```powershell
 $newArray = $null

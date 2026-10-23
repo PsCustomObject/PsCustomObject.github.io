@@ -25,9 +25,9 @@ In this section I will give you a quick rundown of *PowerShell Hashtables* how t
 
 ### Creating a Hashtable
 
-At the very core an *hashtable* is nothing else than a collection of items of the same or different type. Does it sound familiar? If it rings a bell probably it has to do with the fact the same concept applies to **[arrays](https://pscustomobject.github.io/powershell/PowerShell-Arrays/)** with a key difference. A **hashtable** stores each value (or object) using a **key**.
+At the very core a *hashtable* is nothing else than a collection of items of the same or different type. Does it sound familiar? If it rings a bell probably it has to do with the fact the same concept applies to **[arrays](https://pscustomobject.github.io/powershell/PowerShell-Arrays/)** with a key difference. A **hashtable** stores each value (or object) using a **key**.
 
-Here's a an example which should make this clearer:
+Here's an example which should make this clearer:
 
 ```powershell
 # Array
@@ -94,7 +94,7 @@ Hashtables support updating values stored with the following syntax
 $myHashTable['Jane'] = 36
 ```
 
-As you can see we use the same *brackets* syntax that is used to specify hashtable key follows by the value we want to assign to it, this of this as accessing an *array* via its index value.
+As you can see we use the same *brackets* syntax that is used to specify hashtable key follows by the value we want to assign to it, think of this as accessing an *array* via its index value.
 
 ## Hashtables Practical Use
 
@@ -124,7 +124,7 @@ The above example is based on a real automation script I have delivered for a cu
 
 ### Nested Hashtables
 
-Hashtables can also be nested inside other hashtables this can be useul when modeling data around the object we need to represent and manage, extending the previous example we could create the following nested hashtable:
+Hashtables can also be nested inside other hashtables this can be useful when modeling data around the object we need to represent and manage, extending the previous example we could create the following nested hashtable:
 
 ```powershell
 # Create nested hashtable

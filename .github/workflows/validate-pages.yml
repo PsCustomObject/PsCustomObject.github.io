@@ -1,0 +1,36 @@
+name: Validate GitHub Pages build
+
+on:
+  pull_request:
+  push:
+    branches: [upgrade/minimal-mistakes-4.28.1]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build using GitHub Pages tooling
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Check theme and monetization integration
+        shell: bash
+        run: |
+          test -s _site/index.html
+          grep -q 'Minimal Mistakes Jekyll Theme 4.28.1' _site/index.html
+          grep -q 'ca-pub-8799681346916578' _site/index.html
+          cmp ads.txt _site/ads.txt
+          test -s _site/feed.xml
+          test -s _site/sitemap.xml
+      - name: Retain generated site for inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: validated-jekyll-site
+          path: _site/
+          retention-days: 7

@@ -21,11 +21,11 @@ When managing Active Directory (AD) environments, creating unique User Principal
 
 This blog post covers two PowerShell functions that help ensure UPN uniqueness: **Test-UPNExist** and **Get-UniqueUPN**. These functions can be particularly useful for automating user creation processes and can be integrated into your automation projects and solutions.
 
-**Note** Both cmdlets are still under active development so do expect some changes, as I progres with development I will update the post. Feel free to report any issue, idea or suggestion so that I can integrate it into the final cmdlet version.
+**Note** Both cmdlets are still under active development so do expect some changes, as I progress with development I will update the post. Feel free to report any issue, idea or suggestion so that I can integrate it into the final cmdlet version.
 
 ### Function 1: Test-UPNExist
 
-This is a support that is used to check if given UPN already exists in the AD environment.
+This is a support function that is used to check if given UPN already exists in the AD environment.
 
 ```powershell
 function Test-UPNExist
@@ -104,7 +104,7 @@ else
 
 ```
 
-### Function 1: Test-UPNExist
+### Function 2: Get-UniqueUPN
 
 This function generates a unique UPN based on given name components and ensures it doesn't already exist in the AD forest.
 
@@ -312,7 +312,7 @@ Write-Host "Generated UPN: $uniqueUPN"
 
 By using **Test-UPNExist** and **Get-UniqueUPN**, you can automate the process of generating unique UPNs for users in your Active Directory environment.
 
-These functions ensure that each UPN is unique and adhere to the naming conventions you specify.
+These functions ensure that each UPN is unique and adheres to the naming conventions you specify.
 
 This approach minimizes the risk of conflicts and simplifies user management.
 
@@ -320,4 +320,4 @@ As mentioned both functions are still under development and I need to cleanup co
 
 As usual all the code is available on my [GitHub repository](https://github.com/PsCustomObject/PowerShell-Functions).
 
-I would love to receive feedback, ideas or implemntation ideas for them!
+I would love to receive feedback, ideas or implementation ideas for them!

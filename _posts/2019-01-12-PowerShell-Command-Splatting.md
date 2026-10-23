@@ -14,7 +14,7 @@ tags:
 
 When using a PowerShell cmdlet we can use parameters to alter the way it will carry on its assigned task. There are situations where it is desirable using a parameter rather than another depending on the result of another cmdlet output or function return value.
 
-What I see to often is something like this:
+What I see too often is something like this:
 
 ```powershell
 # Check return value from function
@@ -53,7 +53,7 @@ Copy-Item @hashArgs
 Copy-Item -Path 'File1.txt' -Destination 'File2.txt'
 ```
 
-This is a simple example but shows how splatting a command can make code more easier to read, this when dealing with large scripts and/or long commands can make a huge difference.
+This is a simple example but shows how splatting a command can make code easier to read, this when dealing with large scripts and/or long commands can make a huge difference.
 
 Going back to our original example we can rewrite the command like this:
 
@@ -74,7 +74,7 @@ Using splatted commands has another big advantage, it allows us to implement *dy
 
 In our *Set-AdUser* example we used an *if else* statement writing twice the same command with a slight variation. What if we need to check for 4 or even 8 different conditions? We would end up writing the same command over and over just with a slight variation in parameters which, in addition to duplication, could lead to typos and errors.
 
-This is where *command splatting* and *dynamic parameters* come into play. It is probably clear by now but splatting is using an **[hashtable](https://pscustomobject.github.io/powershell/PowerShell-HashTables/)** to build the parameter set and *hashtables* support elements addition.
+This is where *command splatting* and *dynamic parameters* come into play. It is probably clear by now but splatting is using a **[hashtable](https://pscustomobject.github.io/powershell/PowerShell-HashTables/)** to build the parameter set and *hashtables* support elements addition.
 
 Rather than using a complex *if else* chain or *switch* statement to build up our command we can rewrite our example like this
 
