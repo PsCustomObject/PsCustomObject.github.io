@@ -3,7 +3,7 @@ name: Validate GitHub Pages build
 on:
   pull_request:
   push:
-    branches: [upgrade/minimal-mistakes-4.28.1, design/homepage-preview, navigation/topic-hub, content/seo-positioning]
+    branches: [upgrade/minimal-mistakes-4.28.1, design/homepage-preview, navigation/topic-hub, content/seo-positioning, content/technical-freshness]
   workflow_dispatch:
 
 permissions:
