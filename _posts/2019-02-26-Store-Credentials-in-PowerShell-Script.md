@@ -104,3 +104,5 @@ For a secret store integration, review authentication, auditability, rotation an
 The encryption functions discussed here are part of my **[IT-ToolBox module](https://github.com/PsCustomObject/IT-ToolBox)**; consult its documentation for version-specific usage and migration.
 
 For Exchange Online automation, see the [certificate authentication guide]({% post_url 2020-09-21-Exchange-Online-Certificate-Based-Authentication %}) and its current Microsoft references.
+
+For the implementation details, failure-path tests and migration steps, see [PowerShell String Encryption in IT-ToolBox 3.0]({% post_url 2026-10-23-PowerShell-String-Encryption-IT-ToolBox %}).
